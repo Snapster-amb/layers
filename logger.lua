@@ -48,6 +48,6 @@ logger.Unmute = function()
     muted = false
 end
 
-logger.level:set('Trace')
+logger.level:set('Info')
 
 return logger
