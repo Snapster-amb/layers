@@ -22,7 +22,7 @@ local muted = false
 
 local function logMessage(loggingLevel, message, mutable)
     if logger.level.index <= logger.levels[loggingLevel] and (not mutable or not muted) then
-        print(chat.header("Taxonomy:" .. loggingLevel) .. message)
+        print(chat.header("Layers:" .. loggingLevel) .. message)
     end
 end
 

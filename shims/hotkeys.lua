@@ -10,7 +10,7 @@ local bindings = {}
 -- @param binding The keystroke, using windower/ashita bind syntax [^!@#~][key], to bind.
 hotkeys.Bind = function(name, binding)
     local command = chat.location(string.format('//gs c cycle %s', name))
-    logger.Info(chat.header('Taxonomy') .. chat.message("Binding ") .. chat.location(binding) .. chat.message(" to: ") .. command) 
+    logger.Info(chat.header('Layers') .. chat.message("Binding ") .. chat.location(binding) .. chat.message(" to: ") .. command) 
     send_command(string.format("bind %s gs c cycle %s", binding, name))
     bindings[name] = binding
 end

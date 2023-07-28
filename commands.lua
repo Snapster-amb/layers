@@ -40,7 +40,7 @@ local function handleLoggingCommand(args)
     else
         logger.level:set(args[1])
     end
-    print(chat.header("Taxonomy") .. chat.message("Logging level set to ") .. chat.group(logger.level.current))
+    print(chat.header("Layers") .. chat.message("Logging level set to ") .. chat.group(logger.level.current))
 end
 
 ---
