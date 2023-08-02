@@ -80,12 +80,12 @@ local profile = require('layers/layers')
 Sample Ninja LUA
 
 ```lua
-local layers = gFunc.LoadFile('layers\\layers')
+local layers = gFunc.LoadFile('layers\\layers.lua')
 
 local combatMode = layers.CreateModeGroup('Combat', {'Off', 'Tanking'}, '@t')
 local weaponMode = layers.CreateModeGroup('Weapon', {'SenjiFudo', 'Mamushitos', 'Staves'}, '@w')
 
-PDT = {
+local PDT = {
     Head = "Arh. Jinpachi +1",
     Body = "Arhat's Gi +1",
     Hands = "Dst. Mittens +1",
@@ -100,11 +100,12 @@ PDT = {
     Ring2 = "Jelly Ring"
 }
 
-Enmity = {
+local Enmity = {
     Head = "Arh. Jinpachi +1",
     Body = "Arhat's Gi +1",
-    Legs = "Yasha Hakama",
-    Feet = "Arhat's Hakama +1",
+    Hands = "Yasha Tekko",
+    Legs = "Arhat's Hakama +1",
+    Feet = "Yasha Sune-Ate",
     Waist = "Warwolf Belt",
     Neck = "Harmonia's Torque",
     Ammo = "Nokizaru Shuriken",

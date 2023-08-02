@@ -130,6 +130,7 @@ core.HandleDefault = function()
 end
 
 core.HandleAbility = function()
+    lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Ability', action.Name)
     local set = buildEventSet(classifiers, 'Ability')
@@ -137,6 +138,7 @@ core.HandleAbility = function()
 end
 
 core.HandleItem = function()
+    lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = {action.Name}
     local set = buildEventSet(classifiers, 'Item')
@@ -144,6 +146,7 @@ core.HandleItem = function()
 end
 
 core.HandlePrecast = function()
+    lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Spell', action.Name)
     local set = buildEventSet(classifiers, 'Precast')
@@ -151,6 +154,7 @@ core.HandlePrecast = function()
 end
 
 core.HandleMidcast = function()
+    lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Spell', action.Name)
     local set = buildEventSet(classifiers, 'Midcast')
@@ -158,18 +162,21 @@ core.HandleMidcast = function()
 end
 
 core.HandlePreshot = function()
+    lastPlayerStatus = nil
     local action = gData.GetAction()
     local set = buildEventSet({}, 'Preshot')
     return equipSetWithCallbacks(set, 'Preshot')
 end
 
 core.HandleMidshot = function()
+    lastPlayerStatus = nil
     local action = gData.GetAction()
     local set = buildEventSet({}, 'Midshot')
     return equipSetWithCallbacks(set, 'Midshot')
 end
 
 core.HandleWeaponskill = function()
+    lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Weaponskill', action.Name)
     local set = buildEventSet(classifiers, 'Weaponskill')
