@@ -1,3 +1,84 @@
+LuAshitacast Directory Structure
+
+```sh
+Game
+└── config
+    └── addons
+        └── luashitacast
+            └── layers
+                ├── classifiers
+                |   ├── abilities.lua
+                |   ├── pets.lua
+                |   ├── petweaponskills.lua
+                |   ├── spells.lua
+                |   └── weaponskills.lua
+                ├── shims
+                |   ├── constants.lua
+                |   ├── gearswap.lua
+                |   ├── hotkeys.lua
+                |   └── luashitacast.lua
+                ├── callbacks.lua
+                ├── chat.lua
+                ├── commands.lua
+                ├── constants.lua
+                ├── core.lau
+                ├── globals.lua
+                ├── hotkeys.lua
+                ├── layers.lua
+                ├── logger.lua
+                ├── modes.lua
+                ├── taxonomy.lua
+                └── utils.lua
+```
+
+LuAshitacast Include Statement
+
+```lua
+local layers = gFunc.LoadFile('layeers\\layers')
+```
+
+Gearswap Directory Structure
+
+```sh
+Windower
+└── addons
+    └── GearSwap
+        └── libs
+            └── layers
+                ├── classifiers
+                |   ├── abilities.lua
+                |   ├── pets.lua
+                |   ├── petweaponskills.lua
+                |   ├── spells.lua
+                |   └── weaponskills.lua
+                ├── shims
+                |   ├── constants.lua
+                |   ├── gearswap.lua
+                |   ├── hotkeys.lua
+                |   └── luashitacast.lua
+                ├── callbacks.lua
+                ├── chat.lua
+                ├── commands.lua
+                ├── constants.lua
+                ├── core.lau
+                ├── globals.lua
+                ├── hotkeys.lua
+                ├── layers.lua
+                ├── logger.lua
+                ├── modes.lua
+                ├── taxonomy.lua
+                └── utils.lua
+```
+
+GearSwap Include Statement
+
+
+```lua
+local profile = require('layers/layers')
+```
+
+Sample Ninja LUA
+
 ```lua
 local layers = gFunc.LoadFile('layers\\layers')
 
