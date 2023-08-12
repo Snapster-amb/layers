@@ -34,7 +34,7 @@ Game
 LuAshitacast Include Statement
 
 ```lua
-local layers = gFunc.LoadFile('layers\\layers')
+local layers = gFunc.LoadFile('layers\\layers.lua')
 ```
 
 Gearswap Directory Structure
