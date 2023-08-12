@@ -84,6 +84,7 @@ local layers = gFunc.LoadFile('layers\\layers.lua')
 
 local combatMode = layers.CreateModeGroup('Combat', {'Off', 'Tanking'}, '@t')
 local weaponMode = layers.CreateModeGroup('Weapon', {'SenjiFudo', 'Mamushitos', 'Staves'}, '@w')
+local combatMode = layers.CreateModeGroup('MDT', {'Off', 'MDT'}, '@1')
 
 local PDT = {
     Head = "Arh. Jinpachi +1",
@@ -99,6 +100,13 @@ local PDT = {
     Ring1 = "Sattva Ring",
     Ring2 = "Jelly Ring"
 }
+
+local MDT = gFunc.Combine(PDT, {
+    Back = "Resentment Cape",
+    Ear1 = "Merman's Earring",
+    Ear2 = "Merman's Earring",
+    Ring2 = "Merman's Ring"
+})
 
 local Enmity = {
     Head = "Arh. Jinpachi +1",
@@ -159,6 +167,9 @@ layers.Sets.Midcast.Ninjutsu = {
 }
 
 layers.Sets.Midcast['Elemental Ninjutsu'] = {
+    Head = "Yasha Jinpachi",
+    Legs = "Yasha Hakama",
+    Feet = "Yasha Sune-Ate",
     Waist = "Ryl.Kgt. Belt",
     Ring1 = "Eremite's Ring",
     Ring2 = "Eremite's Ring",
@@ -175,10 +186,14 @@ layers.Sets.Midcast.Utsusemi = {
 
 layers.Sets.Tanking.Engaged = PDT
 layers.Sets.Tanking.Midcast.Enfeebling = Enmity
+layers.Sets.Tanking.Midcast.Stun = gFunc.Combine(Enmity, layers.Sets.Midcast.Utsusemi)
 layers.Sets.Tanking.Midcast['Enfeebling Ninjutsu'] = Enmity
 layers.Sets.Tanking.Midcast['Utsusemi: Ichi'] = gFunc.Combine(PDT, {
     Waist = "Swift Belt",
 })
+
+layers.Sets.MDT.Engaged = MDT
+layers.Sets.MDT.Idle = MDT
 
 layers.Sets.SenjiFudo.Idle = {
     Main = "Senjuinrikio",
@@ -201,6 +216,7 @@ layers.Sets.Staves.Idle = {
 layers.Sets.Staves.Engaged = layers.Sets.Staves.Idle
 layers.Sets.Staves.Midcast['Ice Magic Damage'] = { Main = "Ice Staff" }
 layers.Sets.Staves.Midcast['Lightning Magic Damage'] = { Main = "Thunder Staff" }
+layers.Sets.Staves.Midcast['Earth Magic Damage'] = { Main = "Earth Staff" }
 
 layers.RegisterCallback("PostHandleIdle", function()
     local environment = gData.GetEnvironment()
