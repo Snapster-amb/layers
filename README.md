@@ -84,7 +84,7 @@ local layers = gFunc.LoadFile('layers\\layers.lua')
 
 local combatMode = layers.CreateModeGroup('Combat', {'Off', 'Tanking'}, '@t')
 local weaponMode = layers.CreateModeGroup('Weapon', {'SenjiFudo', 'Mamushitos', 'Staves'}, '@w')
-local combatMode = layers.CreateModeGroup('MDT', {'Off', 'MDT'}, '@1')
+local mdtMode = layers.CreateModeGroup('MDT', {'Off', 'MDT'}, '@1')
 
 local PDT = {
     Head = "Arh. Jinpachi +1",
