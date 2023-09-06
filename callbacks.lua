@@ -35,7 +35,7 @@ end
 callbacks.Register = function(transition, callback, name)
     local transitionCallbacks = registered[transition]
     if not transitionCallbacks then
-        logger.Error("Failed to register callback - Invalid event transition")
+        logger.Error("Failed to register callback - Invalid event transition " .. transition)
     elseif not callback or type(callback) ~= 'function' then
         logger.Error("Failed to register callback - provided callback must be a function")
     elseif name and type(name) ~= 'string' then
