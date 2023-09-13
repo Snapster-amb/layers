@@ -3,5 +3,6 @@
 local globals = {}
 
 globals.ModeGroups = {}
+globals.CurrentEventHandler = function() end
 
 return globals

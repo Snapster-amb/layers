@@ -88,6 +88,7 @@ local lastPlayerStatus = nil
 local lastPetEvent = nil
 
 core.HandleDefault = function()
+    globals.CurrentEventHandler = core.HandleDefault
     local player = gData.GetPlayer()
     if not constants.ValidStatus[player.Status] then
         return
@@ -130,6 +131,7 @@ core.HandleDefault = function()
 end
 
 core.HandleAbility = function()
+    globals.CurrentEventHandler = core.HandleAbility
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Ability', action.Name)
@@ -138,6 +140,7 @@ core.HandleAbility = function()
 end
 
 core.HandleItem = function()
+    globals.CurrentEventHandler = core.HandleItem
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = {action.Name}
@@ -146,6 +149,7 @@ core.HandleItem = function()
 end
 
 core.HandlePrecast = function()
+    globals.CurrentEventHandler = core.HandlePrecast
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Spell', action.Name)
@@ -154,6 +158,7 @@ core.HandlePrecast = function()
 end
 
 core.HandleMidcast = function()
+    globals.CurrentEventHandler = core.HandleMidcast
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Spell', action.Name)
@@ -162,6 +167,7 @@ core.HandleMidcast = function()
 end
 
 core.HandlePreshot = function()
+    globals.CurrentEventHandler = core.HandlePreshot
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local set = buildEventSet({}, 'Preshot')
@@ -169,6 +175,7 @@ core.HandlePreshot = function()
 end
 
 core.HandleMidshot = function()
+    globals.CurrentEventHandler = core.HandleMidshot
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local set = buildEventSet({}, 'Midshot')
@@ -176,6 +183,7 @@ core.HandleMidshot = function()
 end
 
 core.HandleWeaponskill = function()
+    globals.CurrentEventHandler = core.HandleWeaponskill
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Weaponskill', action.Name)

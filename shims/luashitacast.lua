@@ -55,3 +55,11 @@ gData.GetPetAction = function()
         }
     end
 end
+
+gEquip = {}
+
+gEquip.ClearBuffer = function()
+end
+
+gEquip.ProcessBuffer = function()
+end

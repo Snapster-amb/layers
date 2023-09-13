@@ -142,6 +142,7 @@ else
     local env = {
         gData = gData,
         gFunc = gFunc,
+        gEquip = gEquip,
         print = print,
         type = type,
         ipairs = ipairs,

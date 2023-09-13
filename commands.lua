@@ -28,6 +28,9 @@ local function handleModeGroupCommand(command, args)
                 current = chat.invalid(group.current)
             end
             logger.Info(chat.group(name) .. chat.message(" group mode set to ") .. current)
+            gEquip.ClearBuffer()
+            globals.CurrentEventHandler()
+            gEquip.ProcessBuffer()
         else
             logger.Error(string.format("Unabled to completed %s command - Unable to find group named %s", command, name))
         end
