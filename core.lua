@@ -75,8 +75,10 @@ local function buildEventSet(classifiers, event)
     return set
 end
 
-local function equipSetWithCallbacks(set, event, action)
+
+local function buildEventSetAndEquipWithCallbacks(classifiers, event, action)
     callbacks.Execute(string.format('PreHandle%s', event), event, action)
+    local set = buildEventSet(classifiers, event)
     logger.Debug(chat.message('Equipping ') .. chat.event(event) .. chat.message(' set containing ') .. chat.highlight(string.format('%d items', utils.GetSetItemCount(set))), true)
     gFunc.EquipSet(set)
     callbacks.Execute(string.format('PostHandle%s', event), event, action)
@@ -108,22 +110,18 @@ core.HandleDefault = function()
     if player.Status == lastPlayerStatus and petEvent == lastPetEvent then
         logger.Mute()
     end
-    local set = buildEventSet({player.Status}, player.Status)
-    equipSetWithCallbacks(set, player.Status)
+    buildEventSetAndEquipWithCallbacks({player.Status}, player.Status)
     if action then
         if action.ActionType == 'Spell' then
             local classifiers = taxonomy.GetRawClassifiers('Spell', action.Name)
-            set = buildEventSet(classifiers, 'PetMidcast')
-            equipSetWithCallbacks(set, 'PetMidcast', gData.petAction or action)
+            buildEventSetAndEquipWithCallbacks(classifiers, 'PetMidcast', gData.petAction or action)
         else
             local classifiers = taxonomy.GetRawClassifiers('PetWeaponskill', action.Name)
-            set = buildEventSet(classifiers, 'PetWeaponskill')
-            equipSetWithCallbacks(set, 'PetWeaponskill', gData.petAction or action)
+            buildEventSetAndEquipWithCallbacks(classifiers, 'PetWeaponskill', gData.petAction or action)
         end
     elseif pet and constants.ValidStatus[pet.Status] then
         local classifiers = taxonomy.GetRawClassifiers('Pet', pet.Name)
-        set = buildEventSet(classifiers, petEvent)
-        equipSetWithCallbacks(set, petEvent)
+        buildEventSetAndEquipWithCallbacks(classifiers, petEvent)
     end
     lastPlayerStatus = player.Status
     lastPetEvent = petEvent
@@ -135,8 +133,7 @@ core.HandleAbility = function()
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Ability', action.Name)
-    local set = buildEventSet(classifiers, 'Ability')
-    return equipSetWithCallbacks(set, 'Ability', gData.playerAction or action)
+    return buildEventSetAndEquipWithCallbacks(classifiers, 'Ability', gData.playerAction or action)
 end
 
 core.HandleItem = function()
@@ -144,8 +141,7 @@ core.HandleItem = function()
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = {action.Name}
-    local set = buildEventSet(classifiers, 'Item')
-    return equipSetWithCallbacks(set, 'Item', gData.playerAction or action)
+    return buildEventSetAndEquipWithCallbacks(classifiers, 'Item', gData.playerAction or action)
 end
 
 core.HandlePrecast = function()
@@ -153,8 +149,7 @@ core.HandlePrecast = function()
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Spell', action.Name)
-    local set = buildEventSet(classifiers, 'Precast')
-    return equipSetWithCallbacks(set, 'Precast', gData.playerAction or action)
+    return buildEventSetAndEquipWithCallbacks(classifiers, 'Precast', gData.playerAction or action)
 end
 
 core.HandleMidcast = function()
@@ -162,24 +157,19 @@ core.HandleMidcast = function()
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Spell', action.Name)
-    local set = buildEventSet(classifiers, 'Midcast')
-    return equipSetWithCallbacks(set, 'Midcast', gData.playerAction or action)
+    return buildEventSetAndEquipWithCallbacks(classifiers, 'Midcast', gData.playerAction or action)
 end
 
 core.HandlePreshot = function()
     globals.CurrentEventHandler = core.HandlePreshot
     lastPlayerStatus = nil
-    local action = gData.GetAction()
-    local set = buildEventSet({}, 'Preshot')
-    return equipSetWithCallbacks(set, 'Preshot')
+    return buildEventSetAndEquipWithCallbacks({}, 'Preshot')
 end
 
 core.HandleMidshot = function()
     globals.CurrentEventHandler = core.HandleMidshot
     lastPlayerStatus = nil
-    local action = gData.GetAction()
-    local set = buildEventSet({}, 'Midshot')
-    return equipSetWithCallbacks(set, 'Midshot')
+    return buildEventSetAndEquipWithCallbacks({}, 'Midshot')
 end
 
 core.HandleWeaponskill = function()
@@ -187,8 +177,7 @@ core.HandleWeaponskill = function()
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Weaponskill', action.Name)
-    local set = buildEventSet(classifiers, 'Weaponskill')
-    return equipSetWithCallbacks(set, 'Weaponskill', gData.playerAction or action)
+    return buildEventSetAndEquipWithCallbacks(classifiers, 'Weaponskill', gData.playerAction or action)
 end
 
 ---
