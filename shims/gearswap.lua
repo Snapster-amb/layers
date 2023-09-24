@@ -7,15 +7,15 @@
 function precast(spell)
     gData.playerAction = spell
     if spell.prefix == '/range' then
-        core.HandlePreshot
+        core.HandlePreshot()
     elseif spell.prefix == '/item' then
-        core.HandleItem
+        core.HandleItem()
     elseif spell.prefix == '/weaponskill' then
         core.HandleWeaponskill)
     elseif spell.prefix == '/pet' or spell.prefix == '/jobability' then
-        core.HandleAbility
+        core.HandleAbility()
     elseif spell.prefix == '/magic' or spell.prefix == '/song' or spell.prefix == '/ninjutsu' then
-        core.HandlePrecast
+        core.HandlePrecast()
     else
         logger.Error("Unhandled precast event - " .. spell.name)
     end
@@ -24,10 +24,10 @@ end
 function midcast(spell)
     gData.playerAction = spell
     if spell.prefix == '/range' then
-        core.HandleMidshot
+        core.HandleMidshot()
     elseif spell.prefix == '/item' or spell.prefix == '/pet' or spell.prefix == '/jobability' or spell.prefix == '/weaponskill' then
     elseif spell.prefix == '/magic' or spell.prefix == '/song' or spell.prefix == '/ninjutsu' then
-        core.HandleMidcast
+        core.HandleMidcast()
     else
         logger.Error("Unhandled midcast event - " .. spell.name)
     end
@@ -35,36 +35,36 @@ end
 
 function aftercast(spell)
     gData.playerAction = nil
-    core.HandleDefault
+    core.HandleDefault()
 end
 
 function pet_midcast(spell)
     gData.petAction = spell
     if not gData.playerAction then
-        core.HandleDefault
+        core.HandleDefault()
     end
 end
 
 function pet_change(pet, gain)
     if gain then
-        core.HandleDefault
+        core.HandleDefault()
     end
 end
 
 function pet_aftercast(spell)
     gData.petAction = nil
     if not gData.playerAction then
-        core.HandleDefault
+        core.HandleDefault()
     end
 end
 
 function status_change(new, old)
-    core.HandleDefault
+    core.HandleDefault()
 end
 
 function pet_status_change(new, old)
     if not gData.playerAction then
-        core.HandleDefault
+        core.HandleDefault()
     end
 end
 
