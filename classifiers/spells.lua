@@ -1049,14 +1049,14 @@ return {
     },
     ["Bind"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Bind",
         [4] = "Ice Affinity",
         [5] = "Ice Enfeeblement"
     },
     ["Bindga"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Bind",
         [4] = "Bindga",
         [5] = "Ice Affinity",
@@ -1143,14 +1143,14 @@ return {
     },
     ["Blind"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Blind",
         [4] = "Dark Affinity",
         [5] = "Dark Enfeeblement"
     },
     ["Blind II"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Blind",
         [4] = "Blind II",
         [5] = "Dark Affinity",
@@ -1158,7 +1158,7 @@ return {
     },
     ["Blindga"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Blind",
         [4] = "Blindga",
         [5] = "Dark Affinity",
@@ -1419,14 +1419,14 @@ return {
     },
     ["Break"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Break",
         [4] = "Earth Affinity",
         [5] = "Earth Enfeeblement"
     },
     ["Breakga"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Break",
         [4] = "Breakga",
         [5] = "Earth Affinity",
@@ -2039,14 +2039,14 @@ return {
     },
     ["Dispel"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Dispel",
         [4] = "Dark Affinity",
         [5] = "Dark Enfeeblement"
     },
     ["Dispelga"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Dispel",
         [4] = "Dispelga",
         [5] = "Dark Affinity",
@@ -2061,14 +2061,14 @@ return {
     },
     ["Distract"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Distract",
         [4] = "Ice Affinity",
         [5] = "Ice Enfeeblement"
     },
     ["Distract II"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Distract",
         [4] = "Distract II",
         [5] = "Ice Affinity",
@@ -2076,7 +2076,7 @@ return {
     },
     ["Distract III"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Distract",
         [4] = "Distract III",
         [5] = "Ice Affinity",
@@ -2908,14 +2908,14 @@ return {
     },
     ["Frazzle"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Frazzle",
         [4] = "Dark Affinity",
         [5] = "Dark Enfeeblement"
     },
     ["Frazzle II"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Frazzle",
         [4] = "Frazzle II",
         [5] = "Dark Affinity",
@@ -2923,7 +2923,7 @@ return {
     },
     ["Frazzle III"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Frazzle",
         [4] = "Frazzle III",
         [5] = "Dark Affinity",
@@ -3365,7 +3365,7 @@ return {
     },
     ["Graviga"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Gravity",
         [4] = "Graviga",
         [5] = "Wind Affinity",
@@ -3373,14 +3373,14 @@ return {
     },
     ["Gravity"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Gravity",
         [4] = "Wind Affinity",
         [5] = "Wind Enfeeblement"
     },
     ["Gravity II"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Gravity",
         [4] = "Gravity II",
         [5] = "Wind Affinity",
@@ -4969,7 +4969,7 @@ return {
     },
     ["Poison"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Poison",
         [4] = "Water Affinity",
         [5] = "Water Enfeeblement"
@@ -4984,7 +4984,7 @@ return {
     },
     ["Poison II"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Poison",
         [4] = "Poison II",
         [5] = "Water Affinity",
@@ -4992,7 +4992,7 @@ return {
     },
     ["Poison III"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Poison",
         [4] = "Poison III",
         [5] = "Water Affinity",
@@ -5000,7 +5000,7 @@ return {
     },
     ["Poison IV"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Poison",
         [4] = "Poison IV",
         [5] = "Water Affinity",
@@ -5008,7 +5008,7 @@ return {
     },
     ["Poison V"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Poison",
         [4] = "Poison V",
         [5] = "Water Affinity",
@@ -5023,7 +5023,7 @@ return {
     },
     ["Poisonga"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Poison",
         [4] = "Poisonga",
         [5] = "Water Affinity",
@@ -5031,7 +5031,7 @@ return {
     },
     ["Poisonga II"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Poison",
         [4] = "Poisonga",
         [5] = "Poisonga II",
@@ -5040,7 +5040,7 @@ return {
     },
     ["Poisonga III"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Poison",
         [4] = "Poisonga",
         [5] = "Poisonga III",
@@ -5049,7 +5049,7 @@ return {
     },
     ["Poisonga IV"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Poison",
         [4] = "Poisonga",
         [5] = "Poisonga IV",
@@ -5058,7 +5058,7 @@ return {
     },
     ["Poisonga V"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Poison",
         [4] = "Poisonga",
         [5] = "Poisonga V",
@@ -6004,14 +6004,14 @@ return {
     },
     ["Sleep"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Sleep",
         [4] = "Dark Affinity",
         [5] = "Dark Enfeeblement"
     },
     ["Sleep II"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Sleep",
         [4] = "Sleep II",
         [5] = "Dark Affinity",
@@ -6019,7 +6019,7 @@ return {
     },
     ["Sleepga"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Sleep",
         [4] = "Sleepga",
         [5] = "Dark Affinity",
@@ -6027,7 +6027,7 @@ return {
     },
     ["Sleepga II"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Sleep",
         [4] = "Sleepga",
         [5] = "Sleepga II",
@@ -6890,7 +6890,7 @@ return {
     },
     ["Virus"] = {
         [1] = "Enfeebling",
-        [2] = "Dark Magic Enfeebling",
+        [2] = "Black Magic Enfeebling",
         [3] = "Virus",
         [4] = "Fire Affinity",
         [5] = "Fire Enfeeblement"
