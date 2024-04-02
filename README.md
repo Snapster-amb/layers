@@ -74,7 +74,7 @@ GearSwap Include Statement
 
 
 ```lua
-local profile = require('layers/layers')
+local layers = require('layers/layers')
 ```
 
 Sample Ninja LUA
