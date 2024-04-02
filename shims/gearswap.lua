@@ -11,7 +11,7 @@ function precast(spell)
     elseif spell.prefix == '/item' then
         core.HandleItem()
     elseif spell.prefix == '/weaponskill' then
-        core.HandleWeaponskill)
+        core.HandleWeaponskill()
     elseif spell.prefix == '/pet' or spell.prefix == '/jobability' then
         core.HandleAbility()
     elseif spell.prefix == '/magic' or spell.prefix == '/song' or spell.prefix == '/ninjutsu' then
