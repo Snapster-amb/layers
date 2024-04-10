@@ -21,7 +21,7 @@ local taxonomy = {
 -- @return A table of classifiers indexed by the classifier name
 taxonomy.GetClassifiers = function(category, spell)
     local classifiers = {}
-    for k, v in pairs(taxonomy[category][string.gsub(spell, '\0', '')] or {}) do
+    for k, v in ipairs(taxonomy[category][string.gsub(spell, '\0', '')] or {}) do
         classifiers[v] = true
     end
     return classifiers
@@ -34,7 +34,7 @@ end
 -- @return A table of classifiers indexed their rank in the taxonomy
 taxonomy.GetOrderedClassifiers = function(category, spell)
     local classifiers = {}
-    for k, v in pairs(taxonomy[category][string.gsub(spell, '\0', '')] or {}) do
+    for k, v in ipairs(taxonomy[category][string.gsub(spell, '\0', '')] or {}) do
         classifiers[k] = v
     end
     return classifiers

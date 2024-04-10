@@ -51,7 +51,7 @@ local function buildClassifierSet(baseSets, event, classifiers, mode)
     local eventSets = baseSets[event] or {}
     utils.LogSetDetails(eventSets, event, mode)
     utils.MergeSets(set, eventSets)
-    for _, classifier in pairs(classifiers) do
+    for _, classifier in ipairs(classifiers) do
         if classifier ~= event then
             local classifierSet = eventSets[classifier] or {}
             utils.LogSetDetails(classifierSet, event, mode, classifier)
@@ -65,7 +65,7 @@ local function buildEventSet(classifiers, event)
     local baseSets = core.Sets or {}
     logger.Debug(chat.message('Building ') .. chat.event(event) .. chat.message(' set'), true)
     local set = buildClassifierSet(baseSets, event, classifiers)
-    for _, group in pairs(globals.ModeGroups) do
+    for _, group in ipairs(globals.ModeGroups) do
         if not constants.InvalidModeNames[group.group.current] then
             baseSets = core.Sets[group.group.current] or {}
             local modeSet = buildClassifierSet(baseSets, event, classifiers, group.group.current)
