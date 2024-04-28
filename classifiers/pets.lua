@@ -82,9 +82,9 @@ return {
         [1] = "Jug Pet",
         [2] = "BugeyedBroncha"
     },
-    ["CaitSith"] = {
+    ["Cait Sith"] = {
         [1] = "Avatar",
-        [2] = "CaitSith",
+        [2] = "Cait Sith",
         [3] = "Light Affinity"
     },
     ["Carbuncle"] = {
