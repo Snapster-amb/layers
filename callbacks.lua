@@ -14,7 +14,7 @@ end
 ---
 -- Execute any registered callbacks for the provided transition
 callbacks.Execute = function(transition, event, action)
-    local transitionCallbacks = registered[transition]
+    local transitionCallbacks = registered[transition] or {}
     for _, callbackTable in ipairs(transitionCallbacks) do
         for name, callback in pairs(callbackTable) do
             logger.Debug(chat.message("Executing ") .. chat.transition(transition) .. chat.message(" callback ") .. chat.callback(name), true)

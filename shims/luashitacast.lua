@@ -7,6 +7,10 @@ gFunc.EquipSet = function(set)
     equip(set)
 end
 
+gFunc.InterimEquipSet = function(set)
+    -- TODO make this work for gearswap
+end
+
 gFunc.Combine = function(lhs, rhs)
     return set_combine(lhs, rhs)
 end

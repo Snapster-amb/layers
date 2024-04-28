@@ -40,6 +40,11 @@ constants.Events = {
     PetResting = true
 }
 
+constants.InterimEvents = {
+    Midcast = "Interimcast",
+    Midshot = "Interimshot",
+}
+
 constants.Transitions = {
     Pre = true,
     Post = true

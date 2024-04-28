@@ -25,6 +25,9 @@ utils.CreateBaseSets = function()
     for event, _ in pairs(constants.Events) do
         sets[event] = {}
     end
+    for _, event in pairs(constants.InterimEvents) do
+        sets[event] = {}
+    end
     return sets
 end
 
