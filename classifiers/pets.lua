@@ -1,15 +1,15 @@
 return {
-    ["Acuex Familiar"] = {
+    ["AcuexFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Acuex Familiar"
+        [2] = "AcuexFamiliar"
     },
-    ["Aged Angus"] = {
+    ["AgedAngus"] = {
         [1] = "Jug Pet",
-        [2] = "Aged Angus"
+        [2] = "AgedAngus"
     },
-    ["Air Spirit"] = {
+    ["AirSpirit"] = {
         [1] = "Spirit",
-        [2] = "Air Spirit",
+        [2] = "AirSpirit",
         [3] = "Wind Affinity"
     },
     ["Alexander"] = {
@@ -17,74 +17,74 @@ return {
         [2] = "Alexander",
         [3] = "Light Affinity"
     },
-    ["Alluring Honey"] = {
+    ["AlluringHoney"] = {
         [1] = "Jug Pet",
-        [2] = "Alluring Honey"
+        [2] = "AlluringHoney"
     },
-    ["Ambusher Allie"] = {
+    ["AmbusherAllie"] = {
         [1] = "Jug Pet",
-        [2] = "Ambusher Allie"
+        [2] = "AmbusherAllie"
     },
-    ["Amiable Roche"] = {
+    ["AmiableRoche"] = {
         [1] = "Jug Pet",
-        [2] = "Amiable Roche"
+        [2] = "AmiableRoche"
     },
-    ["Amigo Sabotender"] = {
+    ["AmigoSabotender"] = {
         [1] = "Jug Pet",
-        [2] = "Amigo Sabotender"
+        [2] = "AmigoSabotender"
     },
-    ["Anklebiter Jedd"] = {
+    ["AnklebiterJedd"] = {
         [1] = "Jug Pet",
-        [2] = "Anklebiter Jedd"
+        [2] = "AnklebiterJedd"
     },
-    ["Antlion Familiar"] = {
+    ["AntlionFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Antlion Familiar"
+        [2] = "AntlionFamiliar"
     },
     ["Atomos"] = {
         [1] = "Avatar",
         [2] = "Atomos",
         [3] = "Dark Affinity"
     },
-    ["Attentive Ibuki"] = {
+    ["AttentiveIbuki"] = {
         [1] = "Jug Pet",
-        [2] = "Attentive Ibuki"
+        [2] = "AttentiveIbuki"
     },
-    ["Audacious Anna"] = {
+    ["AudaciousAnna"] = {
         [1] = "Jug Pet",
-        [2] = "Audacious Anna"
+        [2] = "AudaciousAnna"
     },
-    ["Beetle Familiar"] = {
+    ["BeetleFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Beetle Familiar"
+        [2] = "BeetleFamiliar"
     },
-    ["Blackbeard Randy"] = {
+    ["BlackbeardRandy"] = {
         [1] = "Jug Pet",
-        [2] = "Blackbeard Randy"
+        [2] = "BlackbeardRandy"
     },
-    ["Bloodclaw Shasra"] = {
+    ["BloodclawShasra"] = {
         [1] = "Jug Pet",
-        [2] = "Bloodclaw Shasra"
+        [2] = "BloodclawShasra"
     },
-    ["Bouncing Bertha"] = {
+    ["BouncingBertha"] = {
         [1] = "Jug Pet",
-        [2] = "Bouncing Bertha"
+        [2] = "BouncingBertha"
     },
-    ["Brainy Waluis"] = {
+    ["BrainyWaluis"] = {
         [1] = "Jug Pet",
-        [2] = "Brainy Waluis"
+        [2] = "BrainyWaluis"
     },
-    ["Brave Hero Glenn"] = {
+    ["BraveHeroGlenn"] = {
         [1] = "Jug Pet",
-        [2] = "Brave Hero Glenn"
+        [2] = "BraveHeroGlenn"
     },
-    ["Bugeyed Broncha"] = {
+    ["BugeyedBroncha"] = {
         [1] = "Jug Pet",
-        [2] = "Bugeyed Broncha"
+        [2] = "BugeyedBroncha"
     },
-    ["Cait Sith"] = {
+    ["CaitSith"] = {
         [1] = "Avatar",
-        [2] = "Cait Sith",
+        [2] = "CaitSith",
         [3] = "Light Affinity"
     },
     ["Carbuncle"] = {
@@ -92,57 +92,57 @@ return {
         [2] = "Carbuncle",
         [3] = "Light Affinity"
     },
-    ["Caring Kiyomaro"] = {
+    ["CaringKiyomaro"] = {
         [1] = "Jug Pet",
-        [2] = "Caring Kiyomaro"
+        [2] = "CaringKiyomaro"
     },
-    ["Chopsuey Chucky"] = {
+    ["ChopsueyChucky"] = {
         [1] = "Jug Pet",
-        [2] = "Chopsuey Chucky"
+        [2] = "ChopsueyChucky"
     },
-    ["Choral Leera"] = {
+    ["ChoralLeera"] = {
         [1] = "Jug Pet",
-        [2] = "Choral Leera"
+        [2] = "ChoralLeera"
     },
-    ["Coldblood Como"] = {
+    ["ColdbloodComo"] = {
         [1] = "Jug Pet",
-        [2] = "Coldblood Como"
+        [2] = "ColdbloodComo"
     },
-    ["Colibri Familiar"] = {
+    ["ColibriFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Colibri Familiar"
+        [2] = "ColibriFamiliar"
     },
-    ["Courier Carrie"] = {
+    ["CourierCarrie"] = {
         [1] = "Jug Pet",
-        [2] = "Courier Carrie"
+        [2] = "CourierCarrie"
     },
-    ["Crab Familiar"] = {
+    ["CrabFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Crab Familiar"
+        [2] = "CrabFamiliar"
     },
-    ["Crafty Clyvonne"] = {
+    ["CraftyClyvonne"] = {
         [1] = "Jug Pet",
-        [2] = "Crafty Clyvonne"
+        [2] = "CraftyClyvonne"
     },
-    ["Crude Raphie"] = {
+    ["CrudeRaphie"] = {
         [1] = "Jug Pet",
-        [2] = "Crude Raphie"
+        [2] = "CrudeRaphie"
     },
-    ["Cursed Annabelle"] = {
+    ["CursedAnnabelle"] = {
         [1] = "Jug Pet",
-        [2] = "Cursed Annabelle"
+        [2] = "CursedAnnabelle"
     },
-    ["Dapper Mac"] = {
+    ["DapperMac"] = {
         [1] = "Jug Pet",
-        [2] = "Dapper Mac"
+        [2] = "DapperMac"
     },
-    ["Daring Roland"] = {
+    ["DaringRoland"] = {
         [1] = "Jug Pet",
-        [2] = "Daring Roland"
+        [2] = "DaringRoland"
     },
-    ["Dark Spirit"] = {
+    ["DarkSpirit"] = {
         [1] = "Spirit",
-        [2] = "Dark Spirit",
+        [2] = "DarkSpirit",
         [3] = "Dark Affinity"
     },
     ["Diabolos"] = {
@@ -150,125 +150,125 @@ return {
         [2] = "Diabolos",
         [3] = "Dark Affinity"
     },
-    ["Dipper Yuly"] = {
+    ["DipperYuly"] = {
         [1] = "Jug Pet",
-        [2] = "Dipper Yuly"
+        [2] = "DipperYuly"
     },
-    ["Discreet Louise"] = {
+    ["DiscreetLouise"] = {
         [1] = "Jug Pet",
-        [2] = "Discreet Louise"
+        [2] = "DiscreetLouise"
     },
-    ["Droopy Dortwin"] = {
+    ["DroopyDortwin"] = {
         [1] = "Jug Pet",
-        [2] = "Droopy Dortwin"
+        [2] = "DroopyDortwin"
     },
-    ["Earth Spirit"] = {
+    ["EarthSpirit"] = {
         [1] = "Spirit",
-        [2] = "Earth Spirit",
+        [2] = "EarthSpirit",
         [3] = "Earth Affinity"
     },
-    ["Eft Familiar"] = {
+    ["EftFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Eft Familiar"
+        [2] = "EftFamiliar"
     },
-    ["Energized Sefina"] = {
+    ["EnergizedSefina"] = {
         [1] = "Jug Pet",
-        [2] = "Energized Sefina"
+        [2] = "EnergizedSefina"
     },
-    ["Faithful Falcorr"] = {
+    ["FaithfulFalcorr"] = {
         [1] = "Jug Pet",
-        [2] = "Faithful Falcorr"
+        [2] = "FaithfulFalcorr"
     },
-    ["Fatso Fargann"] = {
+    ["FatsoFargann"] = {
         [1] = "Jug Pet",
-        [2] = "Fatso Fargann"
+        [2] = "FatsoFargann"
     },
     ["Fenrir"] = {
         [1] = "Avatar",
         [2] = "Fenrir",
         [3] = "Dark Affinity"
     },
-    ["Fire Spirit"] = {
+    ["FireSpirit"] = {
         [1] = "Spirit",
-        [2] = "Fire Spirit",
+        [2] = "FireSpirit",
         [3] = "Fire Affinity"
     },
-    ["Fleet Reinhard"] = {
+    ["FleetReinhard"] = {
         [1] = "Jug Pet",
-        [2] = "Fleet Reinhard"
+        [2] = "FleetReinhard"
     },
-    ["Flowerpot Ben"] = {
+    ["FlowerpotBen"] = {
         [1] = "Jug Pet",
-        [2] = "Flowerpot Ben"
+        [2] = "FlowerpotBen"
     },
-    ["Flowerpot Bill"] = {
+    ["FlowerpotBill"] = {
         [1] = "Jug Pet",
-        [2] = "Flowerpot Bill"
+        [2] = "FlowerpotBill"
     },
-    ["Flowerpot Merle"] = {
+    ["FlowerpotMerle"] = {
         [1] = "Jug Pet",
-        [2] = "Flowerpot Merle"
+        [2] = "FlowerpotMerle"
     },
-    ["Fluffy Bredo"] = {
+    ["FluffyBredo"] = {
         [1] = "Jug Pet",
-        [2] = "Fluffy Bredo"
+        [2] = "FluffyBredo"
     },
-    ["Flytrap Familiar"] = {
+    ["FlytrapFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Flytrap Familiar"
+        [2] = "FlytrapFamiliar"
     },
-    ["Funguar Familiar"] = {
+    ["FunguarFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Funguar Familiar"
+        [2] = "FunguarFamiliar"
     },
     ["Garuda"] = {
         [1] = "Avatar",
         [2] = "Garuda",
         [3] = "Wind Affinity"
     },
-    ["Generous Arthur"] = {
+    ["GenerousArthur"] = {
         [1] = "Jug Pet",
-        [2] = "Generous Arthur"
+        [2] = "GenerousArthur"
     },
-    ["Gooey Gerard"] = {
+    ["GooeyGerard"] = {
         [1] = "Jug Pet",
-        [2] = "Gooey Gerard"
+        [2] = "GooeyGerard"
     },
-    ["Gorefang Hobs"] = {
+    ["GorefangHobs"] = {
         [1] = "Jug Pet",
-        [2] = "Gorefang Hobs"
+        [2] = "GorefangHobs"
     },
-    ["Gussy Hachirobe"] = {
+    ["GussyHachirobe"] = {
         [1] = "Jug Pet",
-        [2] = "Gussy Hachirobe"
+        [2] = "GussyHachirobe"
     },
-    ["Hare Familiar"] = {
+    ["HareFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Hare Familiar"
+        [2] = "HareFamiliar"
     },
-    ["Headbreaker Ken"] = {
+    ["HeadbreakerKen"] = {
         [1] = "Jug Pet",
-        [2] = "Headbreaker Ken"
+        [2] = "HeadbreakerKen"
     },
-    ["Herald Henry"] = {
+    ["HeraldHenry"] = {
         [1] = "Jug Pet",
-        [2] = "Herald Henry"
+        [2] = "HeraldHenry"
     },
-    ["Hippogryph Familiar"] = {
+    ["HippogryphFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Hippogryph Familiar"
+        [2] = "HippogryphFamiliar"
     },
     ["Homunculus"] = {
         [1] = "Jug Pet",
         [2] = "Homunculus"
     },
-    ["Hurler Percival"] = {
+    ["HurlerPercival"] = {
         [1] = "Jug Pet",
-        [2] = "Hurler Percival"
+        [2] = "HurlerPercival"
     },
-    ["Ice Spirit"] = {
+    ["IceSpirit"] = {
         [1] = "Spirit",
-        [2] = "Ice Spirit",
+        [2] = "IceSpirit",
         [3] = "Ice Affinity"
     },
     ["Ifrit"] = {
@@ -276,121 +276,121 @@ return {
         [2] = "Ifrit",
         [3] = "Fire Affinity"
     },
-    ["Jovial Edwin"] = {
+    ["JovialEdwin"] = {
         [1] = "Jug Pet",
-        [2] = "Jovial Edwin"
+        [2] = "JovialEdwin"
     },
-    ["Keeneared Steffi"] = {
+    ["KeenearedSteffi"] = {
         [1] = "Jug Pet",
-        [2] = "Keeneared Steffi"
+        [2] = "KeenearedSteffi"
     },
-    ["Left-Handed Yoko"] = {
+    ["Left-HandedYoko"] = {
         [1] = "Jug Pet",
-        [2] = "Left-Handed Yoko"
+        [2] = "Left-HandedYoko"
     },
     ["Leviathan"] = {
         [1] = "Avatar",
         [2] = "Leviathan",
         [3] = "Water Affinity"
     },
-    ["Lifedrinker Lars"] = {
+    ["LifedrinkerLars"] = {
         [1] = "Jug Pet",
-        [2] = "Lifedrinker Lars"
+        [2] = "LifedrinkerLars"
     },
-    ["Light Spirit"] = {
+    ["LightSpirit"] = {
         [1] = "Spirit",
-        [2] = "Light Spirit",
+        [2] = "LightSpirit",
         [3] = "Light Affinity"
     },
-    ["Lizard Familiar"] = {
+    ["LizardFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Lizard Familiar"
+        [2] = "LizardFamiliar"
     },
-    ["Lucky Lulush"] = {
+    ["LuckyLulush"] = {
         [1] = "Jug Pet",
-        [2] = "Lucky Lulush"
+        [2] = "LuckyLulush"
     },
-    ["Lullaby Melodia"] = {
+    ["LullabyMelodia"] = {
         [1] = "Jug Pet",
-        [2] = "Lullaby Melodia"
+        [2] = "LullabyMelodia"
     },
-    ["Lynx Familiar"] = {
+    ["LynxFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Lynx Familiar"
+        [2] = "LynxFamiliar"
     },
-    ["Mailbuster Cetas"] = {
+    ["MailbusterCetas"] = {
         [1] = "Jug Pet",
-        [2] = "Mailbuster Cetas"
+        [2] = "MailbusterCetas"
     },
-    ["Mayfly Familiar"] = {
+    ["MayflyFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Mayfly Familiar"
+        [2] = "MayflyFamiliar"
     },
-    ["Mite Familiar"] = {
+    ["MiteFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Mite Familiar"
+        [2] = "MiteFamiliar"
     },
-    ["Mosquito Familiar"] = {
+    ["MosquitoFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Mosquito Familiar"
+        [2] = "MosquitoFamiliar"
     },
-    ["Nursery Nazuna"] = {
+    ["NurseryNazuna"] = {
         [1] = "Jug Pet",
-        [2] = "Nursery Nazuna"
+        [2] = "NurseryNazuna"
     },
     ["Odin"] = {
         [1] = "Avatar",
         [2] = "Odin",
         [3] = "Dark Affinity"
     },
-    ["Panzer Galahad"] = {
+    ["PanzerGalahad"] = {
         [1] = "Jug Pet",
-        [2] = "Panzer Galahad"
+        [2] = "PanzerGalahad"
     },
-    ["Pondering Peter"] = {
+    ["PonderingPeter"] = {
         [1] = "Jug Pet",
-        [2] = "Pondering Peter"
+        [2] = "PonderingPeter"
     },
-    ["Porter Crab Familiar"] = {
+    ["PorterCrabFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Porter Crab Familiar"
+        [2] = "PorterCrabFamiliar"
     },
-    ["Presto Julio"] = {
+    ["PrestoJulio"] = {
         [1] = "Jug Pet",
-        [2] = "Presto Julio"
+        [2] = "PrestoJulio"
     },
     ["Ramuh"] = {
         [1] = "Avatar",
         [2] = "Ramuh",
         [3] = "Lightning Affinity"
     },
-    ["Redolent Candi"] = {
+    ["RedolentCandi"] = {
         [1] = "Jug Pet",
-        [2] = "Redolent Candi"
+        [2] = "RedolentCandi"
     },
-    ["Rhyming Shizuna"] = {
+    ["RhymingShizuna"] = {
         [1] = "Jug Pet",
-        [2] = "Rhyming Shizuna"
+        [2] = "RhymingShizuna"
     },
-    ["Saber Siravarde"] = {
+    ["SaberSiravarde"] = {
         [1] = "Jug Pet",
-        [2] = "Saber Siravarde"
+        [2] = "SaberSiravarde"
     },
-    ["Scissorleg Xerin"] = {
+    ["ScissorlegXerin"] = {
         [1] = "Jug Pet",
-        [2] = "Scissorleg Xerin"
+        [2] = "ScissorlegXerin"
     },
-    ["Sharpwit Hermes"] = {
+    ["SharpwitHermes"] = {
         [1] = "Jug Pet",
-        [2] = "Sharpwit Hermes"
+        [2] = "SharpwitHermes"
     },
-    ["Sheep Familiar"] = {
+    ["SheepFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Sheep Familiar"
+        [2] = "SheepFamiliar"
     },
-    ["Shellbuster Orob"] = {
+    ["ShellbusterOrob"] = {
         [1] = "Jug Pet",
-        [2] = "Shellbuster Orob"
+        [2] = "ShellbusterOrob"
     },
     ["Shiva"] = {
         [1] = "Avatar",
@@ -402,103 +402,103 @@ return {
         [2] = "Siren",
         [3] = "Wind Affinity"
     },
-    ["Slime Familiar"] = {
+    ["SlimeFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Slime Familiar"
+        [2] = "SlimeFamiliar"
     },
-    ["Slippery Silas"] = {
+    ["SlipperySilas"] = {
         [1] = "Jug Pet",
-        [2] = "Slippery Silas"
+        [2] = "SlipperySilas"
     },
-    ["Spider Familiar"] = {
+    ["SpiderFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Spider Familiar"
+        [2] = "SpiderFamiliar"
     },
-    ["Stalwart Angelina"] = {
+    ["StalwartAngelina"] = {
         [1] = "Jug Pet",
-        [2] = "Stalwart Angelina"
+        [2] = "StalwartAngelina"
     },
-    ["Submerged Iyo"] = {
+    ["SubmergedIyo"] = {
         [1] = "Jug Pet",
-        [2] = "Submerged Iyo"
+        [2] = "SubmergedIyo"
     },
-    ["Sultry Patrice"] = {
+    ["SultryPatrice"] = {
         [1] = "Jug Pet",
-        [2] = "Sultry Patrice"
+        [2] = "SultryPatrice"
     },
-    ["Sunburst Malfik"] = {
+    ["SunburstMalfik"] = {
         [1] = "Jug Pet",
-        [2] = "Sunburst Malfik"
+        [2] = "SunburstMalfik"
     },
-    ["Surging Storm"] = {
+    ["SurgingStorm"] = {
         [1] = "Jug Pet",
-        [2] = "Surging Storm"
+        [2] = "SurgingStorm"
     },
-    ["Suspicious Alice"] = {
+    ["SuspiciousAlice"] = {
         [1] = "Jug Pet",
-        [2] = "Suspicious Alice"
+        [2] = "SuspiciousAlice"
     },
-    ["Sweet Caroline"] = {
+    ["SweetCaroline"] = {
         [1] = "Jug Pet",
-        [2] = "Sweet Caroline"
+        [2] = "SweetCaroline"
     },
-    ["Swift Sieghard"] = {
+    ["SwiftSieghard"] = {
         [1] = "Jug Pet",
-        [2] = "Swift Sieghard"
+        [2] = "SwiftSieghard"
     },
-    ["Swooping Zhivago"] = {
+    ["SwoopingZhivago"] = {
         [1] = "Jug Pet",
-        [2] = "Swooping Zhivago"
+        [2] = "SwoopingZhivago"
     },
-    ["Threestar Lynn"] = {
+    ["ThreestarLynn"] = {
         [1] = "Jug Pet",
-        [2] = "Threestar Lynn"
+        [2] = "ThreestarLynn"
     },
-    ["Thunder Spirit"] = {
+    ["ThunderSpirit"] = {
         [1] = "Spirit",
-        [2] = "Thunder Spirit",
+        [2] = "ThunderSpirit",
         [3] = "Lightning Affinity"
     },
-    ["Tiger Familiar"] = {
+    ["TigerFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Tiger Familiar"
+        [2] = "TigerFamiliar"
     },
     ["Titan"] = {
         [1] = "Avatar",
         [2] = "Titan",
         [3] = "Earth Affinity"
     },
-    ["Turbid Toloi"] = {
+    ["TurbidToloi"] = {
         [1] = "Jug Pet",
-        [2] = "Turbid Toloi"
+        [2] = "TurbidToloi"
     },
-    ["Vivacious Gaston"] = {
+    ["VivaciousGaston"] = {
         [1] = "Jug Pet",
-        [2] = "Vivacious Gaston"
+        [2] = "VivaciousGaston"
     },
-    ["Vivacious Vickie"] = {
+    ["VivaciousVickie"] = {
         [1] = "Jug Pet",
-        [2] = "Vivacious Vickie"
+        [2] = "VivaciousVickie"
     },
-    ["Voracious Audrey"] = {
+    ["VoraciousAudrey"] = {
         [1] = "Jug Pet",
-        [2] = "Voracious Audrey"
+        [2] = "VoraciousAudrey"
     },
-    ["Warlike Patrick"] = {
+    ["WarlikePatrick"] = {
         [1] = "Jug Pet",
-        [2] = "Warlike Patrick"
+        [2] = "WarlikePatrick"
     },
-    ["Water Spirit"] = {
+    ["WaterSpirit"] = {
         [1] = "Spirit",
-        [2] = "Water Spirit",
+        [2] = "WaterSpirit",
         [3] = "Water Affinity"
     },
-    ["Weevil Familiar"] = {
+    ["WeevilFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Weevil Familiar"
+        [2] = "WeevilFamiliar"
     },
-    ["Yellow Beetle Familiar"] = {
+    ["YellowBeetleFamiliar"] = {
         [1] = "Jug Pet",
-        [2] = "Yellow Beetle Familiar"
+        [2] = "YellowBeetleFamiliar"
     },
 }
