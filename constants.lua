@@ -42,7 +42,7 @@ constants.Events = {
 
 constants.InterimEvents = {
     Midcast = "Interimcast",
-    Midshot = "Interimshot",
+    Midshot = "Interimshot"
 }
 
 constants.Transitions = {

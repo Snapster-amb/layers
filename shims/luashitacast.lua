@@ -60,10 +60,17 @@ gData.GetPetAction = function()
     end
 end
 
+gData.GetCurrentCall = function()
+    return 'N/A'
+end
+
 gEquip = {}
 
 gEquip.ClearBuffer = function()
 end
 
 gEquip.ProcessBuffer = function()
+end
+
+gEquip.ProcessImmediateBuffer = function()
 end

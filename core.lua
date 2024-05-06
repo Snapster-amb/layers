@@ -138,15 +138,17 @@ core.HandleAbility = function()
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Ability', action.Name)
-    return buildEventSetAndEquipWithCallbacks(classifiers, 'Ability', gData.playerAction or action)
+    buildEventSetAndEquipWithCallbacks(classifiers, 'Ability', gData.playerAction or action)
 end
 
 core.HandleItem = function()
-    globals.CurrentEventHandler = core.HandleItem
+    globals.CurrentEventHandler = function() end
     lastPlayerStatus = nil
     local action = gData.GetAction()
-    local classifiers = {action.Name}
-    return buildEventSetAndEquipWithCallbacks(classifiers, 'Item', gData.playerAction or action)
+    if action then
+        local classifiers = {action.Name}
+        buildEventSetAndEquipWithCallbacks(classifiers, 'Item', gData.playerAction or action)
+    end
 end
 
 core.HandlePrecast = function()
@@ -154,27 +156,46 @@ core.HandlePrecast = function()
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Spell', action.Name)
-    return buildEventSetAndEquipWithCallbacks(classifiers, 'Precast', gData.playerAction or action)
+    buildEventSetAndEquipWithCallbacks(classifiers, 'Precast', gData.playerAction or action)
 end
 
 core.HandleMidcast = function()
     globals.CurrentEventHandler = core.HandleMidcast
     lastPlayerStatus = nil
     local action = gData.GetAction()
-    local classifiers = taxonomy.GetRawClassifiers('Spell', action.Name)
-    return buildEventSetAndEquipWithCallbacks(classifiers, 'Midcast', gData.playerAction or action)
+    if action then
+        local classifiers = taxonomy.GetRawClassifiers('Spell', action.Name)
+        local call = gData.GetCurrentCall()
+        if call ~= "HandleMidcast" then
+            gEquip.ClearBuffer()
+        end
+        buildEventSetAndEquipWithCallbacks(classifiers, 'Midcast', gData.playerAction or action)
+        if call ~= "HandleMidcast" then
+            gEquip.ProcessImmediateBuffer()
+        end
+    end
 end
 
 core.HandlePreshot = function()
     globals.CurrentEventHandler = core.HandlePreshot
     lastPlayerStatus = nil
-    return buildEventSetAndEquipWithCallbacks({}, 'Preshot')
+    buildEventSetAndEquipWithCallbacks({}, 'Preshot')
 end
 
 core.HandleMidshot = function()
     globals.CurrentEventHandler = core.HandleMidshot
     lastPlayerStatus = nil
-    return buildEventSetAndEquipWithCallbacks({}, 'Midshot')
+    local action = gData.GetAction()
+    if action then
+        local call = gData.GetCurrentCall()
+        if call ~= "HandleMidshot" then
+            gEquip.ClearBuffer()
+        end
+        buildEventSetAndEquipWithCallbacks({}, 'Midshot')
+        if call ~= "HandleMidshot" then
+            gEquip.ProcessImmediateBuffer()
+        end
+    end
 end
 
 core.HandleWeaponskill = function()
@@ -182,7 +203,7 @@ core.HandleWeaponskill = function()
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Weaponskill', action.Name)
-    return buildEventSetAndEquipWithCallbacks(classifiers, 'Weaponskill', gData.playerAction or action)
+    buildEventSetAndEquipWithCallbacks(classifiers, 'Weaponskill', gData.playerAction or action)
 end
 
 ---
