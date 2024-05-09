@@ -58,6 +58,7 @@ if gearswap then
     local modules = {
         { ['shims/gearswap'] = '' },
         { ['shims/luashitacast'] = '' },
+        { ['shims/stickyitems'] = 'stickyitems' },
         { ['modes'] = 'modes' },
         { ['chat'] = 'chat' },
         { ['logger'] = 'logger' },
@@ -154,7 +155,10 @@ else
         table = table,
         error = error,
         rawget = rawget,
-        rawset = rawset
+        rawset = rawset,
+        struct = struct,
+        ashita = ashita,
+        bit = bit
     }
 
     local modules = {
@@ -168,6 +172,7 @@ else
         'utils',
         'callbacks',
         'taxonomy',
+        'stickyitems',
         'core'
     }
 

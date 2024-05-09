@@ -156,6 +156,16 @@ chat.transition = function (str)
 end
 
 --[[
+* Returns the string wrapped in a purple color.
+*
+* @param {string} str - The string to wrap.
+* @return {string} The wrapped string.
+--]]
+chat.charged = function (str)
+    return chat.color2(8, str);
+end
+
+--[[
 * Table of predefined color codes.
 --]]
 chat.colors = { };

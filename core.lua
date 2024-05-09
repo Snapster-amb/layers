@@ -130,6 +130,7 @@ core.HandleDefault = function()
     end
     lastPlayerStatus = player.Status
     lastPetEvent = petEvent
+    stickyitems.Bind()
     logger.Unmute()
 end
 
@@ -139,6 +140,7 @@ core.HandleAbility = function()
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Ability', action.Name)
     buildEventSetAndEquipWithCallbacks(classifiers, 'Ability', gData.playerAction or action)
+    stickyitems.Bind()
 end
 
 core.HandleItem = function()
@@ -149,6 +151,7 @@ core.HandleItem = function()
         local classifiers = {action.Name}
         buildEventSetAndEquipWithCallbacks(classifiers, 'Item', gData.playerAction or action)
     end
+    stickyitems.Bind()
 end
 
 core.HandlePrecast = function()
@@ -157,6 +160,7 @@ core.HandlePrecast = function()
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Spell', action.Name)
     buildEventSetAndEquipWithCallbacks(classifiers, 'Precast', gData.playerAction or action)
+    stickyitems.Bind()
 end
 
 core.HandleMidcast = function()
@@ -174,12 +178,14 @@ core.HandleMidcast = function()
             gEquip.ProcessImmediateBuffer()
         end
     end
+    stickyitems.Bind()
 end
 
 core.HandlePreshot = function()
     globals.CurrentEventHandler = core.HandlePreshot
     lastPlayerStatus = nil
     buildEventSetAndEquipWithCallbacks({}, 'Preshot')
+    stickyitems.Bind()
 end
 
 core.HandleMidshot = function()
@@ -196,6 +202,7 @@ core.HandleMidshot = function()
             gEquip.ProcessImmediateBuffer()
         end
     end
+    stickyitems.Bind()
 end
 
 core.HandleWeaponskill = function()
@@ -204,6 +211,7 @@ core.HandleWeaponskill = function()
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Weaponskill', action.Name)
     buildEventSetAndEquipWithCallbacks(classifiers, 'Weaponskill', gData.playerAction or action)
+    stickyitems.Bind()
 end
 
 ---
@@ -288,5 +296,21 @@ core.GetOrderedClassifiers = taxonomy.GetOrderedClassifiers
 ---
 -- Expose the RegisterCallback method to user job files.
 core.RegisterCallback = callbacks.Register
+
+---
+-- Expose the AddChargedItem method to user job files
+core.AddChargedItem = stickyitems.AddChargedItem
+
+---
+-- Expose the RemoveChargedItem method to user job files
+core.RemoveChargedItem = stickyitems.RemoveChargedItem
+
+---
+-- Expose the AddEnchantedItem method to user job files
+core.AddEnchantedItem = stickyitems.AddEnchantedItem
+
+---
+-- Expose the RemoveEnchantedItem method to user job files
+core.RemoveEnchantedItem = stickyitems.RemoveEnchantedItem
 
 return proxy
