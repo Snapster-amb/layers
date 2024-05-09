@@ -26,9 +26,28 @@ local function itemChargeIsReady(item)
     return useTimeRemaining <= 0
 end
 
+local extraSlots = {
+    ["cannot equip hand, leg, or footgear"] = {"Hands", "Legs", "Feet"},
+    ["cannot equip handgear"] = {"Hands"},
+    ["cannot equip footgear"] = {"Feet"},
+    ["cannot equip headgear"] = {"Head"},
+    ["cannot equip leggear"] = {"Hands", "Legs", "Feet"}
+}
+
+local function getExtraSlots(item)
+    local resource = AshitaCore:GetResourceManager():GetItemByName(item, 0)
+    local description = string.lower(resource.Description[1])
+    for keyphrase, slots in pairs(extraSlots) do
+        if string.find(description, keyphrase) then
+            return slots
+        end
+    end
+    return {}
+end
+
 local function itemIsCharged(item)
     local resource = AshitaCore:GetResourceManager():GetItemByName(item, 0)
-    if not resource then
+    if not resource or resource.Name[1] ~= item then
         logger.Error("Provided item " .. item .. " not found in resources")
         return false
     elseif bit.band(resource.Flags, 2048) == 0 then
@@ -51,9 +70,15 @@ stickyitems.Bind = function()
         if chargedItems[item.Name] and itemChargeIsReady(item) then
             logger.Debug(chat.message("Equipping ") .. chat.charged("Charged") .. chat.message(" item ") .. chat.location(item.Name) .. chat.message(" to ") .. chat.group(slot), true)
             gFunc.Equip(slot, 'ignore')
+            for _, extraSlot in pairs(getExtraSlots(item.Name)) do
+                gFunc.Equip(extraSlot, 'ignore')
+            end
         elseif enchantedItems[item.Name] and (itemChargeIsReady(item) or gData.GetBuffCount("Enchantment") > 0) then
             logger.Debug(chat.message("Equipping ") .. chat.charged("Enchanted") .. chat.message(" item ") .. chat.location(item.Name) .. chat.message(" to ") .. chat.group(slot), true)
             gFunc.Equip(slot, 'ignore')
+            for _, extraSlot in pairs(getExtraSlots(item.Name)) do
+                gFunc.Equip(extraSlot, 'ignore')
+            end
         end
     end
 end
