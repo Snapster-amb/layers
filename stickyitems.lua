@@ -61,6 +61,21 @@ local function itemIsCharged(item)
     end
 end
 
+local function bind(item, slot)
+    gFunc.Equip(slot, item)
+    local extraSlots = getExtraSlots(item.Name)
+    for _, extraSlot in pairs(extraSlots) do
+        gFunc.Equip(extraSlot, 'ignore')
+    end
+    local call = gData.GetCurrentCall()
+    if call == 'HandleMidcast' or call == 'HandleMidshot' or call == 'N/A' then
+        gFunc.InterimEquip(slot, item)
+        for _, extraSlot in pairs(extraSlots) do
+            gFunc.InterimEquip(extraSlot, 'ignore')
+        end
+    end
+end
+
 ---
 -- Binds any charged or enchanted items that should remain equipped.
 --
@@ -69,16 +84,10 @@ stickyitems.Bind = function()
     for slot, item in pairs(gData.GetEquipment()) do
         if chargedItems[item.Name] and itemChargeIsReady(item) then
             logger.Debug(chat.message("Equipping ") .. chat.charged("Charged") .. chat.message(" item ") .. chat.location(item.Name) .. chat.message(" to ") .. chat.group(slot), true)
-            gFunc.Equip(slot, 'ignore')
-            for _, extraSlot in pairs(getExtraSlots(item.Name)) do
-                gFunc.Equip(extraSlot, 'ignore')
-            end
+            bind(item, slot)
         elseif enchantedItems[item.Name] and (itemChargeIsReady(item) or gData.GetBuffCount("Enchantment") > 0) then
             logger.Debug(chat.message("Equipping ") .. chat.charged("Enchanted") .. chat.message(" item ") .. chat.location(item.Name) .. chat.message(" to ") .. chat.group(slot), true)
-            gFunc.Equip(slot, 'ignore')
-            for _, extraSlot in pairs(getExtraSlots(item.Name)) do
-                gFunc.Equip(extraSlot, 'ignore')
-            end
+            bind(item, slot)
         end
     end
 end

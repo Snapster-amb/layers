@@ -174,11 +174,11 @@ core.HandleMidcast = function()
             gEquip.ClearBuffer()
         end
         buildEventSetAndEquipWithCallbacks(classifiers, 'Midcast', gData.playerAction or action)
+        stickyitems.Bind()
         if call ~= "HandleMidcast" then
             gEquip.ProcessImmediateBuffer()
         end
     end
-    stickyitems.Bind()
 end
 
 core.HandlePreshot = function()
@@ -198,11 +198,11 @@ core.HandleMidshot = function()
             gEquip.ClearBuffer()
         end
         buildEventSetAndEquipWithCallbacks({}, 'Midshot')
+        stickyitems.Bind()
         if call ~= "HandleMidshot" then
             gEquip.ProcessImmediateBuffer()
         end
     end
-    stickyitems.Bind()
 end
 
 core.HandleWeaponskill = function()
