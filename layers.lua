@@ -68,6 +68,7 @@ if gearswap then
         { ['utils'] = 'utils' },
         { ['callbacks'] = 'callbacks' },
         { ['taxonomy'] = 'taxonomy' },
+        { ['conquest'] = 'conquest' },
         { ['core'] = 'core' },
         { ['shims/constants'] = '' },
         { ['shims/hotkeys'] = 'hotkeys' }
@@ -173,6 +174,7 @@ else
         'callbacks',
         'taxonomy',
         'stickyitems',
+        'conquest',
         'core'
     }
 

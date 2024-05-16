@@ -14,35 +14,38 @@
 -- which is applied on top of the user's base set.
 local core = {}
 
+local function protectTableMethods(innerTable)
+    local proxy = {}
+    local mt = {
+        __index = function (t, k)
+            local v = rawget(innerTable, k)
+            if v then
+                return v
+            end
+            return rawget(proxy, k)
+        end,
+        __newindex = function (t, k, v)
+            if k == 'Sets' then
+                if type(v) ~= 'table' then
+                    error("Untable to set field Sets - value must be a table")
+                end
+                rawset(innerTable, k, v)
+            else
+                if rawget(innerTable, k) then
+                    error("Unable to set protected field " .. k)
+                end
+                rawset(proxy, k, v)
+            end
+        end,
+        __metatable = 'Protected'
+    }
+    setmetatable(proxy, mt)
+    return proxy
+end
+
 ---
 -- Protect get/set access to the profile that could break the extension
-local proxy = {}
-
-local mt = {
-    __index = function (t, k)
-        local v = rawget(core, k)
-        if v then
-            return v
-        end
-        return rawget(proxy, k)
-    end,
-    __newindex = function (t, k, v)
-        if k == 'Sets' then
-            if type(v) ~= 'table' then
-                error("Untable to set field Sets - value must be a table")
-            end
-            rawset(core, k, v)
-        else
-            if rawget(core, k) then
-                error("Unable to set protected field " .. k)
-            end
-            rawset(proxy, k, v)
-        end
-    end,
-    __metatable = 'Protected'
-}
-
-setmetatable(proxy, mt)
+local proxy = protectTableMethods(core)
 
 core.Sets = utils.CreateBaseSets()
 
@@ -312,5 +315,9 @@ core.AddEnchantedItem = stickyitems.AddEnchantedItem
 ---
 -- Expose the RemoveEnchantedItem method to user job files
 core.RemoveEnchantedItem = stickyitems.RemoveEnchantedItem
+
+---
+-- Expose the Conquest module user job files
+core.conquest = protectTableMethods(conquest)
 
 return proxy
