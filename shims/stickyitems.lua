@@ -1,6 +1,8 @@
 ---
 -- Shim file for gearswap. This feature can't be supported on windower4.
 ---
+local stickyitems = {}
+
 stickyitems.Bind = function() end
 
 stickyitems.AddChargedItem = function(item)
