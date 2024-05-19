@@ -162,25 +162,25 @@ local fixedControl = {
 
 --This data should not be changed unless it is found to be inaccurate or custom regions are added.
 local packetData = {
-    { name="Ronfaure", field="Bitpacked Ronfaure Info" },
-    { name="Zulkheim", field="Bitpacked Zulkheim Info" },
-    { name="Norvallen", field="Bitpacked Norvallen Info" },
-    { name="Gustaberg", field="Bitpacked Gustaberg Info" },
-    { name="Derfland", field="Bitpacked Derfland Info" },
-    { name="Sarutabaruta", field="Bitpacked Sarutabaruta Info" },
-    { name="Kolshushu", field="Bitpacked Kolshushu Info" },
-    { name="Aragoneu", field="Bitpacked Aragoneu Info" },
-    { name="Fauregandi", field="Bitpacked Fauregandi Info" },
-    { name="Valdeaunia", field="Bitpacked Valdeaunia Info" },
-    { name="Qufim", field="Bitpacked Qufim Info" },
-    { name="Li'Telor", field="Bitpacked Li'Telor Info" },
-    { name="Kuzotz", field="Bitpacked Kuzotz Info" },
-    { name="Vollbow", field="Bitpacked Vollbow Info" },
-    { name="Elshimo Lowlands", field="Bitpacked Elshimo Lowlands Info" },
-    { name="Elshimo Uplands", field="Bitpacked Elshimo Uplands Info" },
-    { name="Tu'Lia", field="Bitpacked Tu'Lia Info" },
-    { name="Movalpolos", field="Bitpacked Movalpolos Info" },
-    { name="Tavnazian Archipelago", field="Bitpacked Tavnazian Archipelago Info" },
+    { offset=0x1D, name="Ronfaure" },
+    { offset=0x21, name="Zulkheim" },
+    { offset=0x25, name="Norvallen" },
+    { offset=0x29, name="Gustaberg" },
+    { offset=0x2D, name="Derfland" },
+    { offset=0x31, name="Sarutabaruta" },
+    { offset=0x35, name="Kolshushu" },
+    { offset=0x39, name="Aragoneu" },
+    { offset=0x3D, name="Fauregandi" },
+    { offset=0x41, name="Valdeaunia" },
+    { offset=0x45, name="Qufim" },
+    { offset=0x49, name="Li'Telor" },
+    { offset=0x4D, name="Kuzotz" },
+    { offset=0x51, name="Vollbow" },
+    { offset=0x55, name="Elshimo Lowlands" },
+    { offset=0x59, name="Elshimo Uplands" },
+    { offset=0x5D, name="Tu'Lia" },
+    { offset=0x61, name="Movalpolos" },
+    { offset=0x65, name="Tavnazian Archipelago" },
 }
 
 local regionControllers = {}
@@ -208,36 +208,32 @@ local currentZone = windower.ffxi.get_info().zone
 local currentControl = LookupControl(currentZone)
 logger.Info(chat.message("Region control set to ") .. chat.highlight(currentControl))
 
-windower.raw_register_event('incoming chunk', function (id, data, modified, injected, blocked)
+local function updateConquestData(id, data, modified, injected, blocked)
     if (id == 0x00A) then
-        local p = packets.parse('incoming', data)
-        currentZone = p.Zone
+        currentZone = data:unpack('H', 0x30 + 1)
         local newControl = LookupControl(currentZone)
         if (newControl ~= currentControl) then
             currentControl = newControl
-            logger.Info(chat.message("Region control set to ") .. chat.highlight(currentControl))
         end
     elseif (id == 0x5E) then
-        local p = packets.parse('incoming', data)
         for _, region in ipairs(packetData) do
-            local controller = bit.band(p[region.field], 0b11)
+            local controller = data:byte(region.offset + 1)
             regionControllers[region.name] = controllerNames[controller]
         end
         local newControl = LookupControl(currentZone)
         if (newControl ~= currentControl) then
             currentControl = newControl
-            logger.Info(chat.message("Region control set to ") .. chat.highlight(currentControl))
         end
     elseif (id == 0x61) then
-        local p = packets.parse('incoming', data)
-        local nationIndex = p.Nation
+        local nationIndex = data:byte(0x50 + 1)
         local newNation = controllerNames[nationIndex + 1]
         if (newNation ~= currentNation) then
             currentNation = newNation
-            logger.Info(chat.message("Player nation set to ") .. chat.highlight(currentNation)) 
         end
     end
-end)
+end
+
+windower.raw_register_event('incoming chunk', updateConquestData)
 
 conquest.GetCurrentControl = function()
     return currentControl

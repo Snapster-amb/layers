@@ -19,7 +19,8 @@ if gearswap then
         player = player,
         pet = pet,
         send_command = send_command,
-        sets = sets
+        sets = sets,
+        windower = windower
     }
 
     local loadFile = function(path)
@@ -68,7 +69,7 @@ if gearswap then
         { ['utils'] = 'utils' },
         { ['callbacks'] = 'callbacks' },
         { ['taxonomy'] = 'taxonomy' },
-        { ['conquest'] = 'conquest' },
+        { ['shims/conquest'] = 'conquest' },
         { ['core'] = 'core' },
         { ['shims/constants'] = '' },
         { ['shims/hotkeys'] = 'hotkeys' }
