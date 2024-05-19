@@ -192,7 +192,9 @@ return {
         [3] = "March",
         [4] = "Advancing March",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Adventurer's Dirge"] = {
         [1] = "Singing",
@@ -430,7 +432,9 @@ return {
         [4] = "DEX Enfeebling Magical Blue",
         [5] = "Anvil Lightning",
         [6] = "Lightning Affinity",
-        [7] = "Lightning Magic Damage"
+        [7] = "Thunder Affinity",
+        [8] = "Lightning Magic Damage",
+        [9] = "Thunder Magic Damage"
     },
     ["Apururu (UC)"] = {
         [1] = "Trust",
@@ -452,7 +456,9 @@ return {
         [3] = "Prelude",
         [4] = "Archer's Prelude",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Arciela"] = {
         [1] = "Trust",
@@ -886,7 +892,9 @@ return {
         [3] = "Barstatus",
         [4] = "Barpoison",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Barpoisonra"] = {
         [1] = "Enhancing",
@@ -894,7 +902,9 @@ return {
         [3] = "Barstatus",
         [4] = "Barpoisonra",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Barrier Tusk"] = {
         [1] = "Blue",
@@ -990,7 +1000,9 @@ return {
         [3] = "Barelement",
         [4] = "Barwater",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Barwatera"] = {
         [1] = "Enhancing",
@@ -998,7 +1010,9 @@ return {
         [3] = "Barelement",
         [4] = "Barwatera",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Battery Charge"] = {
         [1] = "Blue",
@@ -1107,7 +1121,9 @@ return {
         [3] = "Madrigal",
         [4] = "Blade Madrigal",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Blank Gaze"] = {
         [1] = "Blue",
@@ -1201,7 +1217,9 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Blitzstrahl",
         [6] = "Lightning Affinity",
-        [7] = "Lightning Magic Damage"
+        [7] = "Thunder Affinity",
+        [8] = "Lightning Magic Damage",
+        [9] = "Thunder Magic Damage"
     },
     ["Blizzaga"] = {
         [1] = "Elemental",
@@ -1383,7 +1401,9 @@ return {
         [3] = "Boost-Stat",
         [4] = "Boost-DEX",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Boost-INT"] = {
         [1] = "Enhancing",
@@ -1451,7 +1471,9 @@ return {
         [2] = "Ancient Magic",
         [3] = "Burst",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Magic Damage"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Magic Damage",
+        [7] = "Thunder Magic Damage"
     },
     ["Burst II"] = {
         [1] = "Elemental",
@@ -1459,7 +1481,9 @@ return {
         [3] = "Ancient Magic II",
         [4] = "Burst II",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Cactuar Fugue"] = {
         [1] = "Singing",
@@ -1535,7 +1559,9 @@ return {
         [3] = "DEX Magical Blue",
         [4] = "Charged Whisker",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Cherukiki"] = {
         [1] = "Trust",
@@ -1632,7 +1658,9 @@ return {
         [3] = "INT Magical Blue",
         [4] = "Crashing Thunder",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Cruel Joke"] = {
         [1] = "Blue",
@@ -1916,7 +1944,9 @@ return {
         [3] = "Etude",
         [4] = "Dextrous Etude",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Dia"] = {
         [1] = "Enfeebling",
@@ -2370,7 +2400,9 @@ return {
         [2] = "Enspell",
         [3] = "Enthunder",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Enhancement"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Enhancement",
+        [7] = "Thunder Enhancement"
     },
     ["Enthunder II"] = {
         [1] = "Enhancing",
@@ -2378,7 +2410,9 @@ return {
         [3] = "Enspell II",
         [4] = "Enthunder II",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Entomb"] = {
         [1] = "Blue",
@@ -3015,7 +3049,9 @@ return {
         [3] = "Gain-Stat",
         [4] = "Gain-DEX",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Gain-INT"] = {
         [1] = "Enhancing",
@@ -3120,7 +3156,9 @@ return {
         [2] = "Geocolure",
         [3] = "Geo-DEX",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Enhancement"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Enhancement",
+        [7] = "Thunder Enhancement"
     },
     ["Geo-Fade"] = {
         [1] = "Geomancy",
@@ -3197,7 +3235,9 @@ return {
         [2] = "Geocolure",
         [3] = "Geo-Malaise",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Enhancement"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Enhancement",
+        [7] = "Thunder Enhancement"
     },
     ["Geo-Paralysis"] = {
         [1] = "Geomancy",
@@ -3218,7 +3258,9 @@ return {
         [2] = "Geocolure",
         [3] = "Geo-Precision",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Enhancement"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Enhancement",
+        [7] = "Thunder Enhancement"
     },
     ["Geo-Refresh"] = {
         [1] = "Geomancy",
@@ -3492,7 +3534,9 @@ return {
         [4] = "Pastoral",
         [5] = "Herb Pastoral",
         [6] = "Lightning Affinity",
-        [7] = "Lightning Enhancement"
+        [7] = "Thunder Affinity",
+        [8] = "Lightning Enhancement",
+        [9] = "Thunder Enhancement"
     },
     ["Herculean Etude"] = {
         [1] = "Singing",
@@ -3573,7 +3617,9 @@ return {
         [3] = "Prelude",
         [4] = "Hunter's Prelude",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Huton: Ichi"] = {
         [1] = "Ninjutsu",
@@ -3769,7 +3815,9 @@ return {
         [2] = "Indicolure",
         [3] = "Indi-DEX",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Enhancement"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Enhancement",
+        [7] = "Thunder Enhancement"
     },
     ["Indi-Fade"] = {
         [1] = "Geomancy",
@@ -3846,7 +3894,9 @@ return {
         [2] = "Indicolure",
         [3] = "Indi-Malaise",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Enhancement"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Enhancement",
+        [7] = "Thunder Enhancement"
     },
     ["Indi-Paralysis"] = {
         [1] = "Geomancy",
@@ -3867,7 +3917,9 @@ return {
         [2] = "Indicolure",
         [3] = "Indi-Precision",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Enhancement"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Enhancement",
+        [7] = "Thunder Enhancement"
     },
     ["Indi-Refresh"] = {
         [1] = "Geomancy",
@@ -3980,7 +4032,9 @@ return {
         [2] = "Helix",
         [3] = "Ionohelix",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Magic Damage"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Magic Damage",
+        [7] = "Thunder Magic Damage"
     },
     ["Ionohelix II"] = {
         [1] = "Elemental",
@@ -3988,7 +4042,9 @@ return {
         [3] = "Helix II",
         [4] = "Ionohelix II",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Iroha"] = {
         [1] = "Trust",
@@ -4659,7 +4715,9 @@ return {
         [4] = "MND Enfeebling Magical Blue",
         [5] = "Mind Blast",
         [6] = "Lightning Affinity",
-        [7] = "Lightning Magic Damage"
+        [7] = "Thunder Affinity",
+        [8] = "Lightning Magic Damage",
+        [9] = "Thunder Magic Damage"
     },
     ["Mnejing"] = {
         [1] = "Trust",
@@ -4958,7 +5016,9 @@ return {
         [4] = "Elemental Spikes Blue",
         [5] = "Plasma Charge",
         [6] = "Lightning Affinity",
-        [7] = "Lightning Enhancement"
+        [7] = "Thunder Affinity",
+        [8] = "Lightning Enhancement",
+        [9] = "Thunder Enhancement"
     },
     ["Plenilune Embrace"] = {
         [1] = "Blue",
@@ -5348,7 +5408,9 @@ return {
         [3] = "Elemental Ninjutsu Ichi",
         [4] = "Raiton: Ichi",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Raiton: Ni"] = {
         [1] = "Ninjutsu",
@@ -5356,7 +5418,9 @@ return {
         [3] = "Elemental Ninjutsu Ni",
         [4] = "Raiton: Ni",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Raiton: San"] = {
         [1] = "Ninjutsu",
@@ -5364,7 +5428,9 @@ return {
         [3] = "Elemental Ninjutsu San",
         [4] = "Raiton: San",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Ram Charge"] = {
         [1] = "Blue",
@@ -5377,7 +5443,9 @@ return {
         [2] = "Avatar",
         [3] = "Ramuh",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Enhancement"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Enhancement",
+        [7] = "Thunder Enhancement"
     },
     ["Raptor Mazurka"] = {
         [1] = "Singing",
@@ -5934,7 +6002,9 @@ return {
         [2] = "Enfeebling Elemental",
         [3] = "Shock",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Magic Damage"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Magic Damage",
+        [7] = "Thunder Magic Damage"
     },
     ["Shock Spikes"] = {
         [1] = "Enhancing",
@@ -5942,7 +6012,9 @@ return {
         [3] = "Elemental Spikes",
         [4] = "Shock Spikes",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Sickle Slash"] = {
         [1] = "Blue",
@@ -6272,7 +6344,9 @@ return {
         [2] = "Enfeebling Dark",
         [3] = "Stun",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Enfeeblement"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Enfeeblement",
+        [7] = "Thunder Enfeeblement"
     },
     ["Sub-zero Smash"] = {
         [1] = "Blue",
@@ -6343,7 +6417,9 @@ return {
         [3] = "Madrigal",
         [4] = "Sword Madrigal",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Sylvie (UC)"] = {
         [1] = "Trust",
@@ -6448,7 +6524,9 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Temporal Shift",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Enfeeblement"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Enfeeblement",
+        [7] = "Thunder Enfeeblement"
     },
     ["Tenebral Crush"] = {
         [1] = "Blue",
@@ -6507,7 +6585,9 @@ return {
         [2] = "Ga",
         [3] = "Thundaga",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Magic Damage"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Magic Damage",
+        [7] = "Thunder Magic Damage"
     },
     ["Thundaga II"] = {
         [1] = "Elemental",
@@ -6515,7 +6595,9 @@ return {
         [3] = "Ga II",
         [4] = "Thundaga II",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Thundaga III"] = {
         [1] = "Elemental",
@@ -6523,7 +6605,9 @@ return {
         [3] = "Ga III",
         [4] = "Thundaga III",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Thundaga IV"] = {
         [1] = "Elemental",
@@ -6531,7 +6615,9 @@ return {
         [3] = "Ga IV",
         [4] = "Thundaga IV",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Thundaga V"] = {
         [1] = "Elemental",
@@ -6539,7 +6625,9 @@ return {
         [3] = "Ga V",
         [4] = "Thundaga V",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Thundaja"] = {
         [1] = "Elemental",
@@ -6547,14 +6635,18 @@ return {
         [3] = "Ja",
         [4] = "Thundaja",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Thundara"] = {
         [1] = "Elemental",
         [2] = "Ra",
         [3] = "Thundara",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Magic Damage"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Magic Damage",
+        [7] = "Thunder Magic Damage"
     },
     ["Thundara II"] = {
         [1] = "Elemental",
@@ -6562,7 +6654,9 @@ return {
         [3] = "Ra II",
         [4] = "Thundara II",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Thundara III"] = {
         [1] = "Elemental",
@@ -6570,21 +6664,27 @@ return {
         [3] = "Ra III",
         [4] = "Thundara III",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Thunder"] = {
         [1] = "Elemental",
         [2] = "Single Target Elemental",
         [3] = "Thunder",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Magic Damage"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Magic Damage",
+        [7] = "Thunder Magic Damage"
     },
     ["Thunder Breath"] = {
         [1] = "Blue",
         [2] = "Breath Blue",
         [3] = "Thunder Breath",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Breath Damage"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Breath Damage",
+        [7] = "Thunder Breath Damage"
     },
     ["Thunder II"] = {
         [1] = "Elemental",
@@ -6592,7 +6692,9 @@ return {
         [3] = "Single Target Elemental II",
         [4] = "Thunder II",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Thunder III"] = {
         [1] = "Elemental",
@@ -6600,7 +6702,9 @@ return {
         [3] = "Single Target Elemental III",
         [4] = "Thunder III",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Thunder IV"] = {
         [1] = "Elemental",
@@ -6608,14 +6712,18 @@ return {
         [3] = "Single Target Elemental IV",
         [4] = "Thunder IV",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Thunder Spirit"] = {
         [1] = "Summoning",
         [2] = "Spirit",
         [3] = "Thunder Spirit",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Enhancement"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Enhancement",
+        [7] = "Thunder Enhancement"
     },
     ["Thunder V"] = {
         [1] = "Elemental",
@@ -6623,7 +6731,9 @@ return {
         [3] = "Single Target Elemental V",
         [4] = "Thunder V",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Thunder VI"] = {
         [1] = "Elemental",
@@ -6631,7 +6741,9 @@ return {
         [3] = "Single Target Elemental VI",
         [4] = "Thunder VI",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Magic Damage"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Magic Damage",
+        [8] = "Thunder Magic Damage"
     },
     ["Thunderbolt"] = {
         [1] = "Blue",
@@ -6640,7 +6752,9 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Thunderbolt",
         [6] = "Lightning Affinity",
-        [7] = "Lightning Magic Damage"
+        [7] = "Thunder Affinity",
+        [8] = "Lightning Magic Damage",
+        [9] = "Thunder Magic Damage"
     },
     ["Thunderstorm"] = {
         [1] = "Enhancing",
@@ -6648,7 +6762,9 @@ return {
         [3] = "Storm",
         [4] = "Thunderstorm",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Thunderstorm II"] = {
         [1] = "Enhancing",
@@ -6657,7 +6773,9 @@ return {
         [4] = "Storm II",
         [5] = "Thunderstorm II",
         [6] = "Lightning Affinity",
-        [7] = "Lightning Enhancement"
+        [7] = "Thunder Affinity",
+        [8] = "Lightning Enhancement",
+        [9] = "Thunder Enhancement"
     },
     ["Titan"] = {
         [1] = "Summoning",
@@ -6760,7 +6878,9 @@ return {
         [4] = "Etude II",
         [5] = "Uncanny Etude",
         [6] = "Lightning Affinity",
-        [7] = "Lightning Enhancement"
+        [7] = "Thunder Affinity",
+        [8] = "Lightning Enhancement",
+        [9] = "Thunder Enhancement"
     },
     ["Uppercut"] = {
         [1] = "Blue",
@@ -6879,7 +6999,9 @@ return {
         [3] = "March",
         [4] = "Victory March",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Viruna"] = {
         [1] = "Healing",
@@ -6999,7 +7121,9 @@ return {
         [3] = "Carol",
         [4] = "Water Carol",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enhancement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enhancement",
+        [8] = "Thunder Enhancement"
     },
     ["Water Carol II"] = {
         [1] = "Singing",
@@ -7008,7 +7132,9 @@ return {
         [4] = "Carol II",
         [5] = "Water Carol II",
         [6] = "Lightning Affinity",
-        [7] = "Lightning Enhancement"
+        [7] = "Thunder Affinity",
+        [8] = "Lightning Enhancement",
+        [9] = "Thunder Enhancement"
     },
     ["Water II"] = {
         [1] = "Elemental",
@@ -7047,7 +7173,9 @@ return {
         [3] = "Threnody",
         [4] = "Water Threnody",
         [5] = "Lightning Affinity",
-        [6] = "Lightning Enfeeblement"
+        [6] = "Thunder Affinity",
+        [7] = "Lightning Enfeeblement",
+        [8] = "Thunder Enfeeblement"
     },
     ["Water Threnody II"] = {
         [1] = "Singing",
@@ -7056,7 +7184,9 @@ return {
         [4] = "Threnody II",
         [5] = "Water Threnody II",
         [6] = "Lightning Affinity",
-        [7] = "Lightning Enfeeblement"
+        [7] = "Thunder Affinity",
+        [8] = "Lightning Enfeeblement",
+        [9] = "Thunder Enfeeblement"
     },
     ["Water V"] = {
         [1] = "Elemental",

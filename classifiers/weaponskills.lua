@@ -197,7 +197,9 @@ return {
         [2] = "Magical Axe",
         [3] = "Cloudsplitter",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Magic Damage"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Magic Damage",
+        [7] = "Thunder Magic Damage"
     },
     ["Combo"] = {
         [1] = "Hand-to-Hand",
@@ -714,7 +716,9 @@ return {
         [2] = "Magical Polearm",
         [3] = "Raiden Thrust",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Magic Damage"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Magic Damage",
+        [7] = "Thunder Magic Damage"
     },
     ["Rampage"] = {
         [1] = "Axe",
@@ -1027,7 +1031,9 @@ return {
         [2] = "Hybrid Great Katana",
         [3] = "Tachi: Goten",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Hybrid Damage"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Hybrid Damage",
+        [7] = "Thunder Hybrid Damage"
     },
     ["Tachi: Hobaku"] = {
         [1] = "Great Katana",
@@ -1107,7 +1113,9 @@ return {
         [2] = "Magical Polearm",
         [3] = "Thunder Thrust",
         [4] = "Lightning Affinity",
-        [5] = "Lightning Magic Damage"
+        [5] = "Thunder Affinity",
+        [6] = "Lightning Magic Damage",
+        [7] = "Thunder Magic Damage"
     },
     ["Torcleaver"] = {
         [1] = "Great Sword",

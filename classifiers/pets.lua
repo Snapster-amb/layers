@@ -362,7 +362,8 @@ return {
     ["Ramuh"] = {
         [1] = "Avatar",
         [2] = "Ramuh",
-        [3] = "Lightning Affinity"
+        [3] = "Lightning Affinity",
+        [4] = "Thunder Affinity"
     },
     ["RedolentCandi"] = {
         [1] = "Jug Pet",
@@ -457,7 +458,8 @@ return {
     ["ThunderSpirit"] = {
         [1] = "Spirit",
         [2] = "ThunderSpirit",
-        [3] = "Lightning Affinity"
+        [3] = "Lightning Affinity",
+        [4] = "Thunder Affinity"
     },
     ["TigerFamiliar"] = {
         [1] = "Jug Pet",

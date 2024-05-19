@@ -337,7 +337,9 @@ return {
         [1] = "Blood Pact",
         [2] = "Chaotic Strike",
         [3] = "Lightning Affinity",
-        [4] = "Lightning Blood Pact"
+        [4] = "Thunder Affinity",
+        [5] = "Lightning Blood Pact",
+        [6] = "Thunder Blood Pact"
     },
     ["Charged Whisker"] = {
         [1] = "Charged Whisker"
@@ -1214,7 +1216,9 @@ return {
         [1] = "Blood Pact",
         [2] = "Judgment Bolt",
         [3] = "Lightning Affinity",
-        [4] = "Lightning Blood Pact"
+        [4] = "Thunder Affinity",
+        [5] = "Lightning Blood Pact",
+        [6] = "Thunder Blood Pact"
     },
     ["Jump"] = {
         [1] = "Jumps",
@@ -1283,7 +1287,9 @@ return {
         [1] = "Blood Pact",
         [2] = "Lightning Armor",
         [3] = "Lightning Affinity",
-        [4] = "Lightning Blood Pact"
+        [4] = "Thunder Affinity",
+        [5] = "Lightning Blood Pact",
+        [6] = "Thunder Blood Pact"
     },
     ["Lightning Breath"] = {
         [1] = "Blood Pact",
@@ -1779,7 +1785,9 @@ return {
         [1] = "Blood Pact",
         [2] = "Rolling Thunder",
         [3] = "Lightning Affinity",
-        [4] = "Lightning Blood Pact"
+        [4] = "Thunder Affinity",
+        [5] = "Lightning Blood Pact",
+        [6] = "Thunder Blood Pact"
     },
     ["Roundhouse"] = {
         [1] = "Blood Pact",
@@ -1919,13 +1927,17 @@ return {
         [1] = "Blood Pact",
         [2] = "Shock Squall",
         [3] = "Lightning Affinity",
-        [4] = "Lightning Blood Pact"
+        [4] = "Thunder Affinity",
+        [5] = "Lightning Blood Pact",
+        [6] = "Thunder Blood Pact"
     },
     ["Shock Strike"] = {
         [1] = "Blood Pact",
         [2] = "Shock Strike",
         [3] = "Lightning Affinity",
-        [4] = "Lightning Blood Pact"
+        [4] = "Thunder Affinity",
+        [5] = "Lightning Blood Pact",
+        [6] = "Thunder Blood Pact"
     },
     ["Sic"] = {
         [1] = "Sic and Ready",
@@ -2199,13 +2211,17 @@ return {
         [1] = "Blood Pact",
         [2] = "Thunder II",
         [3] = "Lightning Affinity",
-        [4] = "Lightning Blood Pact"
+        [4] = "Thunder Affinity",
+        [5] = "Lightning Blood Pact",
+        [6] = "Thunder Blood Pact"
     },
     ["Thunder IV"] = {
         [1] = "Blood Pact",
         [2] = "Thunder IV",
         [3] = "Lightning Affinity",
-        [4] = "Lightning Blood Pact"
+        [4] = "Thunder Affinity",
+        [5] = "Lightning Blood Pact",
+        [6] = "Thunder Blood Pact"
     },
     ["Thunder Maneuver"] = {
         [1] = "Maneuver",
@@ -2219,13 +2235,17 @@ return {
         [1] = "Blood Pact",
         [2] = "Thunderspark",
         [3] = "Lightning Affinity",
-        [4] = "Lightning Blood Pact"
+        [4] = "Thunder Affinity",
+        [5] = "Lightning Blood Pact",
+        [6] = "Thunder Blood Pact"
     },
     ["Thunderstorm"] = {
         [1] = "Blood Pact",
         [2] = "Thunderstorm",
         [3] = "Lightning Affinity",
-        [4] = "Lightning Blood Pact"
+        [4] = "Thunder Affinity",
+        [5] = "Lightning Blood Pact",
+        [6] = "Thunder Blood Pact"
     },
     ["Tickling Tendrils"] = {
         [1] = "Tickling Tendrils"
@@ -2333,7 +2353,9 @@ return {
         [1] = "Blood Pact",
         [2] = "Volt Strike",
         [3] = "Lightning Affinity",
-        [4] = "Lightning Blood Pact"
+        [4] = "Thunder Affinity",
+        [5] = "Lightning Blood Pact",
+        [6] = "Thunder Blood Pact"
     },
     ["Waltzes"] = {
         [1] = "Waltzes"
