@@ -23,7 +23,8 @@ end
 local function itemChargeIsReady(item)
     local currentTime = getTimeUTC()
     local useTimeRemaining = (struct.unpack('L', item.Item.Extra, 5) + vanaOffset) - currentTime
-    return useTimeRemaining <= 0
+    local remainingCharges = item.Item.Extra:byte(2)
+    return remainingCharges > 0 and useTimeRemaining <= 0
 end
 
 local extraSlots = {
