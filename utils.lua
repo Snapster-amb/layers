@@ -21,7 +21,7 @@ utils.TableLength = function(t)
 end
 
 utils.CreateBaseSets = function()
-    local sets = {}
+    local sets = MTable()
     for event, _ in pairs(constants.Events) do
         sets[event] = {}
     end
@@ -38,6 +38,17 @@ utils.MergeSets = function(lhs, rhs)
         end
     end
     return lhs
+end
+
+utils.CopyTable = function(t, filter)
+    local copy = {}
+    local exclude = filter or {}
+    for k, v in ipairs(t) do
+        if not exclude[v] then
+            table.insert(copy, v)
+        end
+    end
+    return copy
 end
 
 utils.GetSetItemCount = function(set)

@@ -45,6 +45,11 @@ constants.InterimEvents = {
     Midshot = "Interimshot"
 }
 
+constants.InterimEventNames = {
+    Interimcast = true,
+    Interimshot = true
+}
+
 constants.Transitions = {
     Pre = true,
     Post = true
