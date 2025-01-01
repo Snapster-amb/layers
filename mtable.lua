@@ -8,7 +8,7 @@ local metatable = {
         local v = rawget(t, k)
         if v then
             return v
-        elseif type(k) == 'string' and not constants.Events[k] and not constants.InterimEventNames[k] then
+        elseif type(k) == 'string' then
             local v = MTable()
             rawset(t, k, v)
             return v
@@ -19,6 +19,12 @@ local metatable = {
 
 MTable = function()
     local t = {}
+    for event, _ in pairs(constants.Events) do
+        t[event] = {}
+    end
+    for _, event in pairs(constants.InterimEvents) do
+        t[event] = {}
+    end
     setmetatable(t, metatable)
     return t
 end

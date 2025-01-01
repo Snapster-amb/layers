@@ -20,17 +20,6 @@ utils.TableLength = function(t)
     return count
 end
 
-utils.CreateBaseSets = function()
-    local sets = MTable()
-    for event, _ in pairs(constants.Events) do
-        sets[event] = {}
-    end
-    for _, event in pairs(constants.InterimEvents) do
-        sets[event] = {}
-    end
-    return sets
-end
-
 utils.MergeSets = function(lhs, rhs)
     for slot, item in pairs(rhs) do
         if constants.Slots[slot] then

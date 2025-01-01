@@ -47,7 +47,7 @@ end
 -- Protect get/set access to the profile that could break the extension
 local proxy = protectTableMethods(core)
 
-core.Sets = utils.CreateBaseSets()
+core.Sets = MTable()
 
 local function buildClassifierSet(baseSets, event, classifiers, mode)
     local set = {}
@@ -307,7 +307,7 @@ core.CreateModeGroup = function(name, modes, binding)
     table.insert(globals.ModeGroups, { ['name'] = name, ['group'] = group })
     for k, v in pairs(modes) do
         if not constants.InvalidModeNames[v] and not rawget(core.Sets, v) then
-            core.Sets[v] = utils.CreateBaseSets()
+            core.Sets[v] = MTable()
         end
     end
     local modeText = chat.invalid(group.current)
