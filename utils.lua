@@ -20,17 +20,6 @@ utils.TableLength = function(t)
     return count
 end
 
-utils.CreateBaseSets = function()
-    local sets = {}
-    for event, _ in pairs(constants.Events) do
-        sets[event] = {}
-    end
-    for _, event in pairs(constants.InterimEvents) do
-        sets[event] = {}
-    end
-    return sets
-end
-
 utils.MergeSets = function(lhs, rhs)
     for slot, item in pairs(rhs) do
         if constants.Slots[slot] then
@@ -38,6 +27,17 @@ utils.MergeSets = function(lhs, rhs)
         end
     end
     return lhs
+end
+
+utils.CopyTable = function(t, filter)
+    local copy = {}
+    local exclude = filter or {}
+    for k, v in ipairs(t) do
+        if not exclude[v] then
+            table.insert(copy, v)
+        end
+    end
+    return copy
 end
 
 utils.GetSetItemCount = function(set)

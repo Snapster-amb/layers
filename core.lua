@@ -47,7 +47,7 @@ end
 -- Protect get/set access to the profile that could break the extension
 local proxy = protectTableMethods(core)
 
-core.Sets = utils.CreateBaseSets()
+core.Sets = MTable()
 
 local function buildClassifierSet(baseSets, event, classifiers, mode)
     local set = {}
@@ -64,14 +64,44 @@ local function buildClassifierSet(baseSets, event, classifiers, mode)
     return set
 end
 
+local function buildModes(unvisitedModes, baseModes, sets, outputModes)
+    for i, mode in ipairs(unvisitedModes) do
+        if rawget(sets, mode) then
+            local newBaseModes = utils.CopyTable(baseModes)
+            table.insert(newBaseModes, mode)
+            local depth = #newBaseModes
+            if not outputModes[depth] then
+                outputModes[depth] = {}
+            end
+            table.insert(outputModes[depth], newBaseModes)
+            local newUnvisitedModes = utils.CopyTable(unvisitedModes, {[mode] = true})
+            buildModes(newUnvisitedModes, newBaseModes, rawget(sets, mode), outputModes)
+        end
+    end
+end
+
 local function buildEventSet(classifiers, event)
     local baseSets = core.Sets or {}
     logger.Debug(chat.message('Building ') .. chat.event(event) .. chat.message(' set'), true)
     local set = buildClassifierSet(baseSets, event, classifiers)
+    local activeModes = {}
+    local activeModesByName = {}
     for _, group in ipairs(globals.ModeGroups) do
-        if not constants.InvalidModeNames[group.group.current] then
-            baseSets = core.Sets[group.group.current] or {}
-            local modeSet = buildClassifierSet(baseSets, event, classifiers, group.group.current)
+        local mode = group.group.current
+        if not constants.InvalidModeNames[mode] and not activeModesByName[mode] then
+            table.insert(activeModes, mode)
+            activeModesByName[mode] = true
+        end
+    end
+    local outputModes = {}
+    buildModes(activeModes, {}, baseSets, outputModes)
+    for depth, depthModes in ipairs(outputModes) do
+        for _, modes in ipairs(depthModes) do
+            local depthSet = baseSets
+            for _, mode in ipairs(modes) do
+                depthSet = depthSet[mode]
+            end
+            local modeSet = buildClassifierSet(depthSet, event, classifiers, table.concat(modes, "."))
             utils.MergeSets(set, modeSet)
         end
     end
@@ -275,11 +305,6 @@ core.CreateModeGroup = function(name, modes, binding)
     end
     local group = M(table.unpack(modes))
     table.insert(globals.ModeGroups, { ['name'] = name, ['group'] = group })
-    for k, v in pairs(modes) do
-        if not constants.InvalidModeNames[v] and not core.Sets[v] then
-            core.Sets[v] = utils.CreateBaseSets()
-        end
-    end
     local modeText = chat.invalid(group.current)
     if not constants.InvalidModeNames[group.current] then
         modeText = chat.highlight(group.current)

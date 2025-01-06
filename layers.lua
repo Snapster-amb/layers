@@ -61,6 +61,7 @@ if gearswap then
         { ['shims/luashitacast'] = '' },
         { ['shims/stickyitems'] = 'stickyitems' },
         { ['modes'] = 'modes' },
+        { ['mtable'] = 'mtable' },
         { ['chat'] = 'chat' },
         { ['logger'] = 'logger' },
         { ['constants'] = 'constants' },
@@ -165,6 +166,7 @@ else
 
     local modules = {
         'modes',
+        'mtable',
         'chat',
         'logger',
         'hotkeys',
