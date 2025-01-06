@@ -305,11 +305,6 @@ core.CreateModeGroup = function(name, modes, binding)
     end
     local group = M(table.unpack(modes))
     table.insert(globals.ModeGroups, { ['name'] = name, ['group'] = group })
-    for k, v in pairs(modes) do
-        if not constants.InvalidModeNames[v] and not rawget(core.Sets, v) then
-            core.Sets[v] = MTable()
-        end
-    end
     local modeText = chat.invalid(group.current)
     if not constants.InvalidModeNames[group.current] then
         modeText = chat.highlight(group.current)
