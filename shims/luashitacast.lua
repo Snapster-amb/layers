@@ -19,7 +19,7 @@ gFunc.LoadFile = function(path)
     return require(string.gsub(path, "\\", "/"), _G)
 end
 
-gFunc.EvaluateItem(item, level)
+gFunc.EvaluateItem = function(item, level)
     if type(item) == 'string' then
         local search = res.items:name(item)
         local id, resource = next(search, nil)
@@ -40,9 +40,9 @@ gFunc.EvaluateItem(item, level)
     return false
 end
 
-gFunc.EvaluateSets = function(sets, level)
+gFunc.EvaluateLevels = function(sets, level)
     local buffer = {}
-    for name, set in pairs(baseTable) do
+    for name, set in pairs(sets) do
         if (#name > 9) and (string.sub(name, -9) == '_Priority') then
             local newSet = {}
             for slotName, slotEntries in pairs(set) do
@@ -68,7 +68,7 @@ gFunc.EvaluateSets = function(sets, level)
         end
     end
     for key,val in pairs(buffer) do
-        baseTable[key] = val
+        sets[key] = val
     end
 end
 

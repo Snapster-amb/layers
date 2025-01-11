@@ -15,14 +15,17 @@ if gearswap then
         rawget = rawget,
         rawset = rawset,
         require = require,
+        next = next,
         equip = equip,
         player = player,
         pet = pet,
         send_command = send_command,
         sets = sets,
         windower = windower,
-        res = res
+        res = require('resources')
     }
+
+    print(res)
 
     local loadFile = function(path)
         local paths = T{
