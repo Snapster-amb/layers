@@ -126,10 +126,15 @@ core.HandleCommand = commands.HandleCommand
 
 local lastPlayerStatus = nil
 local lastPetEvent = nil
+local lastPlayerLevel = 1
 
 core.HandleDefault = function()
     globals.CurrentEventHandler = core.HandleDefault
     local player = gData.GetPlayer()
+    if player.MainJobLevel ~= lastPlayerLevel then
+        utils.EvaluateLevels(core.Sets, player.MainJobLevel)
+        lastPlayerLevel = player.MainJobLevel
+    end
     if not constants.ValidStatus[player.Status] then
         return
     end
