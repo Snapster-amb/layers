@@ -20,7 +20,8 @@ if gearswap then
         pet = pet,
         send_command = send_command,
         sets = sets,
-        windower = windower
+        windower = windower,
+        res = res
     }
 
     local loadFile = function(path)
