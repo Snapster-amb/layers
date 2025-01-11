@@ -77,4 +77,13 @@ utils.LogSetDetails = function(baseSet, event, mode, classifierName)
     end
 end
 
+utils.EvaluateLevels = function(t, level)
+    gFunc.EvaluateLevels(t, level)
+    for k, v in pairs(t) do
+        if not constants.Slots[k] and type(k) == 'string' and type(v) == 'table' then
+            utils.EvaluateLevels(v, level)
+        end
+    end
+end
+
 return utils

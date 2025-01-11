@@ -19,6 +19,9 @@ gFunc.LoadFile = function(path)
     return require(string.gsub(path, "\\", "/"), _G)
 end
 
+gFunc.EvaluateSets = function(sets, level)
+end
+
 gData = {
     petAction = nil,
     playerAction = nil
@@ -43,7 +46,8 @@ end
 
 gData.GetPlayer = function()
     return {
-        Status = player.status
+        Status = player.status,
+        MainJobLevel = player.main_job_level
     }
 end
 
