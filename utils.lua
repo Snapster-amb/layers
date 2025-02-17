@@ -88,7 +88,7 @@ local function evaluateSet(root, name, set, level)
                     t[slotName] = slotEntries
                 else
                     for _, potentialEntry in ipairs(slotEntries) do
-                        if gFunc.EvaluateItem(potentialEntry, level) then
+                        if memory.EvaluateItem(potentialEntry, level) then
                             t[slotName] = potentialEntry
                             break
                         end

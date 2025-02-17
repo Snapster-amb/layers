@@ -3,8 +3,6 @@
 ---
 gFunc = {}
 
-local res = require("resources")
-
 gFunc.EquipSet = function(set)
     equip(set)
 end
@@ -19,27 +17,6 @@ end
 
 gFunc.LoadFile = function(path)
     return require(string.gsub(path, "\\", "/"), _G)
-end
-
-gFunc.EvaluateItem = function(item, level)
-    if type(item) == 'string' then
-        local search = res.items:name(item)
-        local id, resource = next(search, nil)
-        if (id ~= nil) then
-            return (level >= resource.level)
-        end
-    elseif type(item) == 'table' then
-        if type(item.level) == 'number' then
-            return (level >= item.level)
-        else
-            local search = res.items:name(item.name)
-            local id, resource = next(search, nil)
-            if (id ~= nil) then
-                return (level >= resource.level)
-            end
-        end
-    end
-    return false
 end
 
 gData = {
