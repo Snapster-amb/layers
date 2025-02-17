@@ -128,14 +128,18 @@ local lastPlayerStatus = nil
 local lastPetEvent = nil
 local lastPlayerLevel = 0
 
-core.HandleDefault = function()
-    globals.CurrentEventHandler = core.HandleDefault
+core.SyncGear = function()
     local level = memory.GetMainJobLevel()
     if level ~= lastPlayerLevel and level ~= 0 then
         logger.Info(chat.message("Player level set to " .. chat.highlight(level)))
         utils.EvaluateLevels(core.Sets, level)
         lastPlayerLevel = level
     end
+end
+
+core.HandleDefault = function()
+    globals.CurrentEventHandler = core.HandleDefault
+    core.SyncGear()
     local player = gData.GetPlayer()
     if not constants.ValidStatus[player.Status] then
         return
@@ -176,6 +180,7 @@ end
 
 core.HandleAbility = function()
     globals.CurrentEventHandler = core.HandleAbility
+    core.SyncGear()
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Ability', action.Name)
@@ -185,6 +190,7 @@ end
 
 core.HandleItem = function()
     globals.CurrentEventHandler = function() end
+    core.SyncGear()
     lastPlayerStatus = nil
     local action = gData.GetAction()
     if action then
@@ -196,6 +202,7 @@ end
 
 core.HandlePrecast = function()
     globals.CurrentEventHandler = core.HandlePrecast
+    core.SyncGear()
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Spell', action.Name)
@@ -205,6 +212,7 @@ end
 
 core.HandleMidcast = function()
     globals.CurrentEventHandler = core.HandleMidcast
+    core.SyncGear()
     lastPlayerStatus = nil
     local action = gData.GetAction()
     if action then
@@ -223,6 +231,7 @@ end
 
 core.HandlePreshot = function()
     globals.CurrentEventHandler = core.HandlePreshot
+    core.SyncGear()
     lastPlayerStatus = nil
     buildEventSetAndEquipWithCallbacks({}, 'Preshot')
     stickyitems.Bind()
@@ -230,6 +239,7 @@ end
 
 core.HandleMidshot = function()
     globals.CurrentEventHandler = core.HandleMidshot
+    core.SyncGear()
     lastPlayerStatus = nil
     local action = gData.GetAction()
     if action then
@@ -247,6 +257,7 @@ end
 
 core.HandleWeaponskill = function()
     globals.CurrentEventHandler = core.HandleWeaponskill
+    core.SyncGear()
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Weaponskill', action.Name)

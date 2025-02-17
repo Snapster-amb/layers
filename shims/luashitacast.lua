@@ -3,6 +3,8 @@
 ---
 gFunc = {}
 
+local res = require("resources")
+
 gFunc.EquipSet = function(set)
     equip(set)
 end
@@ -30,7 +32,7 @@ gFunc.EvaluateItem = function(item, level)
         if type(item.level) == 'number' then
             return (level >= item.level)
         else
-            local search = res.items:name(item)
+            local search = res.items:name(item.name)
             local id, resource = next(search, nil)
             if (id ~= nil) then
                 return (level >= resource.level)
@@ -38,38 +40,6 @@ gFunc.EvaluateItem = function(item, level)
         end
     end
     return false
-end
-
-gFunc.EvaluateLevels = function(sets, level)
-    local buffer = {}
-    for name, set in pairs(sets) do
-        if (#name > 9) and (string.sub(name, -9) == '_Priority') then
-            local newSet = {}
-            for slotName, slotEntries in pairs(set) do
-                if (constants.Slots[slotName] ~= nil) then
-                    if type(slotEntries) == 'string' then
-                        newSet[slotName] = slotEntries
-                    elseif type(slotEntries) == 'table' then
-                        if slotEntries[1] == nil then
-                            newSet[slotName] = slotEntries
-                        else
-                            for _, potentialEntry in ipairs(slotEntries) do
-                                if gFunc.EvaluateItem(potentialEntry, level) then
-                                    newSet[slotName] = potentialEntry
-                                    break
-                                end
-                            end
-                        end
-                    end
-                end
-            end
-            local newKey = string.sub(name, 1, -10)
-            buffer[newKey] = newSet
-        end
-    end
-    for key,val in pairs(buffer) do
-        sets[key] = val
-    end
 end
 
 gData = {

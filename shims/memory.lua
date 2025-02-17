@@ -2,8 +2,6 @@
 -- Windower memory access call wrapper.
 local memory = {}
 
-local syncLevel = player.main_job_level
-
 ---
 -- Get the player's current level
 --
@@ -13,10 +11,10 @@ memory.GetMainJobLevel = function()
 end
 
 local function updatePlayerSyncLevel(id, data, modified, injected, blocked)
-    if (id == 0x067 and data:byte(0x04 + 1) == 0x02 then
-        local id = data:unpack('U', 0x08 + 1)
-        if id == player.id then
-            syncLevel = data:byte(0x26 + 1)
+    if id == 0x061 then
+        local level = data:byte(0x0d + 1)
+        if level ~= syncLevel then
+            syncLevel = level
         end
     end
 end

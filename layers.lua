@@ -21,11 +21,8 @@ if gearswap then
         pet = pet,
         send_command = send_command,
         sets = sets,
-        windower = windower,
-        res = require('resources')
+        windower = windower
     }
-
-    print(res)
 
     local loadFile = function(path)
         local paths = T{
@@ -74,12 +71,13 @@ if gearswap then
         { ['utils'] = 'utils' },
         { ['callbacks'] = 'callbacks' },
         { ['taxonomy'] = 'taxonomy' },
-        { ['shims/memory'] = 'memory' },
         { ['shims/conquest'] = 'conquest' },
         { ['core'] = 'core' },
+        { ['shims/memory'] = 'memory' },
         { ['shims/constants'] = '' },
         { ['shims/hotkeys'] = 'hotkeys' }
     }
+
     for _, modtable in pairs(modules) do
         for path, mod in pairs(modtable) do
             file = loadFile(string.format('layers/%s', path))

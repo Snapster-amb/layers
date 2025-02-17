@@ -77,13 +77,38 @@ utils.LogSetDetails = function(baseSet, event, mode, classifierName)
     end
 end
 
-utils.EvaluateLevels = function(t, level)
-    gFunc.EvaluateLevels(t, level)
-    for k, v in pairs(t) do
-        if not constants.Slots[k] and type(k) == 'string' and type(v) == 'table' then
-            utils.EvaluateLevels(v, level)
+local function evaluateSet(root, name, set, level)
+    local t = root[string.sub(name, 1, -10)]
+    for slotName, slotEntries in pairs(set) do
+        if (constants.Slots[slotName] ~= nil) then
+            if type(slotEntries) == 'string' then
+                t[slotName] = slotEntries
+            elseif type(slotEntries) == 'table' then
+                if slotEntries[1] == nil then
+                    t[slotName] = slotEntries
+                else
+                    for _, potentialEntry in ipairs(slotEntries) do
+                        if gFunc.EvaluateItem(potentialEntry, level) then
+                            t[slotName] = potentialEntry
+                            break
+                        end
+                    end
+                end
+            end
         end
     end
+end
+
+utils.EvaluateLevels = function(t, level)
+    for k, v in pairs(t) do
+        if type(k) == 'string' and type(v) == 'table' then
+            if (#k > 9) and (string.sub(k, -9) == '_Priority') then
+                evaluateSet(t, k, v, level)
+            elseif not constants.Slots[k] then
+                utils.EvaluateLevels(v, level)
+            end
+       end
+   end
 end
 
 return utils
