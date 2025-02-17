@@ -126,15 +126,17 @@ core.HandleCommand = commands.HandleCommand
 
 local lastPlayerStatus = nil
 local lastPetEvent = nil
-local lastPlayerLevel = 1
+local lastPlayerLevel = 0
 
 core.HandleDefault = function()
     globals.CurrentEventHandler = core.HandleDefault
-    local player = gData.GetPlayer()
-    if player.MainJobLevel ~= lastPlayerLevel then
-        utils.EvaluateLevels(core.Sets, player.MainJobLevel)
-        lastPlayerLevel = player.MainJobLevel
+    local level = memory.GetMainJobLevel()
+    if level ~= lastPlayerLevel and level ~= 0 then
+        logger.Info(chat.message("Player level set to " .. chat.highlight(level)))
+        utils.EvaluateLevels(core.Sets, level)
+        lastPlayerLevel = level
     end
+    local player = gData.GetPlayer()
     if not constants.ValidStatus[player.Status] then
         return
     end
