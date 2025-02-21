@@ -126,20 +126,10 @@ core.HandleCommand = commands.HandleCommand
 
 local lastPlayerStatus = nil
 local lastPetEvent = nil
-local lastPlayerLevel = 0
-
-core.SyncGear = function()
-    local level = memory.GetMainJobLevel()
-    if level ~= lastPlayerLevel and level ~= 0 then
-        logger.Info(chat.message("Player level set to " .. chat.highlight(level)))
-        utils.EvaluateLevels(core.Sets, level)
-        lastPlayerLevel = level
-    end
-end
 
 core.HandleDefault = function()
     globals.CurrentEventHandler = core.HandleDefault
-    core.SyncGear()
+    utils.EvaluateLevels(core.Sets)
     local player = gData.GetPlayer()
     if not constants.ValidStatus[player.Status] then
         return
@@ -180,7 +170,7 @@ end
 
 core.HandleAbility = function()
     globals.CurrentEventHandler = core.HandleAbility
-    core.SyncGear()
+    utils.EvaluateLevels(core.Sets)
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Ability', action.Name)
@@ -190,7 +180,7 @@ end
 
 core.HandleItem = function()
     globals.CurrentEventHandler = function() end
-    core.SyncGear()
+    utils.EvaluateLevels(core.Sets)
     lastPlayerStatus = nil
     local action = gData.GetAction()
     if action then
@@ -202,7 +192,7 @@ end
 
 core.HandlePrecast = function()
     globals.CurrentEventHandler = core.HandlePrecast
-    core.SyncGear()
+    utils.EvaluateLevels(core.Sets)
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Spell', action.Name)
@@ -212,7 +202,7 @@ end
 
 core.HandleMidcast = function()
     globals.CurrentEventHandler = core.HandleMidcast
-    core.SyncGear()
+    utils.EvaluateLevels(core.Sets)
     lastPlayerStatus = nil
     local action = gData.GetAction()
     if action then
@@ -231,7 +221,7 @@ end
 
 core.HandlePreshot = function()
     globals.CurrentEventHandler = core.HandlePreshot
-    core.SyncGear()
+    utils.EvaluateLevels(core.Sets)
     lastPlayerStatus = nil
     buildEventSetAndEquipWithCallbacks({}, 'Preshot')
     stickyitems.Bind()
@@ -239,7 +229,7 @@ end
 
 core.HandleMidshot = function()
     globals.CurrentEventHandler = core.HandleMidshot
-    core.SyncGear()
+    utils.EvaluateLevels(core.Sets)
     lastPlayerStatus = nil
     local action = gData.GetAction()
     if action then
@@ -257,7 +247,7 @@ end
 
 core.HandleWeaponskill = function()
     globals.CurrentEventHandler = core.HandleWeaponskill
-    core.SyncGear()
+    utils.EvaluateLevels(core.Sets)
     lastPlayerStatus = nil
     local action = gData.GetAction()
     local classifiers = taxonomy.GetRawClassifiers('Weaponskill', action.Name)
@@ -362,5 +352,15 @@ core.RemoveEnchantedItem = stickyitems.RemoveEnchantedItem
 ---
 -- Expose the Conquest module user job files
 core.conquest = protectTableMethods(conquest)
+
+---
+-- Expose the EvaluateSet function
+core.EvaluateSet = function(set, level)
+    if not level then
+        return utils.EvaluateSet(set, memory.GetMainJobLevel())
+    else
+        return utils.EvaluateSet(set, level)
+    end
+end
 
 return proxy

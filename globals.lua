@@ -4,5 +4,6 @@ local globals = {}
 
 globals.ModeGroups = {}
 globals.CurrentEventHandler = function() end
+globals.LastPlayerLevel = 0
 
 return globals

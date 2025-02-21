@@ -77,8 +77,8 @@ utils.LogSetDetails = function(baseSet, event, mode, classifierName)
     end
 end
 
-local function evaluateSet(root, name, set, level)
-    local t = root[string.sub(name, 1, -10)]
+utils.EvaluateSet = function(set, level)
+    local t = {}
     for slotName, slotEntries in pairs(set) do
         if (constants.Slots[slotName] ~= nil) then
             if type(slotEntries) == 'string' then
@@ -97,18 +97,31 @@ local function evaluateSet(root, name, set, level)
             end
         end
     end
+    return t
 end
 
-utils.EvaluateLevels = function(t, level)
-    for k, v in pairs(t) do
+utils.EvaluateSets = function(root, level)
+    for k, v in pairs(root) do
         if type(k) == 'string' and type(v) == 'table' then
             if (#k > 9) and (string.sub(k, -9) == '_Priority') then
-                evaluateSet(t, k, v, level)
+                local t = root[string.sub(k, 1, -10)]
+                for slot, item in pairs(utils.EvaluateSet(v, level)) do
+                    t[slot] = item
+                end
             elseif not constants.Slots[k] then
-                utils.EvaluateLevels(v, level)
+                utils.EvaluateSets(v, level)
             end
        end
    end
+end
+
+utils.EvaluateLevels = function(sets)
+    local level = memory.GetMainJobLevel()
+    if level ~= globals.LastPlayerLevel and level ~= 0 then
+        logger.Info(chat.message("Player level set to " .. chat.highlight(level)))
+        utils.EvaluateSets(sets, level)
+        globals.LastPlayerLevel = level
+    end
 end
 
 return utils
