@@ -8,8 +8,9 @@ local function handleModeGroupCommand(command, args)
         logger.Error(string.format("Unable to complete %s command - No group name provided", command))
     else
         local name = args[1]
-        local group = utils.GetGroup(name)
-        if group then
+        local groupWrapper = groups.GetGroupByGroupName(name)
+        if groupWrapper then
+            local group = groupWrapper.group
             if command == "cycle" then
                 group:cycle()
             elseif command == "cycleback" then
