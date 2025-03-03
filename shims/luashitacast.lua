@@ -43,7 +43,8 @@ end
 
 gData.GetPlayer = function()
     return {
-        Status = player.status
+        Status = player.status,
+        MainJobLevel = player.main_job_level
     }
 end
 

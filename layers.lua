@@ -15,6 +15,7 @@ if gearswap then
         rawget = rawget,
         rawset = rawset,
         require = require,
+        next = next,
         equip = equip,
         player = player,
         pet = pet,
@@ -72,9 +73,11 @@ if gearswap then
         { ['taxonomy'] = 'taxonomy' },
         { ['shims/conquest'] = 'conquest' },
         { ['core'] = 'core' },
+        { ['shims/memory'] = 'memory' },
         { ['shims/constants'] = '' },
         { ['shims/hotkeys'] = 'hotkeys' }
     }
+
     for _, modtable in pairs(modules) do
         for path, mod in pairs(modtable) do
             file = loadFile(string.format('layers/%s', path))
@@ -176,6 +179,7 @@ else
         'utils',
         'callbacks',
         'taxonomy',
+        'memory',
         'stickyitems',
         'conquest',
         'core'

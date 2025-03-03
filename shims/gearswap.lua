@@ -82,4 +82,5 @@ function get_sets()
     for k, v in pairs(core.Sets) do
         sets[k] = v
     end
+    utils.EvaluateLevels(core.Sets)
 end
