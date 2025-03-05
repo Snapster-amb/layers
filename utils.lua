@@ -4,14 +4,6 @@
 ---
 local utils = {}
 
-utils.GetGroup = function(name)
-    for _, group in pairs(globals.ModeGroups) do
-        if group.name == name then
-            return group.group
-        end
-    end
-end
-
 utils.TableLength = function(t)
     local count = 0
     for _ in pairs(t) do
@@ -102,7 +94,7 @@ end
 
 utils.EvaluateSets = function(root, level)
     for k, v in pairs(root) do
-        if type(k) == 'string' and type(v) == 'table' then
+        if type(k) == 'string' and type(v) == 'table' and k ~= '__parent' then
             if (#k > 9) and (string.sub(k, -9) == '_Priority') then
                 local t = root[string.sub(k, 1, -10)]
                 for slot, item in pairs(utils.EvaluateSet(v, level)) do

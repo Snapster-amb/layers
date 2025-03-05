@@ -62,7 +62,6 @@ if gearswap then
         { ['shims/luashitacast'] = '' },
         { ['shims/stickyitems'] = 'stickyitems' },
         { ['modes'] = 'modes' },
-        { ['mtable'] = 'mtable' },
         { ['chat'] = 'chat' },
         { ['logger'] = 'logger' },
         { ['constants'] = 'constants' },
@@ -72,10 +71,13 @@ if gearswap then
         { ['callbacks'] = 'callbacks' },
         { ['taxonomy'] = 'taxonomy' },
         { ['shims/conquest'] = 'conquest' },
+        { ['layer'] = 'layer' },
+        { ['groups'] = 'groups' },
         { ['core'] = 'core' },
         { ['shims/memory'] = 'memory' },
         { ['shims/constants'] = '' },
-        { ['shims/hotkeys'] = 'hotkeys' }
+        { ['shims/hotkeys'] = 'hotkeys' },
+        { ['predicatse'] = 'predicates' }
     }
 
     for _, modtable in pairs(modules) do
@@ -164,12 +166,13 @@ else
         rawset = rawset,
         struct = struct,
         ashita = ashita,
-        bit = bit
+        bit = bit,
+        tonumber = tonumber,
+        tostring = tostring
     }
 
     local modules = {
         'modes',
-        'mtable',
         'chat',
         'logger',
         'hotkeys',
@@ -182,6 +185,9 @@ else
         'memory',
         'stickyitems',
         'conquest',
+        'predicates',
+        'layer',
+        'groups',
         'core'
     }
 

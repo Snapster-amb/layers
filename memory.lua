@@ -5,6 +5,34 @@
 local memory = {}
 
 ---
+-- Generate a table of valid status effect names
+memory.GetStatusEffectNames = function()
+    local statusEffects = {}
+    local resourceManager = AshitaCore:GetResourceManager()
+    for i = 1, 700 do
+        local statusEffect = resourceManager:GetString('buffs.names', i)
+        if statusEffect then
+            statusEffects[statusEffect] = i
+        end
+    end
+    return statusEffects
+end
+
+---
+-- Generate a table of valid status effect names
+memory.GetZoneNames = function()
+    local zones = {}
+    local resourceManager = AshitaCore:GetResourceManager()
+    for i = 1, 700 do
+        local zone = resourceManager:GetString('zones.names', i)
+        if zone then
+            zones[zone] = i
+        end
+    end
+    return zones
+end
+
+---
 -- Get the player's current level
 --
 -- This should return the player's reduced level if under level sync
