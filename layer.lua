@@ -24,7 +24,7 @@ local function setEventsAndCallbacks(layer, event, count)
         transition = "PreHandle" .. interimEvents[event]
     end
     if wrapper.implicit and not callbacks.IsCallbackRegistered(transition, name) then
-        local predicate = predicates[name]
+        local predicate = utils.CreateCompoundPredicate(name)
         if predicate then
             callbacks.Register(transition, function()
                 if (predicate()) then
@@ -49,7 +49,7 @@ local metatable = {
             elseif #k > 9 and string.sub(k, -9) == '_Priority' then
                 error("Level sync sets must terminate set declaration")
             else
-                if not groups.GetGroup(k) then
+                if not groups.GetGroup(k) and utils.CreateCompoundPredicate(k) then
                     local m = groups.CreateImplicitModeGroup(k)
                 end
                 local v = Layer(t, k)

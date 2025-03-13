@@ -131,12 +131,24 @@ predicates['Pet Element Matches Day'] = function()
     return classifiers[dayElement .. ' Affinity'] ~= nil
 end
 
-predicates['Pet Element Matches Day'] = function()
+predicates['Pet Element Matches Weather'] = function()
     local pet = gData.GetPet() or {}
     local classifiers = taxonomy.GetClassifiers('Pet', pet.Name or "Unknown")
     local environment = gData.GetEnvironment() or {}
     local weatherElement = environment.WeatherElement or "Unknown"
     return classifiers[weatherElement .. ' Affinity'] ~= nil
+end
+
+predicates['Action Element Matches Day'] = function()
+    local action = gData.GetAction()
+    local environment = gData.GetEnvironment()
+    return action and environment and validElements[action.Element] and action.Element == environment.DayElement
+end
+
+predicates['Action Element Matches Weather'] = function()
+    local action = gData.GetAction()
+    local environment = gData.GetEnvironment()
+    return action and environment and validElements[action.Element] and action.Element == environment.WeatherElement
 end
 
 local jobs = {
