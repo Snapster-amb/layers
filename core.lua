@@ -47,11 +47,11 @@ end
 -- Protect get/set access to the profile that could break the extension
 local proxy = protectTableMethods(core)
 
-core.Sets = MTable()
+core.Sets = Layer(nil, "Sets")
 
 local function buildClassifierSet(baseSets, event, classifiers, mode)
     local set = {}
-    local eventSets = baseSets[event] or {}
+    local eventSets = rawget(baseSets, event) or {}
     utils.LogSetDetails(eventSets, event, mode)
     utils.MergeSets(set, eventSets)
     for _, classifier in ipairs(classifiers) do
@@ -86,9 +86,10 @@ local function buildEventSet(classifiers, event)
     local set = buildClassifierSet(baseSets, event, classifiers)
     local activeModes = {}
     local activeModesByName = {}
-    for _, group in ipairs(globals.ModeGroups) do
-        local mode = group.group.current
-        if not constants.InvalidModeNames[mode] and not activeModesByName[mode] then
+    for _, wrapper in ipairs(groups.groupWrapperArray) do
+        local mode = wrapper.group.current
+        local events = wrapper.events[mode]
+        if not constants.InvalidModeNames[mode] and events[event] and not activeModesByName[mode] then
             table.insert(activeModes, mode)
             activeModesByName[mode] = true
         end
@@ -99,7 +100,7 @@ local function buildEventSet(classifiers, event)
         for _, modes in ipairs(depthModes) do
             local depthSet = baseSets
             for _, mode in ipairs(modes) do
-                depthSet = depthSet[mode]
+                depthSet = rawget(depthSet, mode) or {}
             end
             local modeSet = buildClassifierSet(depthSet, event, classifiers, table.concat(modes, "."))
             utils.MergeSets(set, modeSet)
@@ -281,45 +282,8 @@ core.OnUnload = function()
 end
 
 ---
--- Create a mode group using the provided name, modes, and optional key binding.
---
--- This should be consumed from users' gearswap or LuAshitacast job files.  User
--- commands can cycle, cycleback, set and reset the mode for the mode group.  The
--- user command to cycle the mode group is set to the provided binding it if is 
--- provided.
--- @param name The modegroup name
--- @param modes A mode name indexed table containing the group modes
--- @param binding An optional windower/ashita key binding.
-core.CreateModeGroup = function(name, modes, binding)
-    if not name or type(name) ~= 'string' then
-        return logger.Error('Unable to create group - group names must be strings')
-    end
-    if not modes or type(modes) ~= 'table' then
-        return logger.Error('Unable to create group - modes must be table')
-    end
-    for k, v in pairs(modes) do
-        if type(v) ~= 'string' then
-            return logger.Error(string.format('Unable to create group %s - mode names must be strings', name))
-        end
-    end
-    if utils.TableLength(modes) == 0 then
-        return logger.Error(string.format('Unable to create mode %s - no mode names provided', name))
-    end
-    if binding then
-        local status, err = pcall(hotkeys.Bind, name, binding)
-        if not status then
-            return logger.Error('Unable to create group - key binding error - ' .. err)
-        end
-    end
-    local group = M(table.unpack(modes))
-    table.insert(globals.ModeGroups, { ['name'] = name, ['group'] = group })
-    local modeText = chat.invalid(group.current)
-    if not constants.InvalidModeNames[group.current] then
-        modeText = chat.highlight(group.current)
-    end
-    logger.Info(chat.group(name) .. chat.message(' mode group created with mode ') .. modeText)
-    return group
-end
+-- Expose the CreateModeGroup method to user job files.
+core.CreateModeGroup = groups.CreateModeGroup
 
 ---
 -- Expose the GetClassifiers method to user job files.

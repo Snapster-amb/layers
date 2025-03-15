@@ -7,6 +7,26 @@ local memory = {}
 local res = require("resources")
 
 ---
+-- Generate a table of valid status effect names
+memory.GetStatusEffectNames = function()
+    local statusEffects = {}
+    for id, buff in pairs(res.buffs) do
+        statusEffects[buff.en] = id
+    end
+    return statusEffects
+end
+
+---
+-- Generate a table of valid status effect names
+memory.GetZoneNames = function()
+    local zones = {}
+    for id, zone in pairs(res.zones) do
+        zones[zone.en] = id
+    end
+    return zones
+end
+
+---
 -- Get the player's current level
 --
 -- This should return the player's reduced level if under level sync
