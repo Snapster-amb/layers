@@ -345,7 +345,6 @@ local metatable = {
             if statusEffects[buff] then
                 return function() return gData.GetBuffCount(buff) > 0 end
             end
-
             local buffId = tonumber(buff)
             if buffId then
                 return function() return gData.GetBuffCount(buffId) > 0 end

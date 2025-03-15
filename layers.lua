@@ -18,6 +18,8 @@ if gearswap then
         next = next,
         tonumber = tonumber,
         tostring = tostring,
+        math = math,
+        buffactive = buffactive,
         equip = equip,
         player = player,
         pet = pet,

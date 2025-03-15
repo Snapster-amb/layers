@@ -64,12 +64,14 @@ end
 
 gData.GetPet = function()
     if pet.isvalid then
+        local x = player.x - pet.x
+        local y = player.y - pet.y
         return {
             Name = pet.name,
             Status = pet.status,
             HPP = pet.hpp,
-            TP = pet.tp
-            -- TODO : get distance working
+            TP = pet.tp,
+            Distance = math.sqrt(x * x + y * y)
         }
     end
 end
@@ -104,16 +106,18 @@ end
 
 gData.GetTarget = function()
     local target = player.target
-    if target then
+    if target and target.valid_target then
         local targetType = "PC"
-        if target.is_npc then
-            targetType = "NPC"
-        elseif target.type == "MONSTER" then
+        if target.type == "MONSTER" then
             targetType = "Monster"
-        elseif target.type == "PLAYER" then
-            if target.isallymember then -- TODO search for "Party" target type (or just return windower type?)
-                targetType = "Alliance"
-            end
+        elseif target.type == "SELF" then
+            targetType = "PC"
+        elseif target.ispartymember then
+            targetType = "Party"
+        elseif target.isallymember then
+            targetType = "Alliance"
+        elseif target.is_npc then
+            targetType = "NPC"
         end
         return {
             Name = target.name,
@@ -127,16 +131,19 @@ end
 
 gData.GetActionTarget = function()
     local action = gData.playerAction
-    if action and action.target then
+    if action and action.target and action.target.valid_target then
+        local target = action.target
         local targetType = "PC"
-        if action.target.is_npc then
-            targetType = "NPC"
-        elseif action.target.type == "MONSTER" then
+        if target.type == "MONSTER" then
             targetType = "Monster"
-        elseif action.target.type == "PLAYER" then
-            if action.target.isallymember then -- TODO search for "Party" target type (or just return windower type?)
-                targetType = "Alliance"
-            end
+        elseif target.type == "SELF" then
+            targetType = "PC"
+        elseif target.ispartymember then
+            targetType = "Party"
+        elseif target.isallymember then
+            targetType = "Alliance"
+        elseif target.is_npc then
+            targetType = "NPC"
         end
         return {
             Name = action.target.name,
@@ -151,11 +158,11 @@ end
 gData.GetBuffCount = function(buff)
     if type(buff) == 'string' then
         return buffactive[buff] or 0
-    elseif type(buff) == 'number' then
+    else
         local player = windower.ffxi.get_player()
         local count = 0
-        for buffId in player.buffs do
-            if buffId == buff then
+        for _, buffId in pairs(player.buffs) do
+            if buff == buffId then
                 count = count + 1
             end
         end
