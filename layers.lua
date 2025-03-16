@@ -66,6 +66,8 @@ if gearswap then
         { ['shims/gearswap'] = '' },
         { ['shims/luashitacast'] = '' },
         { ['shims/stickyitems'] = 'stickyitems' },
+        { ['shims/struct'] = 'struct' },
+        { ['shims/memory'] = 'memory' },
         { ['modes'] = 'modes' },
         { ['chat'] = 'chat' },
         { ['logger'] = 'logger' },
@@ -79,7 +81,6 @@ if gearswap then
         { ['layer'] = 'layer' },
         { ['groups'] = 'groups' },
         { ['core'] = 'core' },
-        { ['shims/memory'] = 'memory' },
         { ['shims/constants'] = '' },
         { ['shims/hotkeys'] = 'hotkeys' },
         { ['predicates'] = 'predicates' }

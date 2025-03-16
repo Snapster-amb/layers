@@ -68,7 +68,7 @@ end
 ---
 -- Register a callback with a incoming chunk event
 memory.RegisterPacketIn = function(name, func)
-    local wrapper = function (id, data, modified, injected, blocked)
+    local wrapper = function(id, data, modified, injected, blocked)
         local e = {
             id = id,
             data = data,

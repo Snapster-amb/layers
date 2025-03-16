@@ -203,45 +203,48 @@ local function LookupControl(zone)
     end
 end
 
-local currentNation = "Unknown"
-local currentZone = memory.GetCurrentZone()
-local currentControl = LookupControl(currentZone)
-logger.Info(chat.message("Region control set to ") .. chat.highlight(currentControl))
+local locals = {
+    CurrentNation = "Unknown",
+    CurrentZone = memory.GetCurrentZone(),
+    CurrentControl = LookupControl(currentZone)
+}
+
+logger.Info(chat.message("Region control set to ") .. chat.highlight(locals.CurrentControl))
 
 memory.RegisterPacketIn("LAC_Conquest_Module_HandleIncomingPacket", function (e)
     if (e.id == 0x00A) then
-        currentZone = struct.unpack("H", e.data, 0x30 + 1)
-        local newControl = LookupControl(currentZone)
-        if (newControl ~= currentControl) then
-            currentControl = newControl
-            logger.Info(chat.message("Region control set to ") .. chat.highlight(currentControl))
+        locals.CurrentZone = struct.unpack("H", e.data, 0x30 + 1)
+        local newControl = LookupControl(locals.CurrentZone)
+        if (newControl ~= locals.CurrentControl) then
+            locals.CurrentControl = newControl
+            logger.Info(chat.message("Region control set to ") .. chat.highlight(locals.CurrentControl))
         end
     elseif (e.id == 0x5E) then
         for _, region in ipairs(packetData) do
             local controller = struct.unpack("B", e.data, region.offset + 1)
             regionControllers[region.name] = controllerNames[controller]
         end
-        local newControl = LookupControl(currentZone)
-        if (newControl ~= currentControl) then
-            currentControl = newControl
-            logger.Info(chat.message("Region control set to ") .. chat.highlight(currentControl))
+        local newControl = LookupControl(locals.CurrentZone)
+        if (newControl ~= locals.CurrentControl) then
+            locals.CurrentControl = newControl
+            logger.Info(chat.message("Region control set to ") .. chat.highlight(locals.CurrentControl))
         end
     elseif (e.id == 0x61) then
         local nationIndex = struct.unpack("B", e.data, 0x50 + 1)
         local newNation = controllerNames[nationIndex + 1]
-        if (newNation ~= currentNation) then
-            currentNation = newNation
-            logger.Info(chat.message("Player nation set to ") .. chat.highlight(currentNation)) 
+        if (newNation ~= locals.CurrentNation) then
+            locals.CurrentNation = newNation
+            logger.Info(chat.message("Player nation set to ") .. chat.highlight(locals.CurrentNation))
         end
     end
 end)
 
 conquest.GetCurrentControl = function()
-    return currentControl
+    return locals.CrrentControl
 end
 
 conquest.GetCurrentNation = function()
-    return currentNation
+    return locals.CurrentNation
 end
 
 conquest.GetZoneControl = function(zone)
@@ -249,14 +252,14 @@ conquest.GetZoneControl = function(zone)
 end
 
 conquest.GetInsideControl = function()
-    return (currentControl == currentNation)
+    return (locals.CurrentControl == locals.CurrentNation)
 end
 
 conquest.GetOutsideControl = function()
-    if (currentControl == "Unknown") then
+    if (locals.CurrentControl == "Unknown") then
         return false
     end
-    return (currentControl ~= currentNation)
+    return (locals.CurrentControl ~= locals.CurrentNation)
 end
 
 return conquest
