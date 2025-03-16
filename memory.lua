@@ -63,4 +63,16 @@ memory.EvaluateItem = function(item, level)
     return false;
 end
 
+---
+-- Get the player's current zone
+memory.GetCurrentZone = function()
+    return AshitaCore:GetMemoryManager():GetParty():GetMemberZone(0)
+end
+
+---
+-- Register a callback with a packet_in event
+memory.RegisterPacketIn = function(name, func)
+    ashita.events.register("packet_in", name, func)
+end
+
 return memory

@@ -75,7 +75,7 @@ if gearswap then
         { ['utils'] = 'utils' },
         { ['callbacks'] = 'callbacks' },
         { ['taxonomy'] = 'taxonomy' },
-        { ['shims/conquest'] = 'conquest' },
+        { ['conquest'] = 'conquest' },
         { ['layer'] = 'layer' },
         { ['groups'] = 'groups' },
         { ['core'] = 'core' },

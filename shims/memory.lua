@@ -59,4 +59,26 @@ memory.EvaluateItem = function(item, level)
     return false
 end
 
+---
+-- Get the player's current zone
+memory.GetCurrentZone = function()
+    return windower.ffxi.get_info().zone
+end
+
+---
+-- Register a callback with a incoming chunk event
+memory.RegisterPacketIn = function(name, func)
+    local wrapper = function (id, data, modified, injected, blocked)
+        local e = {
+            id = id,
+            data = data,
+            data_modified = modified,
+            injected = injected,
+            blocked = blocked
+        }
+        func(e)
+    end
+    windower.raw_register_event('incoming chunk', wrapper)
+end
+
 return memory

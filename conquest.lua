@@ -204,11 +204,11 @@ local function LookupControl(zone)
 end
 
 local currentNation = "Unknown"
-local currentZone = AshitaCore:GetMemoryManager():GetParty():GetMemberZone(0)
+local currentZone = memory.GetCurrentZone()
 local currentControl = LookupControl(currentZone)
 logger.Info(chat.message("Region control set to ") .. chat.highlight(currentControl))
 
-ashita.events.register("packet_in", "LAC_Conquest_Module_HandleIncomingPacket", function (e)
+memory.RegisterPacketIn("LAC_Conquest_Module_HandleIncomingPacket", function (e)
     if (e.id == 0x00A) then
         currentZone = struct.unpack("H", e.data, 0x30 + 1)
         local newControl = LookupControl(currentZone)
