@@ -70,7 +70,7 @@ local metatable = {
                         rawset(t, event, {})
                     end
                     rawset(t, k, v)
-                    setEventsAndCallbacks(t, k)
+                    setEventsAndCallbacks(t, event)
                 end
             else
                 rawset(t, k, v)

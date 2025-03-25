@@ -4,6 +4,38 @@
 -- If users declare implicit modes that match a predicate name or pattern, a callback will automatically be registered for relevant events using the named predicate.
 local predicates = {}
 
+local validElements = {
+    Dark = true,
+    Light = true,
+    Earth = true,
+    Fire = true,
+    Water = true,
+    Wind = true,
+    Ice = true,
+    Lightning = true,
+    Thunder = true
+}
+
+local weakElements = {
+    Dark = "Light",
+    Light = "Dark",
+    Earth = "Wind",
+    Fire = "Water",
+    Water = "Thunder",
+    Wind = "Ice",
+    Ice = "Fire",
+    Lightning = "Earth",
+    Thunder = "Earth"
+}
+
+local validPetTypes = {
+    ['Jug Pet'] = true,
+    ['Spirit'] = true,
+    ['Avatar'] = true,
+    -- ['Wyvern'] = true, TODO add wyvern names to taxonomy
+    ['Charm'] = true
+}
+
 local nations = {
     ["San'doria"] = {
         [230] = "Southern San d'Oria",
@@ -184,38 +216,6 @@ end
 local statusEffects = memory.GetStatusEffectNames()
 
 local zones = memory.GetZoneNames()
-
-local validElements = {
-    Dark = true,
-    Light = true,
-    Earth = true,
-    Fire = true,
-    Water = true,
-    Wind = true,
-    Ice = true,
-    Lightning = true,
-    Thunder = true
-}
-
-local weakElements = {
-    Dark = "Light",
-    Light = "Dark",
-    Earth = "Wind",
-    Fire = "Water",
-    Water = "Thunder",
-    Wind = "Ice",
-    Ice = "Fire",
-    Lightning = "Earth",
-    Thunder = "Earth"
-}
-
-local validPetTypes = {
-    ['Jug Pet'] = true,
-    ['Spirit'] = true,
-    ['Avatar'] = true,
-    -- ['Wyvern'] = true, TODO add wyvern names to taxonomy
-    ['Charm'] = true
-}
 
 local numericalOperators = {
     ['<'] = function(lhs, rhs) return lhs < rhs end,
