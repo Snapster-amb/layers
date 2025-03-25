@@ -9,7 +9,7 @@ for k, v in pairs(constants.InterimEvents) do
     interimEvents[v] = k
 end
 
-local function setEventsAndCallbacks(layer, event, count)
+local function setEventsAndCallbacks(layer, event)
     if not rawget(layer, '__parent') then
         return
     end
@@ -35,13 +35,13 @@ local function setEventsAndCallbacks(layer, event, count)
             end, name)
         end
     end
-    setEventsAndCallbacks(layer.__parent, event, count)
+    setEventsAndCallbacks(layer.__parent, event)
 end
 
 local metatable = {
     __index = function (t, k)
         if type(k) == 'string' then
-            if constants.Events[k] or interimEvents[k] ~= nil then
+            if constants.Events[k] or interimEvents[k] then
                 local v = {}
                 rawset(t, k, v)
                 setEventsAndCallbacks(t, k)
@@ -66,9 +66,6 @@ local metatable = {
             elseif (#k > 9 and string.sub(k, -9) == '_Priority') then
                 local event = string.sub(k, 1, -10)
                 if constants.Events[event] or constants.InterimEvents[event] then
-                    if not rawget(t, event) then
-                        rawset(t, event, {})
-                    end
                     rawset(t, k, v)
                     setEventsAndCallbacks(t, event)
                 end

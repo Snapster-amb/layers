@@ -96,7 +96,12 @@ utils.EvaluateSets = function(root, level)
     for k, v in pairs(root) do
         if type(k) == 'string' and type(v) == 'table' and k ~= '__parent' then
             if (#k > 9) and (string.sub(k, -9) == '_Priority') then
-                local t = root[string.sub(k, 1, -10)]
+                local base = string.sub(k, 1, -10)
+                local t = rawget(root, base)
+                if not t then
+                    t = {}
+                    rawset(root, base, t)
+                end
                 for slot, item in pairs(utils.EvaluateSet(v, level)) do
                     t[slot] = item
                 end
