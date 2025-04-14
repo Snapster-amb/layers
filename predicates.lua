@@ -229,7 +229,8 @@ local identityOperators = {
 }
 
 local function generateComparativePredicate(k, prefix, operands, operators, eval)
-    local field, operator, value = k:match("^" .. prefix .. " ([^%p]+) (%p+) (.+)$")
+    local pattern = "^" .. (prefix ~= "" and prefix .. " " or "") .. "([^%p]+)%s*(%p+)%s*(.+)$"
+    local field, operator, value = k:match(pattern)
 
     if not field or not operator or not value then
         return
@@ -320,6 +321,35 @@ local metatable = {
                     local element = action.Element
 
                     if validElements[element] then
+                        local score = 0
+
+                        if environment.DayElement == element then
+                            score = score + 10
+                        elseif environment.DayElement == weakElements[element] then
+                            score = score - 10
+                        end
+
+                        if environment.WeatherElement == element then
+                            score = score + (environment.Weather:sub(-2) == "x2" and 25 or 10)
+                        elseif environment.WeatherElement == weakElements[element] then
+                            score = score - (environment.Weather:sub(-2) == "x2" and 25 or 10)
+                        end
+
+                        return numericalOperators[operator](score, value)
+                    end
+                end
+            end
+        end
+        if k:match("Environment Score ") then
+            local element, operator, value = k:match("^(%w+)%s+Environment Score%s*([<>=!]+)%s*(%d+)")
+            value = tonumber(value)
+            if element and value and numericalOperators[operator] and validElements[element] then
+                return function()
+                    local environment = gData.GetEnvironment() or {}
+                    local action = gData.GetAction() or {}
+
+                    if validElements[element] then
+                        element = memory.GetAddonElementName(element)
                         local score = 0
 
                         if environment.DayElement == element then

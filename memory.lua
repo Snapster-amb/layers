@@ -75,4 +75,14 @@ memory.RegisterPacketIn = function(name, func)
     ashita.events.register("packet_in", name, func)
 end
 
+---
+-- Get the luashitacast version of the provided element name
+memory.GetAddonElementName = function(element)
+    if element == 'Lightning' then
+        return 'Thunder'
+    else
+        return element
+    end
+end
+
 return memory

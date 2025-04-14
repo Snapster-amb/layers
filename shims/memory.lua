@@ -81,4 +81,14 @@ memory.RegisterPacketIn = function(name, func)
     windower.raw_register_event('incoming chunk', wrapper)
 end
 
+---
+-- Get the gearswap version of the provided element name
+memory.GetAddonElementName = function(element)
+    if element == 'Thunder' then
+        return 'Lightning'
+    else
+        return element
+    end
+end
+
 return memory
