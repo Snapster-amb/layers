@@ -127,6 +127,10 @@ utils.CreateCompoundPredicate = function(input)
             error("Empty expression is not allowed")
         end
 
+        -- Trim whitespace from the expression
+        expression = expression:match("^%s*(.-)%s*$")
+
+        -- Validate parentheses are balanced
         local parens_level = 0
         for i = 1, #expression do
             local char = expression:sub(i, i)
@@ -143,15 +147,15 @@ utils.CreateCompoundPredicate = function(input)
             error("Mismatched parentheses: Missing closing parenthesis")
         end
 
-        if expression:sub(1, 1) == "~" then
-            return function()
-                return not parse_expression(expression:sub(2))()
-            end
-        end
-
+        -- First, look for top-level operators (outside parentheses)
+        -- && has higher precedence than ||, so we search for || first (lower precedence)
+        -- then && (higher precedence), processing right-to-left to maintain left-associativity
         local op_pos, op
+        local operators_low_prec = {"||"}  -- Lower precedence operators
+        local operators_high_prec = {"&&"}  -- Higher precedence operators
+        parens_level = 0
 
-        local operators = {"&&", "||"}
+        -- First, look for lower precedence operators (||) at top level
         for i = #expression, 1, -1 do
             local char = expression:sub(i, i)
             if char == ")" then
@@ -159,7 +163,7 @@ utils.CreateCompoundPredicate = function(input)
             elseif char == "(" then
                 parens_level = parens_level - 1
             elseif parens_level == 0 then
-                for _, operator in ipairs(operators) do
+                for _, operator in ipairs(operators_low_prec) do
                     if expression:sub(i, i + #operator - 1) == operator then
                         op_pos, op = i, operator
                         break
@@ -169,6 +173,30 @@ utils.CreateCompoundPredicate = function(input)
             if op_pos then break end
         end
 
+        -- If no lower precedence operator found, look for higher precedence operators (&&)
+        if not op_pos then
+            parens_level = 0
+            for i = #expression, 1, -1 do
+                local char = expression:sub(i, i)
+                if char == ")" then
+                    parens_level = parens_level + 1
+                elseif char == "(" then
+                    parens_level = parens_level - 1
+                elseif parens_level == 0 then
+                    for _, operator in ipairs(operators_high_prec) do
+                        if expression:sub(i, i + #operator - 1) == operator then
+                            op_pos, op = i, operator
+                            break
+                        end
+                    end
+                end
+                if op_pos then break end
+            end
+        end
+
+
+
+        -- If we found an operator, split and recurse
         if op then
             local left = expression:sub(1, op_pos - 1):match("^%s*(.-)%s*$")
             local right = expression:sub(op_pos + #op):match("^%s*(.-)%s*$")
@@ -184,10 +212,26 @@ utils.CreateCompoundPredicate = function(input)
             end
         end
 
+        -- Strip outer parentheses if the entire expression is wrapped
         if expression:sub(1, 1) == "(" and expression:sub(-1) == ")" then
-            return parse_expression(expression:sub(2, -2))
+            local inner = expression:sub(2, -2):match("^%s*(.-)%s*$")
+            return parse_expression(inner)
         end
 
+        -- Handle negation operator (only applies to atomic expressions)
+        if expression:sub(1, 1) == "~" then
+            local rest = expression:sub(2):match("^%s*(.-)%s*$")
+            if rest == "" then
+                error("Invalid syntax: Negation operator requires an operand")
+            end
+            -- Parse the rest as an atomic expression (could be a predicate or parenthesized expression)
+            local inner_pred = parse_expression(rest)
+            return function()
+                return not inner_pred()
+            end
+        end
+
+        -- At this point, we should have an atomic predicate (no operators, no negation, no outer parentheses)
         if expression:find("[%(%)]") then
             error("Invalid syntax: Mismatched or unexpected parentheses")
         end
