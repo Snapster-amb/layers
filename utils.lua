@@ -121,6 +121,33 @@ utils.EvaluateLevels = function(sets)
     end
 end
 
+utils.SelectItem = function(items)
+    if type(items) == 'string' then
+        return items
+    end
+    for _, item in ipairs(items) do
+        if type(item) == 'table' and item.When then
+            local wrapper = groups.GetGroup(item.When)
+            local mode = wrapper.group.current
+            if not constants.InvalidModeNames[mode] then
+                return item
+            end
+        elseif type(item) == 'table' then
+            return item
+        end
+    end
+end
+
+utils.SelectItems = function(set)
+    local selectedItems = {}
+    for slotName, slotEntries in pairs(set) do
+        if constants.Slots[slotName] then
+            selectedItems[slotName] = utils.SelectItem(slotEntries)
+        end
+    end
+    return selectedItems
+end
+
 utils.CreateCompoundPredicate = function(input)
     local function parse_expression(expression)
         if expression == "" then
