@@ -114,12 +114,10 @@ local function buildEventSetAndEquipWithCallbacks(classifiers, event, action)
     local interimEvent = constants.InterimEvents[event]
     if interimEvent then
         local interimSet = buildEventSet(classifiers, interimEvent)
-        interimSet = utils.SelectItems(interimSet)
         logger.Debug(chat.message('Equipping ') .. chat.event(event) .. chat.message(' set containing ') .. chat.highlight(string.format('%d items', utils.GetSetItemCount(interimSet))), true)
         gFunc.InterimEquipSet(interimSet)
     end
     local set = buildEventSet(classifiers, event)
-    set = utils.SelectItems(set)
     logger.Debug(chat.message('Equipping ') .. chat.event(event) .. chat.message(' set containing ') .. chat.highlight(string.format('%d items', utils.GetSetItemCount(set))), true)
     gFunc.EquipSet(set)
     callbacks.Execute(string.format('PostHandle%s', event), event, action)

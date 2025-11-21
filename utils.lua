@@ -13,7 +13,8 @@ utils.TableLength = function(t)
 end
 
 utils.MergeSets = function(lhs, rhs)
-    for slot, item in pairs(rhs) do
+    local selected = utils.SelectItems(rhs)
+    for slot, item in pairs(selected) do
         if constants.Slots[slot] then
             lhs[slot] = item
         end
@@ -125,6 +126,17 @@ utils.SelectItem = function(items)
     if type(items) == 'string' then
         return items
     end
+    if type(items) == 'table' and items.Name then
+        if items.When then
+            local wrapper = groups.GetGroup(items.When)
+            local mode = wrapper.group.current
+            if not constants.InvalidModeNames[mode] then
+                return items
+            end
+        else
+            return items
+        end
+    end
     for _, item in ipairs(items) do
         if type(item) == 'table' and item.When then
             local wrapper = groups.GetGroup(item.When)
@@ -142,7 +154,10 @@ utils.SelectItems = function(set)
     local selectedItems = {}
     for slotName, slotEntries in pairs(set) do
         if constants.Slots[slotName] then
-            selectedItems[slotName] = utils.SelectItem(slotEntries)
+            local item = utils.SelectItem(slotEntries)
+            if item then
+                selectedItems[slotName] = utils.SelectItem(slotEntries)
+            end
         end
     end
     return selectedItems
