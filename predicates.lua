@@ -379,6 +379,9 @@ local metatable = {
             if buffId then
                 return function() return gData.GetBuffCount(buffId) > 0 end
             end
+            if buff == "Utsusemi" then
+                return function() return gData.GetBuffCount(66) > 0 or gData.GetBuffCount(444) > 0 or gData.GetBuffCount(445) > 0 or gData.GetBuffCount(446) > 0 end
+            end
         end
         if k:match("^Area == ") then
             local zone = k:sub(9)

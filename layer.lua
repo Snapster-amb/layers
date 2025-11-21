@@ -65,6 +65,8 @@ local function scanItemSetForRules(root, event)
                         end
                     end
                 end
+            elseif type(v) == 'table' and v.When then
+                createItemEventsAndCallbacks(v.When, event)
             end
         end
     end
