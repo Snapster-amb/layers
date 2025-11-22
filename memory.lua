@@ -109,4 +109,23 @@ memory.GetItemByName = function(name)
     return AshitaCore:GetResourceManager():GetItemByName(name, 0)
 end
 
+---
+-- Get the filesystem path to the Layers extension root directory.
+memory.GetExtensionPath = function()
+    local base = AshitaCore:GetInstallPath()
+    return string.format('%sconfig\\addons\\luashitacast\\layers', base)
+end
+
+---
+-- Send a command to the chat client
+memory.QueueCommand = function(command)
+    AshitaCore:GetChatManager():QueueCommand(1, command)
+end
+
+---
+-- Reload the extension
+memory.Reload = function()
+    AshitaCore:GetChatManager():QueueCommand(1, '/lac reload')
+end
+
 return memory

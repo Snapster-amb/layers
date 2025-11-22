@@ -28,7 +28,9 @@ if gearswap then
         sets = sets,
         windower = windower,
         world = world,
-        coroutine = coroutine
+        coroutine = coroutine,
+        os = os,
+        io = io
     }
 
     local loadFile = function(path)
@@ -178,7 +180,9 @@ else
         bit = bit,
         tonumber = tonumber,
         tostring = tostring,
-        coroutine = coroutine
+        coroutine = coroutine,
+        os = os,
+        io = io
     }
 
     local modules = {

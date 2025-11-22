@@ -45,6 +45,45 @@ local function handleLoggingCommand(args)
     print(chat.header("Layers") .. chat.message("Logging level set to ") .. chat.group(logger.level.current))
 end
 
+local function handleUpdateCommand()
+    local function exec(cmd)
+        local ok, _, code = os.execute(cmd)
+        if ok == true or ok == 0 then
+            return true
+        end
+        if type(ok) == 'number' and ok == 0 then
+            return true
+        end
+        if ok == true and code == 0 then
+            return true
+        end
+        return false
+    end
+    local extensionPath = memory.GetExtensionPath()
+    if not extensionPath then
+        return print(chat.header("Layers") .. chat.error("Unable to determine extension path."))
+    end
+
+    local function withPath(command)
+        return string.format('cd /d "%s" && %s', extensionPath, command)
+    end
+
+    if not exec(withPath("git --version >nul 2>&1")) or exec(withPath("git --version >/dev/null 2>&1")) then
+        return print(chat.header("Layers") .. chat.error("Unable to determine git version."))
+    end
+
+    if not exec(withPath("git rev-parse --is-inside-work-tree >nul 2>&1")) or exec(withPath("git rev-parse --is-inside-work-tree >/dev/null 2>&1")) then
+        return print(chat.header("Layers") .. chat.error("Extension directory is not a git repository."))
+    end
+
+    if exec(withPath("git pull")) then
+        print(chat.header("Layers") .. chat.message("Extension is up to date."))
+        memory.Reload()
+    else
+        print(chat.header("Layers") .. chat.error("Failed to update ."))
+    end
+end
+
 local function handleValidateCommand()
     local itemsByName = utils.CollectSetItems(core.Sets)
     itemsByName["Empty"] = nil
@@ -186,17 +225,17 @@ local function handleValidateCommand()
     table.sort(missingList, function(a, b)
         return a.name:lower() < b.name:lower()
     end)
-
+    print(chat.header("Layers") .. chat.message("Located ") .. chat.highlight(tostring(totalItems - totalLocated - totalMissing)) .. chat.message(" accessible items"))
+    print(chat.header("Layers") .. chat.message("Located ") .. chat.highlight(tostring(totalLocated)) .. chat.message(" stored items"))
     if #flatLocated > 0 then
-        print(chat.header("Layers") .. chat.message("Located ") .. chat.highlight(tostring(totalLocated)) .. chat.message(" stored items"))
         for _, entry in ipairs(flatLocated) do
             print(chat.header("Layers") .. "  " .. chat.location(entry.name) .. " " .. string.char(0x81, 0xC3) .. " " .. chat.charged(entry.container))
             coroutine.sleep(0.05)
         end
     end
 
+    print(chat.header("Layers") .. chat.message("Identified ") .. chat.highlight(tostring(totalMissing)) .. chat.message(" missing items"))
     if #missingList > 0 then
-        print(chat.header("Layers") .. chat.message("Identified ") .. chat.highlight(tostring(totalMissing)) .. chat.message(" missing items"))
         for _, entry in ipairs(missingList) do
             if entry.count > 1 then
                 print(chat.header("Layers") .. "  " .. chat.location(entry.name) .. chat.message(" x ") .. chat.highlight(tostring(entry.count)))
@@ -205,8 +244,6 @@ local function handleValidateCommand()
             end
             coroutine.sleep(0.05)
         end
-    else
-        print(chat.header("Layers") .. chat.success("All required items found."))
     end
 end
 
@@ -232,6 +269,8 @@ commands.HandleCommand = function(args)
         handleModeGroupCommand(command, args)
     elseif command == 'logging' then
         handleLoggingCommand(args)
+    elseif command == 'update' or command == 'u' then
+        handleUpdateCommand()
     elseif command == 'validate' or command == 'v' then
         handleValidateCommand()
     end
