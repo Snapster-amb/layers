@@ -109,4 +109,11 @@ memory.GetItemByName = function(name)
     return AshitaCore:GetResourceManager():GetItemByName(name, 0)
 end
 
+---
+-- Get the filesystem path to the Layers extension root directory.
+memory.GetExtensionPath = function()
+    local base = AshitaCore:GetInstallPath()
+    return string.format('%sconfig\\addons\\luashitacast\\layers', base)
+end
+
 return memory
