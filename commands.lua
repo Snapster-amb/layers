@@ -224,6 +224,7 @@ local function handleValidateCommand()
     table.sort(missingList, function(a, b)
         return a.name:lower() < b.name:lower()
     end)
+    print("test")
     print(chat.header("Layers") .. chat.message("Located ") .. chat.highlight(tostring(totalItems - totalLocated - totalMissing)) .. chat.message(" accessible items"))
     print(chat.header("Layers") .. chat.message("Located ") .. chat.highlight(tostring(totalLocated)) .. chat.message(" stored items"))
     if #flatLocated > 0 then
