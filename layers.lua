@@ -27,7 +27,8 @@ if gearswap then
         send_command = send_command,
         sets = sets,
         windower = windower,
-        world = world
+        world = world,
+        coroutine = coroutine
     }
 
     local loadFile = function(path)
@@ -176,7 +177,8 @@ else
         ashita = ashita,
         bit = bit,
         tonumber = tonumber,
-        tostring = tostring
+        tostring = tostring,
+        coroutine = coroutine
     }
 
     local modules = {

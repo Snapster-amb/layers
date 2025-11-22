@@ -45,6 +45,171 @@ local function handleLoggingCommand(args)
     print(chat.header("Layers") .. chat.message("Logging level set to ") .. chat.group(logger.level.current))
 end
 
+local function handleValidateCommand()
+    local itemsByName = utils.CollectSetItems(core.Sets)
+    itemsByName["Empty"] = nil
+    itemsByName["Ignore"] = nil
+    local itemList = {}
+    local totalItems = 0
+
+    for name, count in pairs(itemsByName) do
+        totalItems = totalItems + count
+        table.insert(itemList, { name = name, count = count })
+    end
+
+    table.sort(itemList, function(a, b)
+        return a.name:lower() < b.name:lower()
+    end)
+
+    print(chat.header("Layers") .. chat.message("Identified ") .. chat.highlight(tostring(totalItems)) .. chat.message(" required items and ") .. chat.highlight(tostring(#itemList)) .. chat.message(" required unique items"))
+    local requiredByName = {}
+    local requiredById = {}
+    for _, entry in ipairs(itemList) do
+        local meta = {
+            name = entry.name,
+            required = entry.count,
+            remaining = entry.count
+        }
+        local resource = memory.GetItemByName(entry.name)
+        if resource and resource.Id then
+            meta.id = resource.Id
+            requiredById[resource.Id] = meta
+        else
+            meta.unknown = true
+        end
+        requiredByName[entry.name] = meta
+    end
+
+    local possessed = {}
+    local located = {}
+
+    local function record(bucket, name, containerName, count)
+        local list = bucket[name]
+        if not list then
+            list = {}
+            bucket[name] = list
+        end
+        table.insert(list, { container = containerName, count = count })
+    end
+
+    local function scanContainers(containerNames, bucket)
+        for _, containerName in ipairs(containerNames) do
+            local containerId = constants.Containers[containerName]
+            if containerId then
+                local max = memory.GetContainerCountMax(containerId)
+                for index = 1, max do
+                    local item = memory.GetContainerItem(containerId, index)
+                    if item and item.Id and item.Id ~= 0 then
+                        local req = requiredById[item.Id]
+                        if req and req.remaining and req.remaining > 0 then
+                            local available = item.Count or 1
+                            local take = available
+                            if take > req.remaining then
+                                take = req.remaining
+                            end
+                            if take > 0 then
+                                record(bucket, req.name, containerName, take)
+                                req.remaining = req.remaining - take
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    local primaryContainers = {
+        'Inventory',
+        'Satchel',
+        'Sack',
+        'Case',
+        'Wardrobe',
+        'Wardrobe2',
+        'Wardrobe3',
+        'Wardrobe4',
+        'Wardrobe5',
+        'Wardrobe6',
+        'Wardrobe7',
+        'Wardrobe8'
+    }
+    scanContainers(primaryContainers, possessed)
+
+    local secondaryContainers = {
+        'Safe',
+        'Storage',
+        'Locker',
+        'Safe2'
+    }
+    scanContainers(secondaryContainers, located)
+
+    local function sumCounts(entries)
+        local total = 0
+        for _, e in ipairs(entries) do
+            total = total + (e.count or 1)
+        end
+        return total
+    end
+
+    local flatLocated = {}
+    local totalLocated = 0
+    for name, entries in pairs(located) do
+        for _, e in ipairs(entries) do
+            local count = e.count or 1
+            local containerName = e.container or 'Unknown'
+            for i = 1, count do
+                totalLocated = totalLocated + 1
+                table.insert(flatLocated, {
+                    name = name,
+                    container = containerName,
+                })
+            end
+        end
+    end
+
+    table.sort(flatLocated, function(a, b)
+        if a.container == b.container then
+            return a.name:lower() < b.name:lower()
+        end
+        return (a.container or '') < (b.container or '')
+    end)
+
+    local missingList = {}
+    local totalMissing = 0
+
+    for name, meta in pairs(requiredByName) do
+        if meta.remaining and meta.remaining > 0 then
+            totalMissing = totalMissing + meta.remaining
+            table.insert(missingList, { name = name, count = meta.remaining })
+        end
+    end
+
+    table.sort(missingList, function(a, b)
+        return a.name:lower() < b.name:lower()
+    end)
+
+    if #flatLocated > 0 then
+        print(chat.header("Layers") .. chat.message("Located ") .. chat.highlight(tostring(totalLocated)) .. chat.message(" stored items"))
+        for _, entry in ipairs(flatLocated) do
+            print(chat.header("Layers") .. "  " .. chat.location(entry.name) .. " " .. string.char(0x81, 0xC3) .. " " .. chat.charged(entry.container))
+            coroutine.sleep(0.05)
+        end
+    end
+
+    if #missingList > 0 then
+        print(chat.header("Layers") .. chat.message("Identified ") .. chat.highlight(tostring(totalMissing)) .. chat.message(" missing items"))
+        for _, entry in ipairs(missingList) do
+            if entry.count > 1 then
+                print(chat.header("Layers") .. "  " .. chat.location(entry.name) .. chat.message(" x ") .. chat.highlight(tostring(entry.count)))
+            else
+                print(chat.header("Layers") .. "  " .. chat.location(entry.name))
+            end
+            coroutine.sleep(0.05)
+        end
+    else
+        print(chat.header("Layers") .. chat.success("All required items found."))
+    end
+end
+
 ---
 -- Retrieve an unordered set of classifiers for something in the taxonomy.
 -- @param args A table containing the split user command indexed by command word order ({[1] = 'cycle', [2] = 'modeGroup'})
@@ -67,6 +232,8 @@ commands.HandleCommand = function(args)
         handleModeGroupCommand(command, args)
     elseif command == 'logging' then
         handleLoggingCommand(args)
+    elseif command == 'validate' or command == 'v' then
+        handleValidateCommand()
     end
 end
 

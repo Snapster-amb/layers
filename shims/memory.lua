@@ -91,4 +91,41 @@ memory.GetAddonElementName = function(element)
     end
 end
 
+---
+-- Get the maximum number of items that can be stored in the provided container
+memory.GetContainerCountMax = function(container)
+    local bag = windower.ffxi.get_bag_info(container)
+    return bag.max
+end
+
+---
+-- Get the current number of items that are stored in the provided container
+memory.GetContainerCount = function(container)
+    local bag = windower.ffxi.get_bag_info(container)
+    return bag.count
+end
+
+---
+-- Get the item from the provided container and index
+memory.GetContainerItem = function(container, index)
+    local item = windower.ffxi.get_items(container, index)
+    if item then
+        return {
+            Id = item.id,
+        }
+    end
+end
+
+---
+-- Get an item using the provided name
+memory.GetItemByName = function(name)
+    local search = res.items:name(item)
+    local id, resource = next(search, nil)
+    if (id ~= nil) then
+        return {
+            Id = id
+        }
+    end
+end
+
 return memory

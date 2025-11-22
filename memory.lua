@@ -85,4 +85,28 @@ memory.GetAddonElementName = function(element)
     end
 end
 
+---
+-- Get the maximum number of items that can be stored in the provided container
+memory.GetContainerCountMax = function(container)
+    return AshitaCore:GetMemoryManager():GetInventory():GetContainerCountMax(container)
+end
+
+---
+-- Get the current number of items that are stored in the provided container
+memory.GetContainerCount = function(container)
+    return AshitaCore:GetMemoryManager():GetInventory():GetContainerCount(container)
+end
+
+---
+-- Get the item from the provided container and index
+memory.GetContainerItem = function(container, index)
+    return AshitaCore:GetMemoryManager():GetInventory():GetContainerItem(container, index)
+end
+
+---
+-- Get an item using the provided name
+memory.GetItemByName = function(name)
+    return AshitaCore:GetResourceManager():GetItemByName(name, 0)
+end
+
 return memory

@@ -163,6 +163,71 @@ utils.SelectItems = function(set)
     return selectedItems
 end
 
+utils.CollectSetItems = function(root)
+    local items = {}
+    local function addTableItems(t)
+        local localCounts = {}
+
+        for slotName, slotValue in pairs(t) do
+            if type(slotName) == 'string' and constants.Slots[slotName] then
+                local slotNames = {}
+
+                if type(slotValue) == 'string' then
+                    if slotValue ~= '' then
+                        slotNames[slotValue] = true
+                    end
+                elseif type(slotValue) == 'table' then
+                    if slotValue[1] ~= nil then
+                        for _, entry in ipairs(slotValue) do
+                            if type(entry) == 'string' then
+                                if entry ~= '' then
+                                    slotNames[entry] = true
+                                end
+                            elseif type(entry) == 'table' and type(entry.Name) == 'string' and entry.Name ~= '' then
+                                slotNames[entry.Name] = true
+                            end
+                        end
+                    else
+                        if type(slotValue.Name) == 'string' and slotValue.Name ~= '' then
+                            slotNames[slotValue.Name] = true
+                        end
+                    end
+                end
+
+                for name, _ in pairs(slotNames) do
+                    localCounts[name] = (localCounts[name] or 0) + 1
+                end
+            end
+        end
+
+        for name, count in pairs(localCounts) do
+            if not items[name] or count > items[name] then
+                items[name] = count
+            end
+        end
+    end
+
+    local visited = {}
+    local stack = { root }
+
+    while #stack > 0 do
+        local current = table.remove(stack)
+        if type(current) == 'table' and not visited[current] then
+            visited[current] = true
+
+            addTableItems(current)
+
+            for k, v in pairs(current) do
+                if type(v) == 'table' and k ~= '__parent' and k ~= '__name' and not constants.Slots[k] then
+                    table.insert(stack, v)
+                end
+            end
+        end
+    end
+
+    return items
+end
+
 utils.CreateCompoundPredicate = function(input)
     local function parse_expression(expression)
         if expression == "" then
