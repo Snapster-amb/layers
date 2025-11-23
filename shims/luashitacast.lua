@@ -80,6 +80,7 @@ gData.GetPlayer = function()
     return {
         Status = player.status,
         MainJobLevel = player.main_job_level,
+        MainJobSync = player.main_job_level,
         HPP = player.hpp,
         HP = player.hp,
         MaxHP = player.max_hp,
@@ -87,7 +88,9 @@ gData.GetPlayer = function()
         MP = player.mp,
         MaxMP = player.max_mp,
         TP = player.tp,
-        SubJob = player.sub_job
+        SubJob = player.sub_job,
+        SubJobLevel = player.sub_job_level,
+        SubJobSync = player.sub_job_level
     }
 end
 

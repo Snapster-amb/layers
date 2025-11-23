@@ -119,13 +119,31 @@ end
 ---
 -- Get an item using the provided name
 memory.GetItemByName = function(name)
-    local search = res.items:name(item)
+    local search = res.items:name(name)
     local id, resource = next(search, nil)
     if (id ~= nil) then
         return {
             Id = id
         }
     end
+end
+
+---
+-- Get the filesystem path to the Layers extension root directory.
+memory.GetExtensionPath = function()
+    return string.format('%saddons\\GearSwap\\libs\\layers', windower.windower_path)
+end
+
+---
+-- Send a command to the chat client
+memory.QueueCommand = function(command)
+    windower.chat.input(command)
+end
+
+---
+-- Reload the extension
+memory.Reload = function()
+    windower.chat.input('//gs reload')
 end
 
 return memory
