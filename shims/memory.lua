@@ -146,4 +146,32 @@ memory.Reload = function()
     windower.chat.input('//gs reload')
 end
 
+---
+-- Return a table containing the players equipment
+memory.GetEquipment = function()
+    local equipment = {}
+    local remapped = {
+        ['main'] = 'Main',
+        ['sub'] = 'Sub',
+        ['range'] = 'Range',
+        ['ammo'] = 'Ammo',
+        ['head'] = 'Head',
+        ['neck'] = 'Neck',
+        ['left_ear'] = 'Ear1',
+        ['right_ear'] = 'Ear2',
+        ['body'] = 'Body',
+        ['hands'] = 'Hands',
+        ['left_ring'] = 'Ring1',
+        ['right_ring'] = 'Ring2',
+        ['back'] = 'Back',
+        ['waist'] = 'Waist',
+        ['legs'] = 'Legs',
+        ['feet'] = 'Feet'
+    }
+    for k, v in pairs(remapped) do
+        equipment[v] = player.equipment[k]
+    end
+    return equipment
+end
+
 return memory

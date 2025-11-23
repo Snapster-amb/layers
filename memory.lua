@@ -128,4 +128,14 @@ memory.Reload = function()
     AshitaCore:GetChatManager():QueueCommand(1, '/lac reload')
 end
 
+---
+-- Return a table containing the players equipment
+memory.GetEquipment = function()
+    local equipment = {}
+    for k, v in pairs(gData.GetEquipment()) do
+        equipment[k] = v.Name
+    end
+    return equipment
+end
+
 return memory

@@ -275,6 +275,7 @@ local metatable = {
         local descriptors = {
             { prefix = 'Player', operands = {'MP', 'HP', 'TP', 'MPP', 'HPP', 'Max HP', 'Max MP', 'Main Job Level', 'Sub Job Level', 'Main Job Sync', 'Sub Job Sync'}, operators = numericalOperators, eval = gData.GetPlayer },
             { prefix = 'Player', operands = {'MP After Cast', 'MPP After Cast'}, operators = numericalOperators, eval = gData.GetAction },
+            { prefix = 'Player', operands = {'Main', 'Sub', 'Range', 'Ammo', 'Head', 'Body', 'Hands', 'Legs', 'Feet', 'Neck', 'Waist', 'Ear1', 'Ear2', 'Ring1', 'Ring2', 'Back'}, operators = identityOperators, eval = memory.GetEquipment },
             { prefix = '', operands = {'Moon Percent', 'Time'}, operators = numericalOperators, eval = gData.GetEnvironment },
             { prefix = '', operands = {'Weather', 'Raw Weather', 'Weather Element', 'Raw Weather Element', 'Day', 'Day Element'}, operators = identityOperators, eval = gData.GetEnvironment },
             { prefix = '', operands = {'Moon Phase'}, operators = identityOperators, eval = gData.GetEnvironment },
