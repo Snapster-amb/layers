@@ -20,7 +20,8 @@ defaults.SetMidcastDelay = function(spell)
         ["Minstrel's Ring"] = 25
     }
     local cureCastItems = {
-        ["Cure Clogs"] = 15
+        ["Cure Clogs"] = 15,
+        ["Rucke's Rung"] = 10
     }
     local summonCastItems = {
         ["Carbuncle's Cuffs"] = 1,
