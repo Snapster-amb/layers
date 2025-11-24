@@ -138,4 +138,16 @@ memory.GetEquipment = function()
     return equipment
 end
 
+---
+-- Return the description of an item
+memory.GetItemDescription = function(item)
+    local resource = AshitaCore:GetResourceManager():GetItemByName(item, 0)
+    if not resource or resource.Name[1] ~= item then
+        logger.Error("Provided item " .. item .. " not found in resources")
+        return ""
+    else
+        return resource.Description[1]
+    end
+end
+
 return memory

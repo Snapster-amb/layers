@@ -174,4 +174,16 @@ memory.GetEquipment = function()
     return equipment
 end
 
+---
+-- Return the description of an item
+memory.GetItemDescription = function(item)
+    local search = res.items:name(name)
+    local id, resource = next(search, nil)
+    if (id ~= nil) then
+        return resource.en
+    else
+        return ""
+    end
+end
+
 return memory
