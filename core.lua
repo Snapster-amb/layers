@@ -339,6 +339,8 @@ core.EnableAutomaticMidshotDelay = function()
     callbacks.Register('PreHandleMidshot', defaults.SetMidshotDelay, 'Set Midshot Delay')
 end
 
+---
+-- Enable a default set of sticky items
 core.EnableDefaultStickyItems = function()
     logger.Info(chat.message("Adding ") .. chat.highlight(tostring(#defaults.ChargedItems)) .. chat.message(" default charged items."))
     for _, item in pairs(defaults.ChargedItems) do
