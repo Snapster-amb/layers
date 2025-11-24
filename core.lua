@@ -327,4 +327,29 @@ core.EvaluateSet = function(set, level)
     end
 end
 
+---
+-- Enable setting the midcast delay using a turnkey function
+core.EnableAutomaticMidcastDelay = function()
+    callbacks.Register('PreHandleMidcast', defaults.SetMidcastDelay, 'Set Midcast Delay')
+end
+
+---
+-- Enable setting the midshot delay using a turnkey function
+core.EnableAutomaticMidshotDelay = function()
+    callbacks.Register('PreHandleMidshot', defaults.SetMidshotDelay, 'Set Midshot Delay')
+end
+
+---
+-- Enable a default set of sticky items
+core.EnableDefaultStickyItems = function()
+    logger.Info(chat.message("Adding ") .. chat.highlight(tostring(#defaults.ChargedItems)) .. chat.message(" default charged items."))
+    for _, item in pairs(defaults.ChargedItems) do
+        stickyitems.AddChargedItem(item)
+    end
+    logger.Info(chat.message("Adding ") .. chat.highlight(tostring(#defaults.EnchantedItems)) .. chat.message(" default enchanted items."))
+    for _, item in pairs(defaults.EnchantedItems) do
+        stickyitems.AddEnchantedItem(item)
+    end
+end
+
 return proxy

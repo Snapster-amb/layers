@@ -103,7 +103,7 @@ stickyitems.AddChargedItem = function(item)
     elseif not itemIsCharged(item) then
         logger.Error("Unable to add item to charged items set")
     else
-        logger.Info(chat.message("Added ") .. chat.location(item) .. chat.message(" to ") .. chat.charged("Charged") .. chat.message(" items set"))
+        logger.Debug(chat.message("Added ") .. chat.location(item) .. chat.message(" to ") .. chat.charged("Charged") .. chat.message(" items set"))
         chargedItems[item] = true
     end
 end
@@ -133,7 +133,7 @@ stickyitems.AddEnchantedItem = function(item)
     elseif not itemIsCharged(item) then
         logger.Error("Unable to add item to enchanted item set")
     else
-        logger.Info(chat.message("Added ") .. chat.location(item) .. chat.message(" to ") .. chat.charged("Enchanted") .. chat.message(" items set"))
+        logger.Debug(chat.message("Added ") .. chat.location(item) .. chat.message(" to ") .. chat.charged("Enchanted") .. chat.message(" items set"))
         enchantedItems[item] = true
     end
 end

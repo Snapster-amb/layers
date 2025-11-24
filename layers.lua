@@ -83,6 +83,8 @@ if gearswap then
         { ['taxonomy'] = 'taxonomy' },
         { ['conquest'] = 'conquest' },
         { ['layer'] = 'layer' },
+        { ['merits'] = 'merits' },
+        { ['defaults'] = 'defaults' },
         { ['groups'] = 'groups' },
         { ['core'] = 'core' },
         { ['shims/constants'] = '' },
@@ -202,6 +204,8 @@ else
         'predicates',
         'layer',
         'groups',
+        'merits',
+        'defaults',
         'core'
     }
 
