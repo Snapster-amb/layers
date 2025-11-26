@@ -307,7 +307,7 @@ local metatable = {
                 return function()
                     local pet = gData.GetPet() or {}
                     local classifiers = taxonomy.GetClassifiers('Pet', pet.Name or "Unknown")
-                    return classifiers[petType] or "Charm"
+                    return classifiers[petType]
                 end
             end
         end
