@@ -141,7 +141,7 @@ utils.SelectItem = function(items)
         if type(item) == 'table' and item.When then
             local wrapper = groups.GetGroup(item.When)
             local mode = wrapper.group.current
-            if (wrapper.implicit and not constants.InvalidModeNames[mode]) or (wrapper.explicit or mode == item.When) then
+            if (wrapper.implicit and not constants.InvalidModeNames[mode]) or (wrapper.explicit and mode == item.When) then
                 return item
             end
         elseif type(item) == 'table' then
