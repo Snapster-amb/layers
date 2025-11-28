@@ -130,7 +130,7 @@ utils.SelectItem = function(items)
         if items.When then
             local wrapper = groups.GetGroup(items.When)
             local mode = wrapper.group.current
-            if (wrapper.implicit and not constants.InvalidModeNames[mode]) or (wrapper.explicit and mode == items.When) then
+            if (wrapper.implicit and not constants.InvalidModeNames[mode]) or (not wrapper.implicit and mode == items.When) then
                 return items
             end
         else
@@ -141,7 +141,7 @@ utils.SelectItem = function(items)
         if type(item) == 'table' and item.When then
             local wrapper = groups.GetGroup(item.When)
             local mode = wrapper.group.current
-            if (wrapper.implicit and not constants.InvalidModeNames[mode]) or (wrapper.explicit and mode == item.When) then
+            if (wrapper.implicit and not constants.InvalidModeNames[mode]) or (not wrapper.implicit and mode == item.When) then
                 return item
             end
         elseif type(item) == 'table' then
