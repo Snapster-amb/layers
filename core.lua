@@ -342,14 +342,16 @@ end
 ---
 -- Enable a default set of sticky items
 core.EnableDefaultStickyItems = function()
-    logger.Info(chat.message("Adding ") .. chat.highlight(tostring(#defaults.ChargedItems)) .. chat.message(" default charged items."))
     for _, item in pairs(defaults.ChargedItems) do
         stickyitems.AddChargedItem(item)
     end
-    logger.Info(chat.message("Adding ") .. chat.highlight(tostring(#defaults.EnchantedItems)) .. chat.message(" default enchanted items."))
-    for _, item in pairs(defaults.EnchantedItems) do
-        stickyitems.AddEnchantedItem(item)
+    logger.Info(chat.message("Added ") .. chat.highlight(tostring(#defaults.ChargedItems)) .. chat.message(" default charged items."))
+    count = 0
+    for item, buff in pairs(defaults.EnchantedItems) do
+        stickyitems.AddEnchantedItem(item, buff)
+        count = count + 1
     end
+    logger.Info(chat.message("Added ") .. chat.highlight(tostring(count)) .. chat.message(" default enchanted items."))
 end
 
 return proxy

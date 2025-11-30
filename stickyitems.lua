@@ -86,7 +86,7 @@ stickyitems.Bind = function()
         if chargedItems[item.Name] and itemChargeIsReady(item) then
             logger.Debug(chat.message("Equipping ") .. chat.charged("Charged") .. chat.message(" item ") .. chat.location(item.Name) .. chat.message(" to ") .. chat.group(slot), true)
             bind(item, slot)
-        elseif enchantedItems[item.Name] and (itemChargeIsReady(item) or gData.GetBuffCount("Enchantment") > 0) then
+        elseif enchantedItems[item.Name] and (itemChargeIsReady(item) or gData.GetBuffCount(enchantedItems[item.Name]) > 0) then
             logger.Debug(chat.message("Equipping ") .. chat.charged("Enchanted") .. chat.message(" item ") .. chat.location(item.Name) .. chat.message(" to ") .. chat.group(slot), true)
             bind(item, slot)
         end
@@ -127,14 +127,17 @@ end
 -- Add an item to the set of enchanted items.
 --
 -- @param item The name of the item (i.e. "High Brth. Mantle")
-stickyitems.AddEnchantedItem = function(item)
+stickyitems.AddEnchantedItem = function(item, buff)
+    if not buff then
+        buff = "Enchantment"
+    end
     if type(item) ~= 'string' then
         logger.Error("Unable to add item to enchanted items set - provided item name is not a string")
     elseif not itemIsCharged(item) then
         logger.Error("Unable to add item to enchanted item set")
     else
         logger.Debug(chat.message("Added ") .. chat.location(item) .. chat.message(" to ") .. chat.charged("Enchanted") .. chat.message(" items set"))
-        enchantedItems[item] = true
+        enchantedItems[item] = buff
     end
 end
 
