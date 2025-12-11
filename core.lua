@@ -286,6 +286,10 @@ end
 core.CreateModeGroup = groups.CreateModeGroup
 
 ---
+-- Expose the groupWrapperArray object to user job files.
+core.groupWrapperArray = groups.groupWrapperArray
+
+---
 -- Expose the GetClassifiers method to user job files.
 core.GetClassifiers = taxonomy.GetClassifiers
 
