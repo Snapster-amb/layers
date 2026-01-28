@@ -128,10 +128,16 @@ utils.SelectItem = function(items)
     end
     if type(items) == 'table' and items.Name then
         if items.When then
-            local wrapper = groups.GetGroup(items.When)
-            local mode = wrapper.group.current
-            if (wrapper.implicit and not constants.InvalidModeNames[mode]) or (not wrapper.implicit and mode == items.When) then
-                return items
+            if type(items.When) == 'function' then
+                if items.When() then
+                    return items
+                end
+            else
+                local wrapper = groups.GetGroup(items.When)
+                local mode = wrapper.group.current
+                if (wrapper.implicit and not constants.InvalidModeNames[mode]) or (not wrapper.implicit and mode == items.When) then
+                    return items
+                end
             end
         else
             return items
@@ -139,10 +145,16 @@ utils.SelectItem = function(items)
     end
     for _, item in ipairs(items) do
         if type(item) == 'table' and item.When then
-            local wrapper = groups.GetGroup(item.When)
-            local mode = wrapper.group.current
-            if (wrapper.implicit and not constants.InvalidModeNames[mode]) or (not wrapper.implicit and mode == item.When) then
-                return item
+            if type(item.When) == 'function' then
+                if item.When() then
+                    return item
+                end
+            else
+                local wrapper = groups.GetGroup(item.When)
+                local mode = wrapper.group.current
+                if (wrapper.implicit and not constants.InvalidModeNames[mode]) or (not wrapper.implicit and mode == item.When) then
+                    return item
+                end
             end
         elseif type(item) == 'table' then
             return item
