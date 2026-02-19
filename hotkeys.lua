@@ -5,7 +5,7 @@ local hotkeys = {}
 local bindings = {}
 
 hotkeys.Bind = function(name, binding)
-    AshitaCore:GetChatManager():QueueCommand(1, "/bind " .. binding .. " /lac fwd cycle " .. name)
+    AshitaCore:GetChatManager():QueueCommand(1, "/bind " .. binding .. " /lac fwd cycle \"" .. name .."\"")
     bindings[name] = binding
 end
 

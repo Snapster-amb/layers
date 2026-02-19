@@ -60,12 +60,12 @@ local function scanItemSetForRules(root, event)
             if type(v) == 'table' and v[1] ~= nil then
                 for _, t in ipairs(v) do
                     if type(t) == 'table' then
-                        if t.When then
+                        if t.When and type(t.When) ~= 'function' then
                             createItemEventsAndCallbacks(t.When, event)
                         end
                     end
                 end
-            elseif type(v) == 'table' and v.When then
+            elseif type(v) == 'table' and v.When and type(v.When) ~= 'function'then
                 createItemEventsAndCallbacks(v.When, event)
             end
         end
