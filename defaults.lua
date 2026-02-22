@@ -112,7 +112,7 @@ defaults.SetMidshotDelay = function()
     local minimumBuffer = 0.1
     local packetDelay = 0.4
     local castDelay = aimingDelay * (1 - rapidShotModifier) * (1 - velocityShotModifer) - minimumBuffer
-    if castDelay >= packetDelay and gData.GetCurrentCall() == "HandleMidcast" then
+    if castDelay >= packetDelay and gData.GetCurrentCall() == "HandleMidshot" then
         gFunc.SetMidDelay(castDelay)
     end
 end
