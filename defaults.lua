@@ -72,7 +72,11 @@ defaults.SetMidcastDelay = function(spell)
     local fastCastValue = fastCast / 100.0
     local minimumBuffer = 0.1
     local packetDelay = 0.4
-    local castDelay = (((spell.CastTime - castTimeReduction) * (1 - fastCastValue)) / 1000) - minimumBuffer
+    local castTime = spell.CastTime
+    if gData.GetBuffCount('Hasso') > 0 or gData.GetBuffCount('Seigan') > 0 then
+        castTime = castTime * 1.5
+    end
+    local castDelay = (((castTime - castTimeReduction) * (1 - fastCastValue)) / 1000) - minimumBuffer
     if castDelay >= packetDelay and gData.GetCurrentCall() == "HandleMidcast" then
         gFunc.SetMidDelay(castDelay)
     end
