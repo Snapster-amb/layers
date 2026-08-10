@@ -203,9 +203,10 @@ local function LookupControl(zone)
     end
 end
 
+local currentZone = memory.GetCurrentZone()
 local locals = {
     CurrentNation = "Unknown",
-    CurrentZone = memory.GetCurrentZone(),
+    CurrentZone = currentZone,
     CurrentControl = LookupControl(currentZone)
 }
 
@@ -240,7 +241,7 @@ memory.RegisterPacketIn("LAC_Conquest_Module_HandleIncomingPacket", function (e)
 end)
 
 conquest.GetCurrentControl = function()
-    return locals.CrrentControl
+    return locals.CurrentControl
 end
 
 conquest.GetCurrentNation = function()
@@ -252,6 +253,9 @@ conquest.GetZoneControl = function(zone)
 end
 
 conquest.GetInsideControl = function()
+    if (locals.CurrentControl == "Unknown") then
+        return false
+    end
     return (locals.CurrentControl == locals.CurrentNation)
 end
 
