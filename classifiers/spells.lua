@@ -4,7 +4,8 @@ return {
         [2] = "Magical Blue",
         [3] = "1000 Needles",
         [4] = "Light Affinity",
-        [5] = "Light Magic Damage"
+        [5] = "Light Offensive",
+        [6] = "Light Magic Damage"
     },
     ["AAEV"] = {
         [1] = "Trust",
@@ -60,7 +61,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Absolute Terror",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Absorb-ACC"] = {
         [1] = "Dark",
@@ -68,7 +70,8 @@ return {
         [3] = "Absorb-Stat",
         [4] = "Absorb-ACC",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Absorb-AGI"] = {
         [1] = "Dark",
@@ -76,14 +79,16 @@ return {
         [3] = "Absorb-Stat",
         [4] = "Absorb-AGI",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Absorb-Attri"] = {
         [1] = "Dark",
         [2] = "Absorb",
         [3] = "Absorb-Attri",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Absorb-CHR"] = {
         [1] = "Dark",
@@ -91,7 +96,8 @@ return {
         [3] = "Absorb-Stat",
         [4] = "Absorb-CHR",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Absorb-DEX"] = {
         [1] = "Dark",
@@ -99,7 +105,8 @@ return {
         [3] = "Absorb-Stat",
         [4] = "Absorb-DEX",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Absorb-INT"] = {
         [1] = "Dark",
@@ -107,7 +114,8 @@ return {
         [3] = "Absorb-Stat",
         [4] = "Absorb-INT",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Absorb-MND"] = {
         [1] = "Dark",
@@ -115,7 +123,8 @@ return {
         [3] = "Absorb-Stat",
         [4] = "Absorb-MND",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Absorb-STR"] = {
         [1] = "Dark",
@@ -123,14 +132,16 @@ return {
         [3] = "Absorb-Stat",
         [4] = "Absorb-STR",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Absorb-TP"] = {
         [1] = "Dark",
         [2] = "Absorb",
         [3] = "Absorb-TP",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Absorb-VIT"] = {
         [1] = "Dark",
@@ -138,7 +149,8 @@ return {
         [3] = "Absorb-Stat",
         [4] = "Absorb-VIT",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Acrid Stream"] = {
         [1] = "Blue",
@@ -147,21 +159,24 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Acrid Stream",
         [6] = "Water Affinity",
-        [7] = "Water Magic Damage"
+        [7] = "Water Offensive",
+        [8] = "Water Magic Damage"
     },
     ["Actinic Burst"] = {
         [1] = "Blue",
         [2] = "Enfeebling Blue",
         [3] = "Actinic Burst",
         [4] = "Light Affinity",
-        [5] = "Light Enfeeblement"
+        [5] = "Light Offensive",
+        [6] = "Light Enfeeblement"
     },
     ["Addle"] = {
         [1] = "Enfeebling",
         [2] = "White Magic Enfeebling",
         [3] = "Addle",
         [4] = "Fire Affinity",
-        [5] = "Fire Enfeeblement"
+        [5] = "Fire Offensive",
+        [6] = "Fire Enfeeblement"
     },
     ["Addle II"] = {
         [1] = "Enfeebling",
@@ -169,7 +184,8 @@ return {
         [3] = "Addle",
         [4] = "Addle II",
         [5] = "Fire Affinity",
-        [6] = "Fire Enfeeblement"
+        [6] = "Fire Offensive",
+        [7] = "Fire Enfeeblement"
     },
     ["Adelheid"] = {
         [1] = "Trust",
@@ -209,7 +225,8 @@ return {
         [2] = "Ra",
         [3] = "Aera",
         [4] = "Wind Affinity",
-        [5] = "Wind Magic Damage"
+        [5] = "Wind Offensive",
+        [6] = "Wind Magic Damage"
     },
     ["Aera II"] = {
         [1] = "Elemental",
@@ -217,7 +234,8 @@ return {
         [3] = "Ra II",
         [4] = "Aera II",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Aera III"] = {
         [1] = "Elemental",
@@ -225,14 +243,16 @@ return {
         [3] = "Ra III",
         [4] = "Aera III",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Aero"] = {
         [1] = "Elemental",
         [2] = "Single Target Elemental",
         [3] = "Aero",
         [4] = "Wind Affinity",
-        [5] = "Wind Magic Damage"
+        [5] = "Wind Offensive",
+        [6] = "Wind Magic Damage"
     },
     ["Aero II"] = {
         [1] = "Elemental",
@@ -240,7 +260,8 @@ return {
         [3] = "Single Target Elemental II",
         [4] = "Aero II",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Aero III"] = {
         [1] = "Elemental",
@@ -248,7 +269,8 @@ return {
         [3] = "Single Target Elemental III",
         [4] = "Aero III",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Aero IV"] = {
         [1] = "Elemental",
@@ -256,7 +278,8 @@ return {
         [3] = "Single Target Elemental IV",
         [4] = "Aero IV",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Aero V"] = {
         [1] = "Elemental",
@@ -264,7 +287,8 @@ return {
         [3] = "Single Target Elemental V",
         [4] = "Aero V",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Aero VI"] = {
         [1] = "Elemental",
@@ -272,14 +296,16 @@ return {
         [3] = "Single Target Elemental VI",
         [4] = "Aero VI",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Aeroga"] = {
         [1] = "Elemental",
         [2] = "Ga",
         [3] = "Aeroga",
         [4] = "Wind Affinity",
-        [5] = "Wind Magic Damage"
+        [5] = "Wind Offensive",
+        [6] = "Wind Magic Damage"
     },
     ["Aeroga II"] = {
         [1] = "Elemental",
@@ -287,7 +313,8 @@ return {
         [3] = "Ga II",
         [4] = "Aeroga II",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Aeroga III"] = {
         [1] = "Elemental",
@@ -295,7 +322,8 @@ return {
         [3] = "Ga III",
         [4] = "Aeroga III",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Aeroga IV"] = {
         [1] = "Elemental",
@@ -303,7 +331,8 @@ return {
         [3] = "Ga IV",
         [4] = "Aeroga IV",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Aeroga V"] = {
         [1] = "Elemental",
@@ -311,7 +340,8 @@ return {
         [3] = "Ga V",
         [4] = "Aeroga V",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Aeroja"] = {
         [1] = "Elemental",
@@ -319,7 +349,8 @@ return {
         [3] = "Ja",
         [4] = "Aeroja",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Air Spirit"] = {
         [1] = "Summoning",
@@ -334,7 +365,8 @@ return {
         [3] = "Aisha",
         [4] = "Aisha: Ichi",
         [5] = "Water Affinity",
-        [6] = "Water Enfeeblement"
+        [6] = "Water Offensive",
+        [7] = "Water Enfeeblement"
     },
     ["Ajido-Marujido"] = {
         [1] = "Trust",
@@ -390,7 +422,8 @@ return {
         [2] = "Helix",
         [3] = "Anemohelix",
         [4] = "Wind Affinity",
-        [5] = "Wind Magic Damage"
+        [5] = "Wind Offensive",
+        [6] = "Wind Magic Damage"
     },
     ["Anemohelix II"] = {
         [1] = "Elemental",
@@ -398,7 +431,8 @@ return {
         [3] = "Helix II",
         [4] = "Anemohelix II",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Animating Wail"] = {
         [1] = "Blue",
@@ -433,8 +467,10 @@ return {
         [5] = "Anvil Lightning",
         [6] = "Lightning Affinity",
         [7] = "Thunder Affinity",
-        [8] = "Lightning Magic Damage",
-        [9] = "Thunder Magic Damage"
+        [8] = "Lightning Offensive",
+        [9] = "Thunder Offensive",
+        [10] = "Lightning Magic Damage",
+        [11] = "Thunder Magic Damage"
     },
     ["Apururu (UC)"] = {
         [1] = "Trust",
@@ -565,7 +601,8 @@ return {
         [2] = "Absorption Dark",
         [3] = "Aspir",
         [4] = "Dark Affinity",
-        [5] = "Absorption"
+        [5] = "Dark Offensive",
+        [6] = "Absorption"
     },
     ["Aspir II"] = {
         [1] = "Dark",
@@ -573,7 +610,8 @@ return {
         [3] = "Aspir",
         [4] = "Aspir II",
         [5] = "Dark Affinity",
-        [6] = "Absorption"
+        [6] = "Dark Offensive",
+        [7] = "Absorption"
     },
     ["Aspir III"] = {
         [1] = "Dark",
@@ -581,7 +619,8 @@ return {
         [3] = "Aspir",
         [4] = "Aspir III",
         [5] = "Dark Affinity",
-        [6] = "Absorption"
+        [6] = "Dark Offensive",
+        [7] = "Absorption"
     },
     ["Asuran Claws"] = {
         [1] = "Blue",
@@ -601,7 +640,8 @@ return {
         [2] = "Absorption Blue",
         [3] = "Atra. Libations",
         [4] = "Dark Affinity",
-        [5] = "Absorption"
+        [5] = "Dark Offensive",
+        [6] = "Absorption"
     },
     ["August"] = {
         [1] = "Trust",
@@ -615,7 +655,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Auroral Drape",
         [4] = "Wind Affinity",
-        [5] = "Wind Enfeeblement"
+        [5] = "Wind Offensive",
+        [6] = "Wind Enfeeblement"
     },
     ["Aurorastorm"] = {
         [1] = "Enhancing",
@@ -646,7 +687,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Awful Eye",
         [4] = "Water Affinity",
-        [5] = "Water Enfeeblement"
+        [5] = "Water Offensive",
+        [6] = "Water Enfeeblement"
     },
     ["Ayame"] = {
         [1] = "Trust",
@@ -675,7 +717,8 @@ return {
         [3] = "Enfeebling Breath Blue",
         [4] = "Bad Breath",
         [5] = "Earth Affinity",
-        [6] = "Earth Breath Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Breath Damage"
     },
     ["Balamor"] = {
         [1] = "Trust",
@@ -689,7 +732,8 @@ return {
         [2] = "Elemental Divine",
         [3] = "Banish",
         [4] = "Light Affinity",
-        [5] = "Light Magic Damage"
+        [5] = "Light Offensive",
+        [6] = "Light Magic Damage"
     },
     ["Banish II"] = {
         [1] = "Divine",
@@ -697,7 +741,8 @@ return {
         [3] = "Banish",
         [4] = "Banish II",
         [5] = "Light Affinity",
-        [6] = "Light Magic Damage"
+        [6] = "Light Offensive",
+        [7] = "Light Magic Damage"
     },
     ["Banish III"] = {
         [1] = "Divine",
@@ -705,7 +750,8 @@ return {
         [3] = "Banish",
         [4] = "Banish III",
         [5] = "Light Affinity",
-        [6] = "Light Magic Damage"
+        [6] = "Light Offensive",
+        [7] = "Light Magic Damage"
     },
     ["Banish IV"] = {
         [1] = "Divine",
@@ -713,7 +759,8 @@ return {
         [3] = "Banish",
         [4] = "Banish IV",
         [5] = "Light Affinity",
-        [6] = "Light Magic Damage"
+        [6] = "Light Offensive",
+        [7] = "Light Magic Damage"
     },
     ["Banish V"] = {
         [1] = "Divine",
@@ -721,7 +768,8 @@ return {
         [3] = "Banish",
         [4] = "Banish V",
         [5] = "Light Affinity",
-        [6] = "Light Magic Damage"
+        [6] = "Light Offensive",
+        [7] = "Light Magic Damage"
     },
     ["Banishga"] = {
         [1] = "Divine",
@@ -729,7 +777,8 @@ return {
         [3] = "Banish",
         [4] = "Banishga",
         [5] = "Light Affinity",
-        [6] = "Light Magic Damage"
+        [6] = "Light Offensive",
+        [7] = "Light Magic Damage"
     },
     ["Banishga II"] = {
         [1] = "Divine",
@@ -738,7 +787,8 @@ return {
         [4] = "Banishga",
         [5] = "Banishga II",
         [6] = "Light Affinity",
-        [7] = "Light Magic Damage"
+        [7] = "Light Offensive",
+        [8] = "Light Magic Damage"
     },
     ["Banishga III"] = {
         [1] = "Divine",
@@ -747,7 +797,8 @@ return {
         [4] = "Banishga",
         [5] = "Banishga III",
         [6] = "Light Affinity",
-        [7] = "Light Magic Damage"
+        [7] = "Light Offensive",
+        [8] = "Light Magic Damage"
     },
     ["Banishga IV"] = {
         [1] = "Divine",
@@ -756,7 +807,8 @@ return {
         [4] = "Banishga",
         [5] = "Banishga IV",
         [6] = "Light Affinity",
-        [7] = "Light Magic Damage"
+        [7] = "Light Offensive",
+        [8] = "Light Magic Damage"
     },
     ["Banishga V"] = {
         [1] = "Divine",
@@ -765,7 +817,8 @@ return {
         [4] = "Banishga",
         [5] = "Banishga V",
         [6] = "Light Affinity",
-        [7] = "Light Magic Damage"
+        [7] = "Light Offensive",
+        [8] = "Light Magic Damage"
     },
     ["Baraera"] = {
         [1] = "Enhancing",
@@ -1036,7 +1089,8 @@ return {
         [3] = "Elegy",
         [4] = "Battlefield Elegy",
         [5] = "Earth Affinity",
-        [6] = "Earth Enfeeblement"
+        [6] = "Earth Offensive",
+        [7] = "Earth Enfeeblement"
     },
     ["Benthic Typhoon"] = {
         [1] = "Blue",
@@ -1066,7 +1120,8 @@ return {
         [2] = "Black Magic Enfeebling",
         [3] = "Bind",
         [4] = "Ice Affinity",
-        [5] = "Ice Enfeeblement"
+        [5] = "Ice Offensive",
+        [6] = "Ice Enfeeblement"
     },
     ["Bindga"] = {
         [1] = "Enfeebling",
@@ -1074,14 +1129,16 @@ return {
         [3] = "Bind",
         [4] = "Bindga",
         [5] = "Ice Affinity",
-        [6] = "Ice Enfeeblement"
+        [6] = "Ice Offensive",
+        [7] = "Ice Enfeeblement"
     },
     ["Bio"] = {
         [1] = "Dark",
         [2] = "Enfeebling Dark",
         [3] = "Bio",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Bio II"] = {
         [1] = "Dark",
@@ -1089,7 +1146,8 @@ return {
         [3] = "Bio",
         [4] = "Bio II",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Bio III"] = {
         [1] = "Dark",
@@ -1097,7 +1155,8 @@ return {
         [3] = "Bio",
         [4] = "Bio III",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Bio IV"] = {
         [1] = "Dark",
@@ -1105,7 +1164,8 @@ return {
         [3] = "Bio",
         [4] = "Bio IV",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Bio V"] = {
         [1] = "Dark",
@@ -1113,7 +1173,8 @@ return {
         [3] = "Bio",
         [4] = "Bio V",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Blade Madrigal"] = {
         [1] = "Singing",
@@ -1130,7 +1191,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Blank Gaze",
         [4] = "Light Affinity",
-        [5] = "Light Enfeeblement"
+        [5] = "Light Offensive",
+        [6] = "Light Enfeeblement"
     },
     ["Blastbomb"] = {
         [1] = "Blue",
@@ -1139,7 +1201,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Blastbomb",
         [6] = "Fire Affinity",
-        [7] = "Fire Magic Damage"
+        [7] = "Fire Offensive",
+        [8] = "Fire Magic Damage"
     },
     ["Blaze Spikes"] = {
         [1] = "Enhancing",
@@ -1155,14 +1218,16 @@ return {
         [3] = "INT Magical Blue",
         [4] = "Blazing Bound",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Blind"] = {
         [1] = "Enfeebling",
         [2] = "Black Magic Enfeebling",
         [3] = "Blind",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Blind II"] = {
         [1] = "Enfeebling",
@@ -1170,7 +1235,8 @@ return {
         [3] = "Blind",
         [4] = "Blind II",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Blindga"] = {
         [1] = "Enfeebling",
@@ -1178,7 +1244,8 @@ return {
         [3] = "Blind",
         [4] = "Blindga",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Blinding Fulgor"] = {
         [1] = "Blue",
@@ -1187,7 +1254,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Blinding Fulgor",
         [6] = "Light Affinity",
-        [7] = "Light Magic Damage"
+        [7] = "Light Offensive",
+        [8] = "Light Magic Damage"
     },
     ["Blindna"] = {
         [1] = "Healing",
@@ -1208,7 +1276,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Blistering Roar",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Blitzstrahl"] = {
         [1] = "Blue",
@@ -1218,15 +1287,18 @@ return {
         [5] = "Blitzstrahl",
         [6] = "Lightning Affinity",
         [7] = "Thunder Affinity",
-        [8] = "Lightning Magic Damage",
-        [9] = "Thunder Magic Damage"
+        [8] = "Lightning Offensive",
+        [9] = "Thunder Offensive",
+        [10] = "Lightning Magic Damage",
+        [11] = "Thunder Magic Damage"
     },
     ["Blizzaga"] = {
         [1] = "Elemental",
         [2] = "Ga",
         [3] = "Blizzaga",
         [4] = "Ice Affinity",
-        [5] = "Ice Magic Damage"
+        [5] = "Ice Offensive",
+        [6] = "Ice Magic Damage"
     },
     ["Blizzaga II"] = {
         [1] = "Elemental",
@@ -1234,7 +1306,8 @@ return {
         [3] = "Ga II",
         [4] = "Blizzaga II",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Blizzaga III"] = {
         [1] = "Elemental",
@@ -1242,7 +1315,8 @@ return {
         [3] = "Ga III",
         [4] = "Blizzaga III",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Blizzaga IV"] = {
         [1] = "Elemental",
@@ -1250,7 +1324,8 @@ return {
         [3] = "Ga IV",
         [4] = "Blizzaga IV",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Blizzaga V"] = {
         [1] = "Elemental",
@@ -1258,7 +1333,8 @@ return {
         [3] = "Ga V",
         [4] = "Blizzaga V",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Blizzaja"] = {
         [1] = "Elemental",
@@ -1266,14 +1342,16 @@ return {
         [3] = "Ja",
         [4] = "Blizzaja",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Blizzara"] = {
         [1] = "Elemental",
         [2] = "Ra",
         [3] = "Blizzara",
         [4] = "Ice Affinity",
-        [5] = "Ice Magic Damage"
+        [5] = "Ice Offensive",
+        [6] = "Ice Magic Damage"
     },
     ["Blizzara II"] = {
         [1] = "Elemental",
@@ -1281,7 +1359,8 @@ return {
         [3] = "Ra II",
         [4] = "Blizzara II",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Blizzara III"] = {
         [1] = "Elemental",
@@ -1289,14 +1368,16 @@ return {
         [3] = "Ra III",
         [4] = "Blizzara III",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Blizzard"] = {
         [1] = "Elemental",
         [2] = "Single Target Elemental",
         [3] = "Blizzard",
         [4] = "Ice Affinity",
-        [5] = "Ice Magic Damage"
+        [5] = "Ice Offensive",
+        [6] = "Ice Magic Damage"
     },
     ["Blizzard II"] = {
         [1] = "Elemental",
@@ -1304,7 +1385,8 @@ return {
         [3] = "Single Target Elemental II",
         [4] = "Blizzard II",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Blizzard III"] = {
         [1] = "Elemental",
@@ -1312,7 +1394,8 @@ return {
         [3] = "Single Target Elemental III",
         [4] = "Blizzard III",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Blizzard IV"] = {
         [1] = "Elemental",
@@ -1320,7 +1403,8 @@ return {
         [3] = "Single Target Elemental IV",
         [4] = "Blizzard IV",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Blizzard V"] = {
         [1] = "Elemental",
@@ -1328,7 +1412,8 @@ return {
         [3] = "Single Target Elemental V",
         [4] = "Blizzard V",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Blizzard VI"] = {
         [1] = "Elemental",
@@ -1336,21 +1421,24 @@ return {
         [3] = "Single Target Elemental VI",
         [4] = "Blizzard VI",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Blood Drain"] = {
         [1] = "Blue",
         [2] = "Absorption Blue",
         [3] = "Blood Drain",
         [4] = "Dark Affinity",
-        [5] = "Absorption"
+        [5] = "Dark Offensive",
+        [6] = "Absorption"
     },
     ["Blood Saber"] = {
         [1] = "Blue",
         [2] = "Absorption Blue",
         [3] = "Blood Saber",
         [4] = "Dark Affinity",
-        [5] = "Absorption"
+        [5] = "Dark Offensive",
+        [6] = "Absorption"
     },
     ["Bloodrake"] = {
         [1] = "Blue",
@@ -1377,7 +1465,8 @@ return {
         [3] = "INT Magical Blue",
         [4] = "Bomb Toss",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Boost-AGI"] = {
         [1] = "Enhancing",
@@ -1442,7 +1531,8 @@ return {
         [2] = "Black Magic Enfeebling",
         [3] = "Break",
         [4] = "Earth Affinity",
-        [5] = "Earth Enfeeblement"
+        [5] = "Earth Offensive",
+        [6] = "Earth Enfeeblement"
     },
     ["Breakga"] = {
         [1] = "Enfeebling",
@@ -1450,7 +1540,8 @@ return {
         [3] = "Break",
         [4] = "Breakga",
         [5] = "Earth Affinity",
-        [6] = "Earth Enfeeblement"
+        [6] = "Earth Offensive",
+        [7] = "Earth Enfeeblement"
     },
     ["Brygid"] = {
         [1] = "Trust",
@@ -1464,7 +1555,8 @@ return {
         [2] = "Enfeebling Elemental",
         [3] = "Burn",
         [4] = "Fire Affinity",
-        [5] = "Fire Magic Damage"
+        [5] = "Fire Offensive",
+        [6] = "Fire Magic Damage"
     },
     ["Burst"] = {
         [1] = "Elemental",
@@ -1472,8 +1564,10 @@ return {
         [3] = "Burst",
         [4] = "Lightning Affinity",
         [5] = "Thunder Affinity",
-        [6] = "Lightning Magic Damage",
-        [7] = "Thunder Magic Damage"
+        [6] = "Lightning Offensive",
+        [7] = "Thunder Offensive",
+        [8] = "Lightning Magic Damage",
+        [9] = "Thunder Magic Damage"
     },
     ["Burst II"] = {
         [1] = "Elemental",
@@ -1482,8 +1576,10 @@ return {
         [4] = "Burst II",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Cactuar Fugue"] = {
         [1] = "Singing",
@@ -1528,7 +1624,8 @@ return {
         [3] = "Elegy",
         [4] = "Carnage Elegy",
         [5] = "Earth Affinity",
-        [6] = "Earth Enfeeblement"
+        [6] = "Earth Offensive",
+        [7] = "Earth Enfeeblement"
     },
     ["Cesspool"] = {
         [1] = "Blue",
@@ -1537,7 +1634,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Cesspool",
         [6] = "Water Affinity",
-        [7] = "Water Magic Damage"
+        [7] = "Water Offensive",
+        [8] = "Water Magic Damage"
     },
     ["Chacharoon"] = {
         [1] = "Trust",
@@ -1551,7 +1649,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Chaotic Eye",
         [4] = "Wind Affinity",
-        [5] = "Wind Enfeeblement"
+        [5] = "Wind Offensive",
+        [6] = "Wind Enfeeblement"
     },
     ["Charged Whisker"] = {
         [1] = "Blue",
@@ -1560,8 +1659,10 @@ return {
         [4] = "Charged Whisker",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Cherukiki"] = {
         [1] = "Trust",
@@ -1592,7 +1693,8 @@ return {
         [2] = "Enfeebling Elemental",
         [3] = "Choke",
         [4] = "Wind Affinity",
-        [5] = "Wind Magic Damage"
+        [5] = "Wind Offensive",
+        [6] = "Wind Magic Damage"
     },
     ["Cid"] = {
         [1] = "Trust",
@@ -1606,7 +1708,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Cimicine Discharge",
         [4] = "Earth Affinity",
-        [5] = "Earth Enfeeblement"
+        [5] = "Earth Offensive",
+        [6] = "Earth Enfeeblement"
     },
     ["Claw Cyclone"] = {
         [1] = "Blue",
@@ -1627,14 +1730,16 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Cold Wave",
         [4] = "Ice Affinity",
-        [5] = "Ice Enfeeblement"
+        [5] = "Ice Offensive",
+        [6] = "Ice Enfeeblement"
     },
     ["Comet"] = {
         [1] = "Elemental",
         [2] = "Cumulative Magic",
         [3] = "Comet",
         [4] = "Dark Affinity",
-        [5] = "Dark Magic Damage"
+        [5] = "Dark Offensive",
+        [6] = "Dark Magic Damage"
     },
     ["Cornelia"] = {
         [1] = "Trust",
@@ -1650,7 +1755,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Corrosive Ooze",
         [6] = "Water Affinity",
-        [7] = "Water Magic Damage"
+        [7] = "Water Offensive",
+        [8] = "Water Magic Damage"
     },
     ["Crashing Thunder"] = {
         [1] = "Blue",
@@ -1659,15 +1765,18 @@ return {
         [4] = "Crashing Thunder",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Cruel Joke"] = {
         [1] = "Blue",
         [2] = "Enfeebling Blue",
         [3] = "Cruel Joke",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Crusade"] = {
         [1] = "Enhancing",
@@ -1681,7 +1790,8 @@ return {
         [2] = "Helix",
         [3] = "Cryohelix",
         [4] = "Ice Affinity",
-        [5] = "Ice Magic Damage"
+        [5] = "Ice Offensive",
+        [6] = "Ice Magic Damage"
     },
     ["Cryohelix II"] = {
         [1] = "Elemental",
@@ -1689,7 +1799,8 @@ return {
         [3] = "Helix II",
         [4] = "Cryohelix II",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Cura"] = {
         [1] = "Healing",
@@ -1806,7 +1917,8 @@ return {
         [2] = "Enfeebling Dark",
         [3] = "Curse",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Cursed Sphere"] = {
         [1] = "Blue",
@@ -1814,7 +1926,8 @@ return {
         [3] = "INT Magical Blue",
         [4] = "Cursed Sphere",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Cursna"] = {
         [1] = "Healing",
@@ -1853,7 +1966,8 @@ return {
         [3] = "INT Magical Blue",
         [4] = "Dark Orb",
         [5] = "Dark Affinity",
-        [6] = "Dark Magic Damage"
+        [6] = "Dark Offensive",
+        [7] = "Dark Magic Damage"
     },
     ["Dark Spirit"] = {
         [1] = "Summoning",
@@ -1868,7 +1982,8 @@ return {
         [3] = "Threnody",
         [4] = "Dark Threnody",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Dark Threnody II"] = {
         [1] = "Singing",
@@ -1877,7 +1992,8 @@ return {
         [4] = "Threnody II",
         [5] = "Dark Threnody II",
         [6] = "Light Affinity",
-        [7] = "Light Enfeeblement"
+        [7] = "Light Offensive",
+        [8] = "Light Enfeeblement"
     },
     ["Darrcuiln"] = {
         [1] = "Trust",
@@ -1891,7 +2007,8 @@ return {
         [2] = "Elemental Dark",
         [3] = "Death",
         [4] = "Dark Affinity",
-        [5] = "Dark Magic Damage"
+        [5] = "Dark Offensive",
+        [6] = "Dark Magic Damage"
     },
     ["Death Ray"] = {
         [1] = "Blue",
@@ -1899,7 +2016,8 @@ return {
         [3] = "INT Magical Blue",
         [4] = "Death Ray",
         [5] = "Dark Affinity",
-        [6] = "Dark Magic Damage"
+        [6] = "Dark Offensive",
+        [7] = "Dark Magic Damage"
     },
     ["Death Scissors"] = {
         [1] = "Blue",
@@ -1919,7 +2037,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Demoralizing Roar",
         [4] = "Water Affinity",
-        [5] = "Water Enfeeblement"
+        [5] = "Water Offensive",
+        [6] = "Water Enfeeblement"
     },
     ["Deodorize"] = {
         [1] = "Enhancing",
@@ -1953,7 +2072,8 @@ return {
         [2] = "White Magic Enfeebling",
         [3] = "Dia",
         [4] = "Light Affinity",
-        [5] = "Light Enfeeblement"
+        [5] = "Light Offensive",
+        [6] = "Light Enfeeblement"
     },
     ["Dia II"] = {
         [1] = "Enfeebling",
@@ -1961,7 +2081,8 @@ return {
         [3] = "Dia",
         [4] = "Dia II",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Dia III"] = {
         [1] = "Enfeebling",
@@ -1969,7 +2090,8 @@ return {
         [3] = "Dia",
         [4] = "Dia III",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Dia IV"] = {
         [1] = "Enfeebling",
@@ -1977,7 +2099,8 @@ return {
         [3] = "Dia",
         [4] = "Dia IV",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Dia V"] = {
         [1] = "Enfeebling",
@@ -1985,7 +2108,8 @@ return {
         [3] = "Dia",
         [4] = "Dia V",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Diabolos"] = {
         [1] = "Summoning",
@@ -2000,7 +2124,8 @@ return {
         [3] = "Dia",
         [4] = "Diaga",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Diaga II"] = {
         [1] = "Enfeebling",
@@ -2009,7 +2134,8 @@ return {
         [4] = "Diaga",
         [5] = "Diaga II",
         [6] = "Light Affinity",
-        [7] = "Light Enfeeblement"
+        [7] = "Light Offensive",
+        [8] = "Light Enfeeblement"
     },
     ["Diaga III"] = {
         [1] = "Enfeebling",
@@ -2018,7 +2144,8 @@ return {
         [4] = "Diaga",
         [5] = "Diaga III",
         [6] = "Light Affinity",
-        [7] = "Light Enfeeblement"
+        [7] = "Light Offensive",
+        [8] = "Light Enfeeblement"
     },
     ["Diaga IV"] = {
         [1] = "Enfeebling",
@@ -2027,7 +2154,8 @@ return {
         [4] = "Diaga",
         [5] = "Diaga IV",
         [6] = "Light Affinity",
-        [7] = "Light Enfeeblement"
+        [7] = "Light Offensive",
+        [8] = "Light Enfeeblement"
     },
     ["Diaga V"] = {
         [1] = "Enfeebling",
@@ -2036,7 +2164,8 @@ return {
         [4] = "Diaga",
         [5] = "Diaga V",
         [6] = "Light Affinity",
-        [7] = "Light Enfeeblement"
+        [7] = "Light Offensive",
+        [8] = "Light Enfeeblement"
     },
     ["Diamondhide"] = {
         [1] = "Blue",
@@ -2052,14 +2181,16 @@ return {
         [3] = "MND Magical Blue",
         [4] = "Diffusion Ray",
         [5] = "Light Affinity",
-        [6] = "Light Magic Damage"
+        [6] = "Light Offensive",
+        [7] = "Light Magic Damage"
     },
     ["Digest"] = {
         [1] = "Blue",
         [2] = "Absorption Blue",
         [3] = "Digest",
         [4] = "Dark Affinity",
-        [5] = "Absorption"
+        [5] = "Dark Offensive",
+        [6] = "Absorption"
     },
     ["Dimensional Death"] = {
         [1] = "Blue",
@@ -2072,7 +2203,8 @@ return {
         [2] = "Black Magic Enfeebling",
         [3] = "Dispel",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Dispelga"] = {
         [1] = "Enfeebling",
@@ -2080,7 +2212,8 @@ return {
         [3] = "Dispel",
         [4] = "Dispelga",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Disseverment"] = {
         [1] = "Blue",
@@ -2094,7 +2227,8 @@ return {
         [2] = "Black Magic Enfeebling",
         [3] = "Distract",
         [4] = "Ice Affinity",
-        [5] = "Ice Enfeeblement"
+        [5] = "Ice Offensive",
+        [6] = "Ice Enfeeblement"
     },
     ["Distract II"] = {
         [1] = "Enfeebling",
@@ -2102,7 +2236,8 @@ return {
         [3] = "Distract",
         [4] = "Distract II",
         [5] = "Ice Affinity",
-        [6] = "Ice Enfeeblement"
+        [6] = "Ice Offensive",
+        [7] = "Ice Enfeeblement"
     },
     ["Distract III"] = {
         [1] = "Enfeebling",
@@ -2110,7 +2245,8 @@ return {
         [3] = "Distract",
         [4] = "Distract III",
         [5] = "Ice Affinity",
-        [6] = "Ice Enfeeblement"
+        [6] = "Ice Offensive",
+        [7] = "Ice Enfeeblement"
     },
     ["Dokumori: Ichi"] = {
         [1] = "Ninjutsu",
@@ -2118,7 +2254,8 @@ return {
         [3] = "Dokumori",
         [4] = "Dokumori: Ichi",
         [5] = "Water Affinity",
-        [6] = "Water Enfeeblement"
+        [6] = "Water Offensive",
+        [7] = "Water Enfeeblement"
     },
     ["Dokumori: Ni"] = {
         [1] = "Ninjutsu",
@@ -2126,7 +2263,8 @@ return {
         [3] = "Dokumori",
         [4] = "Dokumori: Ni",
         [5] = "Water Affinity",
-        [6] = "Water Enfeeblement"
+        [6] = "Water Offensive",
+        [7] = "Water Enfeeblement"
     },
     ["Dokumori: San"] = {
         [1] = "Ninjutsu",
@@ -2134,7 +2272,8 @@ return {
         [3] = "Dokumori",
         [4] = "Dokumori: San",
         [5] = "Water Affinity",
-        [6] = "Water Enfeeblement"
+        [6] = "Water Offensive",
+        [7] = "Water Enfeeblement"
     },
     ["Doton: Ichi"] = {
         [1] = "Ninjutsu",
@@ -2142,7 +2281,8 @@ return {
         [3] = "Elemental Ninjutsu Ichi",
         [4] = "Doton: Ichi",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Doton: Ni"] = {
         [1] = "Ninjutsu",
@@ -2150,7 +2290,8 @@ return {
         [3] = "Elemental Ninjutsu Ni",
         [4] = "Doton: Ni",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Doton: San"] = {
         [1] = "Ninjutsu",
@@ -2158,7 +2299,8 @@ return {
         [3] = "Elemental Ninjutsu San",
         [4] = "Doton: San",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Dragonfoe Mambo"] = {
         [1] = "Singing",
@@ -2173,7 +2315,8 @@ return {
         [2] = "Absorption Dark",
         [3] = "Drain",
         [4] = "Dark Affinity",
-        [5] = "Absorption"
+        [5] = "Dark Offensive",
+        [6] = "Absorption"
     },
     ["Drain II"] = {
         [1] = "Dark",
@@ -2181,7 +2324,8 @@ return {
         [3] = "Drain",
         [4] = "Drain II",
         [5] = "Dark Affinity",
-        [6] = "Absorption"
+        [6] = "Dark Offensive",
+        [7] = "Absorption"
     },
     ["Drain III"] = {
         [1] = "Dark",
@@ -2189,7 +2333,8 @@ return {
         [3] = "Drain",
         [4] = "Drain III",
         [5] = "Dark Affinity",
-        [6] = "Absorption"
+        [6] = "Dark Offensive",
+        [7] = "Absorption"
     },
     ["Dread Spikes"] = {
         [1] = "Dark",
@@ -2203,7 +2348,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Dream Flower",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Droning Whirlwind"] = {
         [1] = "Blue",
@@ -2212,14 +2358,16 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Droning Whirlwind",
         [6] = "Wind Affinity",
-        [7] = "Wind Magic Damage"
+        [7] = "Wind Offensive",
+        [8] = "Wind Magic Damage"
     },
     ["Drown"] = {
         [1] = "Elemental",
         [2] = "Enfeebling Elemental",
         [3] = "Drown",
         [4] = "Water Affinity",
-        [5] = "Water Magic Damage"
+        [5] = "Water Offensive",
+        [6] = "Water Magic Damage"
     },
     ["Earth Carol"] = {
         [1] = "Singing",
@@ -2251,7 +2399,8 @@ return {
         [3] = "Threnody",
         [4] = "Earth Threnody",
         [5] = "Wind Affinity",
-        [6] = "Wind Enfeeblement"
+        [6] = "Wind Offensive",
+        [7] = "Wind Enfeeblement"
     },
     ["Earth Threnody II"] = {
         [1] = "Singing",
@@ -2260,7 +2409,8 @@ return {
         [4] = "Threnody II",
         [5] = "Earth Threnody II",
         [6] = "Wind Affinity",
-        [7] = "Wind Enfeeblement"
+        [7] = "Wind Offensive",
+        [8] = "Wind Enfeeblement"
     },
     ["Elivira"] = {
         [1] = "Trust",
@@ -2276,7 +2426,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Embalming Earth",
         [6] = "Earth Affinity",
-        [7] = "Earth Magic Damage"
+        [7] = "Earth Offensive",
+        [8] = "Earth Magic Damage"
     },
     ["Embrava"] = {
         [1] = "Enhancing",
@@ -2348,7 +2499,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Enervation",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Enfire"] = {
         [1] = "Enhancing",
@@ -2421,7 +2573,8 @@ return {
         [4] = "VIT Enfeebling Magical Blue",
         [5] = "Entomb",
         [6] = "Earth Affinity",
-        [7] = "Earth Magic Damage"
+        [7] = "Earth Offensive",
+        [8] = "Earth Magic Damage"
     },
     ["Enwater"] = {
         [1] = "Enhancing",
@@ -2475,7 +2628,8 @@ return {
         [3] = "MND Magical Blue",
         [4] = "Evryone. Grudge",
         [5] = "Dark Affinity",
-        [6] = "Dark Magic Damage"
+        [6] = "Dark Offensive",
+        [7] = "Dark Magic Damage"
     },
     ["Excenmille"] = {
         [1] = "Trust",
@@ -2504,7 +2658,8 @@ return {
         [3] = "CHR Magical Blue",
         [4] = "Eyes On Me",
         [5] = "Dark Affinity",
-        [6] = "Dark Magic Damage"
+        [6] = "Dark Offensive",
+        [7] = "Dark Magic Damage"
     },
     ["Fablinix"] = {
         [1] = "Trust",
@@ -2541,7 +2696,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Feather Tickle",
         [4] = "Wind Affinity",
-        [5] = "Wind Enfeeblement"
+        [5] = "Wind Offensive",
+        [6] = "Wind Enfeeblement"
     },
     ["Fenrir"] = {
         [1] = "Summoning",
@@ -2562,7 +2718,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Filamented Hold",
         [4] = "Earth Affinity",
-        [5] = "Earth Enfeeblement"
+        [5] = "Earth Offensive",
+        [6] = "Earth Enfeeblement"
     },
     ["Final Sting"] = {
         [1] = "Blue",
@@ -2574,7 +2731,8 @@ return {
         [2] = "Ra",
         [3] = "Fira",
         [4] = "Fire Affinity",
-        [5] = "Fire Magic Damage"
+        [5] = "Fire Offensive",
+        [6] = "Fire Magic Damage"
     },
     ["Fira II"] = {
         [1] = "Elemental",
@@ -2582,7 +2740,8 @@ return {
         [3] = "Ra II",
         [4] = "Fira II",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Fira III"] = {
         [1] = "Elemental",
@@ -2590,14 +2749,16 @@ return {
         [3] = "Ra III",
         [4] = "Fira III",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Firaga"] = {
         [1] = "Elemental",
         [2] = "Ga",
         [3] = "Firaga",
         [4] = "Fire Affinity",
-        [5] = "Fire Magic Damage"
+        [5] = "Fire Offensive",
+        [6] = "Fire Magic Damage"
     },
     ["Firaga II"] = {
         [1] = "Elemental",
@@ -2605,7 +2766,8 @@ return {
         [3] = "Ga II",
         [4] = "Firaga II",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Firaga III"] = {
         [1] = "Elemental",
@@ -2613,7 +2775,8 @@ return {
         [3] = "Ga III",
         [4] = "Firaga III",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Firaga IV"] = {
         [1] = "Elemental",
@@ -2621,7 +2784,8 @@ return {
         [3] = "Ga IV",
         [4] = "Firaga IV",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Firaga V"] = {
         [1] = "Elemental",
@@ -2629,7 +2793,8 @@ return {
         [3] = "Ga V",
         [4] = "Firaga V",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Firaja"] = {
         [1] = "Elemental",
@@ -2637,14 +2802,16 @@ return {
         [3] = "Ja",
         [4] = "Firaja",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Fire"] = {
         [1] = "Elemental",
         [2] = "Single Target Elemental",
         [3] = "Fire",
         [4] = "Fire Affinity",
-        [5] = "Fire Magic Damage"
+        [5] = "Fire Offensive",
+        [6] = "Fire Magic Damage"
     },
     ["Fire Carol"] = {
         [1] = "Singing",
@@ -2669,7 +2836,8 @@ return {
         [3] = "Single Target Elemental II",
         [4] = "Fire II",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Fire III"] = {
         [1] = "Elemental",
@@ -2677,7 +2845,8 @@ return {
         [3] = "Single Target Elemental III",
         [4] = "Fire III",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Fire IV"] = {
         [1] = "Elemental",
@@ -2685,7 +2854,8 @@ return {
         [3] = "Single Target Elemental IV",
         [4] = "Fire IV",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Fire Spirit"] = {
         [1] = "Summoning",
@@ -2700,7 +2870,8 @@ return {
         [3] = "Threnody",
         [4] = "Fire Threnody",
         [5] = "Water Affinity",
-        [6] = "Water Enfeeblement"
+        [6] = "Water Offensive",
+        [7] = "Water Enfeeblement"
     },
     ["Fire Threnody II"] = {
         [1] = "Singing",
@@ -2709,7 +2880,8 @@ return {
         [4] = "Threnody II",
         [5] = "Fire Threnody II",
         [6] = "Water Affinity",
-        [7] = "Water Enfeeblement"
+        [7] = "Water Offensive",
+        [8] = "Water Enfeeblement"
     },
     ["Fire V"] = {
         [1] = "Elemental",
@@ -2717,7 +2889,8 @@ return {
         [3] = "Single Target Elemental V",
         [4] = "Fire V",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Fire VI"] = {
         [1] = "Elemental",
@@ -2725,7 +2898,8 @@ return {
         [3] = "Single Target Elemental VI",
         [4] = "Fire VI",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Firespit"] = {
         [1] = "Blue",
@@ -2733,7 +2907,8 @@ return {
         [3] = "INT Magical Blue",
         [4] = "Firespit",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Firestorm"] = {
         [1] = "Enhancing",
@@ -2757,7 +2932,8 @@ return {
         [2] = "Ancient Magic",
         [3] = "Flare",
         [4] = "Fire Affinity",
-        [5] = "Fire Magic Damage"
+        [5] = "Fire Offensive",
+        [6] = "Fire Magic Damage"
     },
     ["Flare II"] = {
         [1] = "Elemental",
@@ -2765,14 +2941,16 @@ return {
         [3] = "Ancient Magic II",
         [4] = "Flare II",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Flash"] = {
         [1] = "Divine",
         [2] = "Enfeebling Divine",
         [3] = "Flash",
         [4] = "Light Affinity",
-        [5] = "Light Enfeeblement"
+        [5] = "Light Offensive",
+        [6] = "Light Enfeeblement"
     },
     ["Flaviria (UC)"] = {
         [1] = "Trust",
@@ -2786,7 +2964,8 @@ return {
         [2] = "Ancient Magic",
         [3] = "Flood",
         [4] = "Water Affinity",
-        [5] = "Water Magic Damage"
+        [5] = "Water Offensive",
+        [6] = "Water Magic Damage"
     },
     ["Flood II"] = {
         [1] = "Elemental",
@@ -2794,7 +2973,8 @@ return {
         [3] = "Ancient Magic II",
         [4] = "Flood II",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Flurry"] = {
         [1] = "Enhancing",
@@ -2818,7 +2998,8 @@ return {
         [2] = "Breath Blue",
         [3] = "Flying Hip Press",
         [4] = "Wind Affinity",
-        [5] = "Wind Breath Damage"
+        [5] = "Wind Offensive",
+        [6] = "Wind Breath Damage"
     },
     ["Foe Lullaby"] = {
         [1] = "Singing",
@@ -2826,7 +3007,8 @@ return {
         [3] = "Lullaby",
         [4] = "Foe Lullaby",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Foe Lullaby II"] = {
         [1] = "Singing",
@@ -2835,7 +3017,8 @@ return {
         [4] = "Foe Lullaby",
         [5] = "Foe Lullaby II",
         [6] = "Light Affinity",
-        [7] = "Light Enfeeblement"
+        [7] = "Light Offensive",
+        [8] = "Light Enfeeblement"
     },
     ["Foe Requiem"] = {
         [1] = "Singing",
@@ -2843,7 +3026,8 @@ return {
         [3] = "Requiem",
         [4] = "Foe Requiem",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Foe Requiem II"] = {
         [1] = "Singing",
@@ -2851,7 +3035,8 @@ return {
         [3] = "Requiem",
         [4] = "Foe Requiem II",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Foe Requiem III"] = {
         [1] = "Singing",
@@ -2859,7 +3044,8 @@ return {
         [3] = "Requiem",
         [4] = "Foe Requiem III",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Foe Requiem IV"] = {
         [1] = "Singing",
@@ -2867,7 +3053,8 @@ return {
         [3] = "Requiem",
         [4] = "Foe Requiem IV",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Foe Requiem V"] = {
         [1] = "Singing",
@@ -2875,7 +3062,8 @@ return {
         [3] = "Requiem",
         [4] = "Foe Requiem V",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Foe Requiem VI"] = {
         [1] = "Singing",
@@ -2883,7 +3071,8 @@ return {
         [3] = "Requiem",
         [4] = "Foe Requiem VI",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Foe Requiem VII"] = {
         [1] = "Singing",
@@ -2891,7 +3080,8 @@ return {
         [3] = "Requiem",
         [4] = "Foe Requiem VII",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Foe Requiem VIII"] = {
         [1] = "Singing",
@@ -2899,7 +3089,8 @@ return {
         [3] = "Requiem",
         [4] = "Foe Requiem VIII",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Foe Sirvente"] = {
         [1] = "Singing",
@@ -2929,7 +3120,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Foul Waters",
         [6] = "Water Affinity",
-        [7] = "Water Magic Damage"
+        [7] = "Water Offensive",
+        [8] = "Water Magic Damage"
     },
     ["Fowl Aubade"] = {
         [1] = "Singing",
@@ -2945,7 +3137,8 @@ return {
         [2] = "Black Magic Enfeebling",
         [3] = "Frazzle",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Frazzle II"] = {
         [1] = "Enfeebling",
@@ -2953,7 +3146,8 @@ return {
         [3] = "Frazzle",
         [4] = "Frazzle II",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Frazzle III"] = {
         [1] = "Enfeebling",
@@ -2961,14 +3155,16 @@ return {
         [3] = "Frazzle",
         [4] = "Frazzle III",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Freeze"] = {
         [1] = "Elemental",
         [2] = "Ancient Magic",
         [3] = "Freeze",
         [4] = "Ice Affinity",
-        [5] = "Ice Magic Damage"
+        [5] = "Ice Offensive",
+        [6] = "Ice Magic Damage"
     },
     ["Freeze II"] = {
         [1] = "Elemental",
@@ -2976,7 +3172,8 @@ return {
         [3] = "Ancient Magic II",
         [4] = "Freeze II",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Frenetic Rip"] = {
         [1] = "Blue",
@@ -2989,14 +3186,16 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Frightful Roar",
         [4] = "Wind Affinity",
-        [5] = "Wind Enfeeblement"
+        [5] = "Wind Offensive",
+        [6] = "Wind Enfeeblement"
     },
     ["Frost"] = {
         [1] = "Elemental",
         [2] = "Enfeebling Elemental",
         [3] = "Frost",
         [4] = "Ice Affinity",
-        [5] = "Ice Magic Damage"
+        [5] = "Ice Offensive",
+        [6] = "Ice Magic Damage"
     },
     ["Frost Breath"] = {
         [1] = "Blue",
@@ -3004,7 +3203,8 @@ return {
         [3] = "Enfeebling Breath Blue",
         [4] = "Frost Breath",
         [5] = "Ice Affinity",
-        [6] = "Ice Breath Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Breath Damage"
     },
     ["Frypan"] = {
         [1] = "Blue",
@@ -3099,14 +3299,16 @@ return {
         [4] = "STR Enfeebling Magical Blue",
         [5] = "Gates of Hades",
         [6] = "Fire Affinity",
-        [7] = "Fire Magic Damage"
+        [7] = "Fire Offensive",
+        [8] = "Fire Magic Damage"
     },
     ["Geist Wall"] = {
         [1] = "Blue",
         [2] = "Enfeebling Blue",
         [3] = "Geist Wall",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Gekka: Ichi"] = {
         [1] = "Ninjutsu",
@@ -3337,7 +3539,8 @@ return {
         [2] = "Helix",
         [3] = "Geohelix",
         [4] = "Earth Affinity",
-        [5] = "Earth Magic Damage"
+        [5] = "Earth Offensive",
+        [6] = "Earth Magic Damage"
     },
     ["Geohelix II"] = {
         [1] = "Elemental",
@@ -3345,7 +3548,8 @@ return {
         [3] = "Helix II",
         [4] = "Geohelix II",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Gessho"] = {
         [1] = "Trust",
@@ -3411,14 +3615,16 @@ return {
         [3] = "Gravity",
         [4] = "Graviga",
         [5] = "Wind Affinity",
-        [6] = "Wind Enfeeblement"
+        [6] = "Wind Offensive",
+        [7] = "Wind Enfeeblement"
     },
     ["Gravity"] = {
         [1] = "Enfeebling",
         [2] = "Black Magic Enfeebling",
         [3] = "Gravity",
         [4] = "Wind Affinity",
-        [5] = "Wind Enfeeblement"
+        [5] = "Wind Offensive",
+        [6] = "Wind Enfeeblement"
     },
     ["Gravity II"] = {
         [1] = "Enfeebling",
@@ -3426,7 +3632,8 @@ return {
         [3] = "Gravity",
         [4] = "Gravity II",
         [5] = "Wind Affinity",
-        [6] = "Wind Enfeeblement"
+        [6] = "Wind Offensive",
+        [7] = "Wind Enfeeblement"
     },
     ["Hailstorm"] = {
         [1] = "Enhancing",
@@ -3505,7 +3712,8 @@ return {
         [2] = "Breath Blue",
         [3] = "Heat Breath",
         [4] = "Fire Affinity",
-        [5] = "Fire Breath Damage"
+        [5] = "Fire Offensive",
+        [6] = "Fire Breath Damage"
     },
     ["Heavy Strike"] = {
         [1] = "Blue",
@@ -3519,7 +3727,8 @@ return {
         [3] = "Enfeebling Breath Blue",
         [4] = "Hecatomb Wave",
         [5] = "Wind Affinity",
-        [6] = "Wind Breath Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Breath Damage"
     },
     ["Helldive"] = {
         [1] = "Blue",
@@ -3553,7 +3762,8 @@ return {
         [3] = "Hojo",
         [4] = "Hojo: Ichi",
         [5] = "Earth Affinity",
-        [6] = "Earth Enfeeblement"
+        [6] = "Earth Offensive",
+        [7] = "Earth Enfeeblement"
     },
     ["Hojo: Ni"] = {
         [1] = "Ninjutsu",
@@ -3561,7 +3771,8 @@ return {
         [3] = "Hojo",
         [4] = "Hojo: Ni",
         [5] = "Earth Affinity",
-        [6] = "Earth Enfeeblement"
+        [6] = "Earth Offensive",
+        [7] = "Earth Enfeeblement"
     },
     ["Hojo: San"] = {
         [1] = "Ninjutsu",
@@ -3569,14 +3780,16 @@ return {
         [3] = "Hojo",
         [4] = "Hojo: San",
         [5] = "Earth Affinity",
-        [6] = "Earth Enfeeblement"
+        [6] = "Earth Offensive",
+        [7] = "Earth Enfeeblement"
     },
     ["Holy"] = {
         [1] = "Divine",
         [2] = "Elemental Divine",
         [3] = "Holy",
         [4] = "Light Affinity",
-        [5] = "Light Magic Damage"
+        [5] = "Light Offensive",
+        [6] = "Light Magic Damage"
     },
     ["Holy II"] = {
         [1] = "Divine",
@@ -3584,7 +3797,8 @@ return {
         [3] = "Holy",
         [4] = "Holy II",
         [5] = "Light Affinity",
-        [6] = "Light Magic Damage"
+        [6] = "Light Offensive",
+        [7] = "Light Magic Damage"
     },
     ["Honor March"] = {
         [1] = "Singing",
@@ -3600,7 +3814,8 @@ return {
         [3] = "Lullaby",
         [4] = "Horde Lullaby",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Horde Lullaby II"] = {
         [1] = "Singing",
@@ -3609,7 +3824,8 @@ return {
         [4] = "Horde Lullaby",
         [5] = "Horde Lullaby II",
         [6] = "Light Affinity",
-        [7] = "Light Enfeeblement"
+        [7] = "Light Offensive",
+        [8] = "Light Enfeeblement"
     },
     ["Hunter's Prelude"] = {
         [1] = "Singing",
@@ -3627,7 +3843,8 @@ return {
         [3] = "Elemental Ninjutsu Ichi",
         [4] = "Huton: Ichi",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Huton: Ni"] = {
         [1] = "Ninjutsu",
@@ -3635,7 +3852,8 @@ return {
         [3] = "Elemental Ninjutsu Ni",
         [4] = "Huton: Ni",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Huton: San"] = {
         [1] = "Ninjutsu",
@@ -3643,7 +3861,8 @@ return {
         [3] = "Elemental Ninjutsu San",
         [4] = "Huton: San",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Hydro Shot"] = {
         [1] = "Blue",
@@ -3657,7 +3876,8 @@ return {
         [2] = "Helix",
         [3] = "Hydrohelix",
         [4] = "Water Affinity",
-        [5] = "Water Magic Damage"
+        [5] = "Water Offensive",
+        [6] = "Water Magic Damage"
     },
     ["Hydrohelix II"] = {
         [1] = "Elemental",
@@ -3665,7 +3885,8 @@ return {
         [3] = "Helix II",
         [4] = "Hydrohelix II",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Hyoton: Ichi"] = {
         [1] = "Ninjutsu",
@@ -3673,7 +3894,8 @@ return {
         [3] = "Elemental Ninjutsu Ichi",
         [4] = "Hyoton: Ichi",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Hyoton: Ni"] = {
         [1] = "Ninjutsu",
@@ -3681,7 +3903,8 @@ return {
         [3] = "Elemental Ninjutsu Ni",
         [4] = "Hyoton: Ni",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Hyoton: San"] = {
         [1] = "Ninjutsu",
@@ -3689,7 +3912,8 @@ return {
         [3] = "Elemental Ninjutsu San",
         [4] = "Hyoton: San",
         [5] = "Ice Affinity",
-        [6] = "Ice Magic Damage"
+        [6] = "Ice Offensive",
+        [7] = "Ice Magic Damage"
     },
     ["Hysteric Barrage"] = {
         [1] = "Blue",
@@ -3711,7 +3935,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Ice Break",
         [6] = "Ice Affinity",
-        [7] = "Ice Magic Damage"
+        [7] = "Ice Offensive",
+        [8] = "Ice Magic Damage"
     },
     ["Ice Carol"] = {
         [1] = "Singing",
@@ -3751,7 +3976,8 @@ return {
         [3] = "Threnody",
         [4] = "Ice Threnody",
         [5] = "Fire Affinity",
-        [6] = "Fire Enfeeblement"
+        [6] = "Fire Offensive",
+        [7] = "Fire Enfeeblement"
     },
     ["Ice Threnody II"] = {
         [1] = "Singing",
@@ -3760,7 +3986,8 @@ return {
         [4] = "Threnody II",
         [5] = "Ice Threnody II",
         [6] = "Fire Affinity",
-        [7] = "Fire Enfeeblement"
+        [7] = "Fire Offensive",
+        [8] = "Fire Enfeeblement"
     },
     ["Ifrit"] = {
         [1] = "Summoning",
@@ -3773,7 +4000,8 @@ return {
         [1] = "Elemental",
         [2] = "Impact",
         [3] = "Dark Affinity",
-        [4] = "Dark Magic Damage"
+        [4] = "Dark Offensive",
+        [5] = "Dark Magic Damage"
     },
     ["Indi-AGI"] = {
         [1] = "Geomancy",
@@ -3996,7 +4224,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Infrasonics",
         [4] = "Ice Affinity",
-        [5] = "Ice Enfeeblement"
+        [5] = "Ice Offensive",
+        [6] = "Ice Enfeeblement"
     },
     ["Ingrid"] = {
         [1] = "Trust",
@@ -4017,7 +4246,8 @@ return {
         [2] = "White Magic Enfeebling",
         [3] = "Inundation",
         [4] = "Light Affinity",
-        [5] = "Light Enfeeblement"
+        [5] = "Light Offensive",
+        [6] = "Light Enfeeblement"
     },
     ["Invisible"] = {
         [1] = "Enhancing",
@@ -4033,8 +4263,10 @@ return {
         [3] = "Ionohelix",
         [4] = "Lightning Affinity",
         [5] = "Thunder Affinity",
-        [6] = "Lightning Magic Damage",
-        [7] = "Thunder Magic Damage"
+        [6] = "Lightning Offensive",
+        [7] = "Thunder Offensive",
+        [8] = "Lightning Magic Damage",
+        [9] = "Thunder Magic Damage"
     },
     ["Ionohelix II"] = {
         [1] = "Elemental",
@@ -4043,8 +4275,10 @@ return {
         [4] = "Ionohelix II",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Iroha"] = {
         [1] = "Trust",
@@ -4094,7 +4328,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Jettatura",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Joachim"] = {
         [1] = "Trust",
@@ -4109,7 +4344,8 @@ return {
         [3] = "Jubaku",
         [4] = "Jubaku: Ichi",
         [5] = "Ice Affinity",
-        [6] = "Ice Enfeeblement"
+        [6] = "Ice Offensive",
+        [7] = "Ice Enfeeblement"
     },
     ["Jubaku: Ni"] = {
         [1] = "Ninjutsu",
@@ -4117,7 +4353,8 @@ return {
         [3] = "Jubaku",
         [4] = "Jubaku: Ni",
         [5] = "Ice Affinity",
-        [6] = "Ice Enfeeblement"
+        [6] = "Ice Offensive",
+        [7] = "Ice Enfeeblement"
     },
     ["Jubaku: San"] = {
         [1] = "Ninjutsu",
@@ -4125,7 +4362,8 @@ return {
         [3] = "Jubaku",
         [4] = "Jubaku: San",
         [5] = "Ice Affinity",
-        [6] = "Ice Enfeeblement"
+        [6] = "Ice Offensive",
+        [7] = "Ice Enfeeblement"
     },
     ["Kakka: Ichi"] = {
         [1] = "Ninjutsu",
@@ -4148,7 +4386,8 @@ return {
         [3] = "Elemental Ninjutsu Ichi",
         [4] = "Katon: Ichi",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Katon: Ni"] = {
         [1] = "Ninjutsu",
@@ -4156,7 +4395,8 @@ return {
         [3] = "Elemental Ninjutsu Ni",
         [4] = "Katon: Ni",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Katon: San"] = {
         [1] = "Ninjutsu",
@@ -4164,14 +4404,16 @@ return {
         [3] = "Elemental Ninjutsu San",
         [4] = "Katon: San",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Kaustra"] = {
         [1] = "Dark",
         [2] = "Elemental Dark",
         [3] = "Kaustra",
         [4] = "Dark Affinity",
-        [5] = "Dark Magic Damage"
+        [5] = "Dark Offensive",
+        [6] = "Dark Magic Damage"
     },
     ["Kayeel-Payeel"] = {
         [1] = "Trust",
@@ -4275,7 +4517,8 @@ return {
         [3] = "Kurayami",
         [4] = "Kurayami: Ichi",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Kurayami: Ni"] = {
         [1] = "Ninjutsu",
@@ -4283,7 +4526,8 @@ return {
         [3] = "Kurayami",
         [4] = "Kurayami: Ni",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Kurayami: San"] = {
         [1] = "Ninjutsu",
@@ -4291,7 +4535,8 @@ return {
         [3] = "Kurayami",
         [4] = "Kurayami: San",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Kuyin Hathdenna"] = {
         [1] = "Trust",
@@ -4306,7 +4551,8 @@ return {
         [3] = "INT Magical Blue",
         [4] = "Leafstorm",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Learned Etude"] = {
         [1] = "Singing",
@@ -4381,7 +4627,8 @@ return {
         [3] = "Threnody",
         [4] = "Light Threnody",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Light Threnody II"] = {
         [1] = "Singing",
@@ -4390,14 +4637,16 @@ return {
         [4] = "Threnody II",
         [5] = "Light Threnody II",
         [6] = "Dark Affinity",
-        [7] = "Dark Enfeeblement"
+        [7] = "Dark Offensive",
+        [8] = "Dark Enfeeblement"
     },
     ["Light of Penance"] = {
         [1] = "Blue",
         [2] = "Enfeebling Blue",
         [3] = "Light of Penance",
         [4] = "Light Affinity",
-        [5] = "Light Enfeeblement"
+        [5] = "Light Offensive",
+        [6] = "Light Enfeeblement"
     },
     ["Lightning Carol"] = {
         [1] = "Singing",
@@ -4458,7 +4707,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Lowing",
         [4] = "Fire Affinity",
-        [5] = "Fire Enfeeblement"
+        [5] = "Fire Offensive",
+        [6] = "Fire Enfeeblement"
     },
     ["Ltng. Threnody"] = {
         [1] = "Singing",
@@ -4466,7 +4716,8 @@ return {
         [3] = "Threnody",
         [4] = "Ltng. Threnody",
         [5] = "Earth Affinity",
-        [6] = "Earth Enfeeblement"
+        [6] = "Earth Offensive",
+        [7] = "Earth Enfeeblement"
     },
     ["Ltng. Threnody II"] = {
         [1] = "Singing",
@@ -4475,14 +4726,16 @@ return {
         [4] = "Threnody II",
         [5] = "Ltng. Threnody II",
         [6] = "Earth Affinity",
-        [7] = "Earth Enfeeblement"
+        [7] = "Earth Offensive",
+        [8] = "Earth Enfeeblement"
     },
     ["Luminohelix"] = {
         [1] = "Elemental",
         [2] = "Helix",
         [3] = "Luminohelix",
         [4] = "Light Affinity",
-        [5] = "Light Magic Damage"
+        [5] = "Light Offensive",
+        [6] = "Light Magic Damage"
     },
     ["Luminohelix II"] = {
         [1] = "Elemental",
@@ -4490,7 +4743,8 @@ return {
         [3] = "Helix II",
         [4] = "Luminohelix II",
         [5] = "Light Affinity",
-        [6] = "Light Magic Damage"
+        [6] = "Light Offensive",
+        [7] = "Light Magic Damage"
     },
     ["Luzaf"] = {
         [1] = "Trust",
@@ -4504,7 +4758,8 @@ return {
         [2] = "Absorption Blue",
         [3] = "MP Drainkiss",
         [4] = "Dark Affinity",
-        [5] = "Absorption"
+        [5] = "Dark Offensive",
+        [6] = "Absorption"
     },
     ["Maat"] = {
         [1] = "Trust",
@@ -4527,7 +4782,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Maelstrom",
         [6] = "Water Affinity",
-        [7] = "Water Magic Damage"
+        [7] = "Water Offensive",
+        [8] = "Water Magic Damage"
     },
     ["Mage's Ballad"] = {
         [1] = "Singing",
@@ -4567,7 +4823,8 @@ return {
         [3] = "Finale",
         [4] = "Magic Finale",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Magic Fruit"] = {
         [1] = "Blue",
@@ -4582,7 +4839,8 @@ return {
         [3] = "MND Magical Blue",
         [4] = "Magic Hammer",
         [5] = "Light Affinity",
-        [6] = "Light Magic Damage"
+        [6] = "Light Offensive",
+        [7] = "Light Magic Damage"
     },
     ["Magnetite Cloud"] = {
         [1] = "Blue",
@@ -4590,7 +4848,8 @@ return {
         [3] = "Enfeebling Breath Blue",
         [4] = "Magnetite Cloud",
         [5] = "Earth Affinity",
-        [6] = "Earth Breath Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Breath Damage"
     },
     ["Maiden's Virelai"] = {
         [1] = "Singing",
@@ -4598,7 +4857,8 @@ return {
         [3] = "Virelai",
         [4] = "Maiden's Virelai",
         [5] = "Light Affinity",
-        [6] = "Light Enfeeblement"
+        [6] = "Light Offensive",
+        [7] = "Light Enfeeblement"
     },
     ["Makki-Chebukki"] = {
         [1] = "Trust",
@@ -4626,7 +4886,8 @@ return {
         [3] = "Elegy",
         [4] = "Massacre Elegy",
         [5] = "Earth Affinity",
-        [6] = "Earth Enfeeblement"
+        [6] = "Earth Offensive",
+        [7] = "Earth Enfeeblement"
     },
     ["Matsui-P"] = {
         [1] = "Trust",
@@ -4669,14 +4930,16 @@ return {
         [1] = "Elemental",
         [2] = "Meteor",
         [3] = "Non-Elemental Affinity",
-        [4] = "Non-Elemental Magic Damage"
+        [4] = "Non-Elemental Offensive",
+        [5] = "Non-Elemental Magic Damage"
     },
     ["Meteor II"] = {
         [1] = "Elemental",
         [2] = "Meteor",
         [3] = "Meteor II",
         [4] = "Light Affinity",
-        [5] = "Light Magic Damage"
+        [5] = "Light Offensive",
+        [6] = "Light Magic Damage"
     },
     ["Migawari: Ichi"] = {
         [1] = "Ninjutsu",
@@ -4716,8 +4979,10 @@ return {
         [5] = "Mind Blast",
         [6] = "Lightning Affinity",
         [7] = "Thunder Affinity",
-        [8] = "Lightning Magic Damage",
-        [9] = "Thunder Magic Damage"
+        [8] = "Lightning Offensive",
+        [9] = "Thunder Offensive",
+        [10] = "Lightning Magic Damage",
+        [11] = "Thunder Magic Damage"
     },
     ["Mnejing"] = {
         [1] = "Trust",
@@ -4732,7 +4997,8 @@ return {
         [3] = "INT Magical Blue",
         [4] = "Molting Plumage",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Monberaux"] = {
         [1] = "Trust",
@@ -4768,7 +5034,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Mortal Ray",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Mumor"] = {
         [1] = "Trust",
@@ -4799,7 +5066,8 @@ return {
         [4] = "CHR Enfeebling Magical Blue",
         [5] = "Mysterious Light",
         [6] = "Wind Affinity",
-        [7] = "Wind Magic Damage"
+        [7] = "Wind Offensive",
+        [8] = "Wind Magic Damage"
     },
     ["Naja (UC)"] = {
         [1] = "Trust",
@@ -4865,14 +5133,16 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Nectarous Deluge",
         [6] = "Water Affinity",
-        [7] = "Water Magic Damage"
+        [7] = "Water Offensive",
+        [8] = "Water Magic Damage"
     },
     ["Noctohelix"] = {
         [1] = "Elemental",
         [2] = "Helix",
         [3] = "Noctohelix",
         [4] = "Dark Affinity",
-        [5] = "Dark Magic Damage"
+        [5] = "Dark Offensive",
+        [6] = "Dark Magic Damage"
     },
     ["Noctohelix II"] = {
         [1] = "Elemental",
@@ -4880,7 +5150,8 @@ return {
         [3] = "Helix II",
         [4] = "Noctohelix II",
         [5] = "Dark Affinity",
-        [6] = "Dark Magic Damage"
+        [6] = "Dark Offensive",
+        [7] = "Dark Magic Damage"
     },
     ["Noillurie"] = {
         [1] = "Trust",
@@ -4917,7 +5188,8 @@ return {
         [2] = "Absorption Blue",
         [3] = "Osmosis",
         [4] = "Dark Affinity",
-        [5] = "Absorption"
+        [5] = "Dark Offensive",
+        [6] = "Absorption"
     },
     ["Ovjang"] = {
         [1] = "Trust",
@@ -4933,7 +5205,8 @@ return {
         [4] = "AGI Enfeebling Magical Blue",
         [5] = "Palling Salvo",
         [6] = "Dark Affinity",
-        [7] = "Dark Magic Damage"
+        [7] = "Dark Offensive",
+        [8] = "Dark Magic Damage"
     },
     ["Paralyga"] = {
         [1] = "Enfeebling",
@@ -4941,7 +5214,8 @@ return {
         [3] = "Paralyze",
         [4] = "Paralyga",
         [5] = "Ice Affinity",
-        [6] = "Ice Enfeeblement"
+        [6] = "Ice Offensive",
+        [7] = "Ice Enfeeblement"
     },
     ["Paralyna"] = {
         [1] = "Healing",
@@ -4955,7 +5229,8 @@ return {
         [2] = "White Magic Enfeebling",
         [3] = "Paralyze",
         [4] = "Ice Affinity",
-        [5] = "Ice Enfeeblement"
+        [5] = "Ice Offensive",
+        [6] = "Ice Enfeeblement"
     },
     ["Paralyze II"] = {
         [1] = "Enfeebling",
@@ -4963,7 +5238,8 @@ return {
         [3] = "Paralyze",
         [4] = "Paralyze II",
         [5] = "Ice Affinity",
-        [6] = "Ice Enfeeblement"
+        [6] = "Ice Offensive",
+        [7] = "Ice Enfeeblement"
     },
     ["Paralyzing Triad"] = {
         [1] = "Blue",
@@ -5007,7 +5283,8 @@ return {
         [3] = "Nocturne",
         [4] = "Pining Nocturne",
         [5] = "Fire Affinity",
-        [6] = "Fire Enfeeblement"
+        [6] = "Fire Offensive",
+        [7] = "Fire Enfeeblement"
     },
     ["Plasma Charge"] = {
         [1] = "Blue",
@@ -5032,7 +5309,8 @@ return {
         [2] = "Black Magic Enfeebling",
         [3] = "Poison",
         [4] = "Water Affinity",
-        [5] = "Water Enfeeblement"
+        [5] = "Water Offensive",
+        [6] = "Water Enfeeblement"
     },
     ["Poison Breath"] = {
         [1] = "Blue",
@@ -5040,7 +5318,8 @@ return {
         [3] = "Enfeebling Breath Blue",
         [4] = "Poison Breath",
         [5] = "Water Affinity",
-        [6] = "Water Breath Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Breath Damage"
     },
     ["Poison II"] = {
         [1] = "Enfeebling",
@@ -5048,7 +5327,8 @@ return {
         [3] = "Poison",
         [4] = "Poison II",
         [5] = "Water Affinity",
-        [6] = "Water Enfeeblement"
+        [6] = "Water Offensive",
+        [7] = "Water Enfeeblement"
     },
     ["Poison III"] = {
         [1] = "Enfeebling",
@@ -5056,7 +5336,8 @@ return {
         [3] = "Poison",
         [4] = "Poison III",
         [5] = "Water Affinity",
-        [6] = "Water Enfeeblement"
+        [6] = "Water Offensive",
+        [7] = "Water Enfeeblement"
     },
     ["Poison IV"] = {
         [1] = "Enfeebling",
@@ -5064,7 +5345,8 @@ return {
         [3] = "Poison",
         [4] = "Poison IV",
         [5] = "Water Affinity",
-        [6] = "Water Enfeeblement"
+        [6] = "Water Offensive",
+        [7] = "Water Enfeeblement"
     },
     ["Poison V"] = {
         [1] = "Enfeebling",
@@ -5072,7 +5354,8 @@ return {
         [3] = "Poison",
         [4] = "Poison V",
         [5] = "Water Affinity",
-        [6] = "Water Enfeeblement"
+        [6] = "Water Offensive",
+        [7] = "Water Enfeeblement"
     },
     ["Poisona"] = {
         [1] = "Healing",
@@ -5087,7 +5370,8 @@ return {
         [3] = "Poison",
         [4] = "Poisonga",
         [5] = "Water Affinity",
-        [6] = "Water Enfeeblement"
+        [6] = "Water Offensive",
+        [7] = "Water Enfeeblement"
     },
     ["Poisonga II"] = {
         [1] = "Enfeebling",
@@ -5096,7 +5380,8 @@ return {
         [4] = "Poisonga",
         [5] = "Poisonga II",
         [6] = "Water Affinity",
-        [7] = "Water Enfeeblement"
+        [7] = "Water Offensive",
+        [8] = "Water Enfeeblement"
     },
     ["Poisonga III"] = {
         [1] = "Enfeebling",
@@ -5105,7 +5390,8 @@ return {
         [4] = "Poisonga",
         [5] = "Poisonga III",
         [6] = "Water Affinity",
-        [7] = "Water Enfeeblement"
+        [7] = "Water Offensive",
+        [8] = "Water Enfeeblement"
     },
     ["Poisonga IV"] = {
         [1] = "Enfeebling",
@@ -5114,7 +5400,8 @@ return {
         [4] = "Poisonga",
         [5] = "Poisonga IV",
         [6] = "Water Affinity",
-        [7] = "Water Enfeeblement"
+        [7] = "Water Offensive",
+        [8] = "Water Enfeeblement"
     },
     ["Poisonga V"] = {
         [1] = "Enfeebling",
@@ -5123,7 +5410,8 @@ return {
         [4] = "Poisonga",
         [5] = "Poisonga V",
         [6] = "Water Affinity",
-        [7] = "Water Enfeeblement"
+        [7] = "Water Offensive",
+        [8] = "Water Enfeeblement"
     },
     ["Polar Roar"] = {
         [1] = "Blue",
@@ -5132,7 +5420,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Polar Roar",
         [6] = "Ice Affinity",
-        [7] = "Ice Magic Damage"
+        [7] = "Ice Offensive",
+        [8] = "Ice Magic Damage"
     },
     ["Pollen"] = {
         [1] = "Blue",
@@ -5276,7 +5565,8 @@ return {
         [2] = "Helix",
         [3] = "Pyrohelix",
         [4] = "Fire Affinity",
-        [5] = "Fire Magic Damage"
+        [5] = "Fire Offensive",
+        [6] = "Fire Magic Damage"
     },
     ["Pyrohelix II"] = {
         [1] = "Elemental",
@@ -5284,7 +5574,8 @@ return {
         [3] = "Helix II",
         [4] = "Pyrohelix II",
         [5] = "Fire Affinity",
-        [6] = "Fire Magic Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Magic Damage"
     },
     ["Quad. Continuum"] = {
         [1] = "Blue",
@@ -5303,7 +5594,8 @@ return {
         [2] = "Ancient Magic",
         [3] = "Quake",
         [4] = "Earth Affinity",
-        [5] = "Earth Magic Damage"
+        [5] = "Earth Offensive",
+        [6] = "Earth Magic Damage"
     },
     ["Quake II"] = {
         [1] = "Elemental",
@@ -5311,7 +5603,8 @@ return {
         [3] = "Ancient Magic II",
         [4] = "Quake II",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Queasyshroom"] = {
         [1] = "Blue",
@@ -5341,7 +5634,8 @@ return {
         [3] = "Enfeebling Breath Blue",
         [4] = "Radiant Breath",
         [5] = "Light Affinity",
-        [6] = "Light Breath Damage"
+        [6] = "Light Offensive",
+        [7] = "Light Breath Damage"
     },
     ["Rahal"] = {
         [1] = "Trust",
@@ -5356,7 +5650,8 @@ return {
         [3] = "MND Magical Blue",
         [4] = "Rail Cannon",
         [5] = "Light Affinity",
-        [6] = "Light Magic Damage"
+        [6] = "Light Offensive",
+        [7] = "Light Magic Damage"
     },
     ["Rainemard"] = {
         [1] = "Trust",
@@ -5409,8 +5704,10 @@ return {
         [4] = "Raiton: Ichi",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Raiton: Ni"] = {
         [1] = "Ninjutsu",
@@ -5419,8 +5716,10 @@ return {
         [4] = "Raiton: Ni",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Raiton: San"] = {
         [1] = "Ninjutsu",
@@ -5429,8 +5728,10 @@ return {
         [4] = "Raiton: San",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Ram Charge"] = {
         [1] = "Blue",
@@ -5460,7 +5761,8 @@ return {
         [2] = "Enfeebling Elemental",
         [3] = "Rasp",
         [4] = "Earth Affinity",
-        [5] = "Earth Magic Damage"
+        [5] = "Earth Offensive",
+        [6] = "Earth Magic Damage"
     },
     ["Reactor Cool"] = {
         [1] = "Blue",
@@ -5476,7 +5778,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Reaving Wind",
         [4] = "Wind Affinity",
-        [5] = "Wind Enfeeblement"
+        [5] = "Wind Offensive",
+        [6] = "Wind Enfeeblement"
     },
     ["Recall-Jugner"] = {
         [1] = "Enhancing",
@@ -5600,7 +5903,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Regurgitation",
         [6] = "Water Affinity",
-        [7] = "Water Magic Damage"
+        [7] = "Water Offensive",
+        [8] = "Water Magic Damage"
     },
     ["Rending Deluge"] = {
         [1] = "Blue",
@@ -5609,14 +5913,16 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Rending Deluge",
         [6] = "Water Affinity",
-        [7] = "Water Magic Damage"
+        [7] = "Water Offensive",
+        [8] = "Water Magic Damage"
     },
     ["Repose"] = {
         [1] = "Divine",
         [2] = "Enfeebling Divine",
         [3] = "Repose",
         [4] = "Light Affinity",
-        [5] = "Light Enfeeblement"
+        [5] = "Light Offensive",
+        [6] = "Light Enfeeblement"
     },
     ["Reprisal"] = {
         [1] = "Enhancing",
@@ -5666,7 +5972,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Retinal Glare",
         [6] = "Light Affinity",
-        [7] = "Light Magic Damage"
+        [7] = "Light Offensive",
+        [8] = "Light Magic Damage"
     },
     ["Retrace"] = {
         [1] = "Enhancing",
@@ -5749,14 +6056,16 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Sandspin",
         [6] = "Earth Affinity",
-        [7] = "Earth Magic Damage"
+        [7] = "Earth Offensive",
+        [8] = "Earth Magic Damage"
     },
     ["Sandspray"] = {
         [1] = "Blue",
         [2] = "Enfeebling Blue",
         [3] = "Sandspray",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Sandstorm"] = {
         [1] = "Enhancing",
@@ -5798,7 +6107,8 @@ return {
         [4] = "MND Enfeebling Magical Blue",
         [5] = "Scouring Spate",
         [6] = "Water Affinity",
-        [7] = "Water Magic Damage"
+        [7] = "Water Offensive",
+        [8] = "Water Magic Damage"
     },
     ["Screwdriver"] = {
         [1] = "Blue",
@@ -5813,7 +6123,8 @@ return {
         [4] = "STR Enfeebling Magical Blue",
         [5] = "Searing Tempest",
         [6] = "Fire Affinity",
-        [7] = "Fire Magic Damage"
+        [7] = "Fire Offensive",
+        [8] = "Fire Magic Damage"
     },
     ["Seedspray"] = {
         [1] = "Blue",
@@ -5828,7 +6139,8 @@ return {
         [3] = "Enfeebling Breath Blue",
         [4] = "Self-Destruct",
         [5] = "Fire Affinity",
-        [6] = "Fire Breath Damage"
+        [6] = "Fire Offensive",
+        [7] = "Fire Breath Damage"
     },
     ["Selh'teus"] = {
         [1] = "Trust",
@@ -5871,7 +6183,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Sheep Song",
         [4] = "Light Affinity",
-        [5] = "Light Enfeeblement"
+        [5] = "Light Offensive",
+        [6] = "Light Enfeeblement"
     },
     ["Sheepfoe Mambo"] = {
         [1] = "Singing",
@@ -6003,8 +6316,10 @@ return {
         [3] = "Shock",
         [4] = "Lightning Affinity",
         [5] = "Thunder Affinity",
-        [6] = "Lightning Magic Damage",
-        [7] = "Thunder Magic Damage"
+        [6] = "Lightning Offensive",
+        [7] = "Thunder Offensive",
+        [8] = "Lightning Magic Damage",
+        [9] = "Thunder Magic Damage"
     },
     ["Shock Spikes"] = {
         [1] = "Enhancing",
@@ -6034,7 +6349,8 @@ return {
         [2] = "White Magic Enfeebling",
         [3] = "Silence",
         [4] = "Wind Affinity",
-        [5] = "Wind Enfeeblement"
+        [5] = "Wind Offensive",
+        [6] = "Wind Enfeeblement"
     },
     ["Silencega"] = {
         [1] = "Enfeebling",
@@ -6042,7 +6358,8 @@ return {
         [3] = "Silence",
         [4] = "Silencega",
         [5] = "Wind Affinity",
-        [6] = "Wind Enfeeblement"
+        [6] = "Wind Offensive",
+        [7] = "Wind Enfeeblement"
     },
     ["Silent Storm"] = {
         [1] = "Blue",
@@ -6051,7 +6368,8 @@ return {
         [4] = "AGI Enfeebling Magical Blue",
         [5] = "Silent Storm",
         [6] = "Wind Affinity",
-        [7] = "Wind Magic Damage"
+        [7] = "Wind Offensive",
+        [8] = "Wind Magic Damage"
     },
     ["Sinewy Etude"] = {
         [1] = "Singing",
@@ -6079,7 +6397,8 @@ return {
         [2] = "Black Magic Enfeebling",
         [3] = "Sleep",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Sleep II"] = {
         [1] = "Enfeebling",
@@ -6087,7 +6406,8 @@ return {
         [3] = "Sleep",
         [4] = "Sleep II",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Sleepga"] = {
         [1] = "Enfeebling",
@@ -6095,7 +6415,8 @@ return {
         [3] = "Sleep",
         [4] = "Sleepga",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Sleepga II"] = {
         [1] = "Enfeebling",
@@ -6104,14 +6425,16 @@ return {
         [4] = "Sleepga",
         [5] = "Sleepga II",
         [6] = "Dark Affinity",
-        [7] = "Dark Enfeeblement"
+        [7] = "Dark Offensive",
+        [8] = "Dark Enfeeblement"
     },
     ["Slow"] = {
         [1] = "Enfeebling",
         [2] = "White Magic Enfeebling",
         [3] = "Slow",
         [4] = "Earth Affinity",
-        [5] = "Earth Enfeeblement"
+        [5] = "Earth Offensive",
+        [6] = "Earth Enfeeblement"
     },
     ["Slow II"] = {
         [1] = "Enfeebling",
@@ -6119,7 +6442,8 @@ return {
         [3] = "Slow",
         [4] = "Slow II",
         [5] = "Earth Affinity",
-        [6] = "Earth Enfeeblement"
+        [6] = "Earth Offensive",
+        [7] = "Earth Enfeeblement"
     },
     ["Slowga"] = {
         [1] = "Enfeebling",
@@ -6127,7 +6451,8 @@ return {
         [3] = "Slow",
         [4] = "Slowga",
         [5] = "Earth Affinity",
-        [6] = "Earth Enfeeblement"
+        [6] = "Earth Offensive",
+        [7] = "Earth Enfeeblement"
     },
     ["Smite of Rage"] = {
         [1] = "Blue",
@@ -6148,14 +6473,16 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Soporific",
         [4] = "Dark Affinity",
-        [5] = "Dark Enfeeblement"
+        [5] = "Dark Offensive",
+        [6] = "Dark Enfeeblement"
     },
     ["Sound Blast"] = {
         [1] = "Blue",
         [2] = "Enfeebling Blue",
         [3] = "Sound Blast",
         [4] = "Fire Affinity",
-        [5] = "Fire Enfeeblement"
+        [5] = "Fire Offensive",
+        [6] = "Fire Enfeeblement"
     },
     ["Spectral Floe"] = {
         [1] = "Blue",
@@ -6164,7 +6491,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Spectral Floe",
         [6] = "Ice Affinity",
-        [7] = "Ice Magic Damage"
+        [7] = "Ice Offensive",
+        [8] = "Ice Magic Damage"
     },
     ["Spinal Cleave"] = {
         [1] = "Blue",
@@ -6206,7 +6534,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Stinking Gas",
         [4] = "Wind Affinity",
-        [5] = "Wind Enfeeblement"
+        [5] = "Wind Offensive",
+        [6] = "Wind Enfeeblement"
     },
     ["Stona"] = {
         [1] = "Healing",
@@ -6220,7 +6549,8 @@ return {
         [2] = "Single Target Elemental",
         [3] = "Stone",
         [4] = "Earth Affinity",
-        [5] = "Earth Magic Damage"
+        [5] = "Earth Offensive",
+        [6] = "Earth Magic Damage"
     },
     ["Stone II"] = {
         [1] = "Elemental",
@@ -6228,7 +6558,8 @@ return {
         [3] = "Single Target Elemental II",
         [4] = "Stone II",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Stone III"] = {
         [1] = "Elemental",
@@ -6236,7 +6567,8 @@ return {
         [3] = "Single Target Elemental III",
         [4] = "Stone III",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Stone IV"] = {
         [1] = "Elemental",
@@ -6244,7 +6576,8 @@ return {
         [3] = "Single Target Elemental IV",
         [4] = "Stone IV",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Stone V"] = {
         [1] = "Elemental",
@@ -6252,7 +6585,8 @@ return {
         [3] = "Single Target Elemental V",
         [4] = "Stone V",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Stone VI"] = {
         [1] = "Elemental",
@@ -6260,14 +6594,16 @@ return {
         [3] = "Single Target Elemental VI",
         [4] = "Stone VI",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Stonega"] = {
         [1] = "Elemental",
         [2] = "Ga",
         [3] = "Stonega",
         [4] = "Earth Affinity",
-        [5] = "Earth Magic Damage"
+        [5] = "Earth Offensive",
+        [6] = "Earth Magic Damage"
     },
     ["Stonega II"] = {
         [1] = "Elemental",
@@ -6275,7 +6611,8 @@ return {
         [3] = "Ga II",
         [4] = "Stonega II",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Stonega III"] = {
         [1] = "Elemental",
@@ -6283,7 +6620,8 @@ return {
         [3] = "Ga III",
         [4] = "Stonega III",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Stonega IV"] = {
         [1] = "Elemental",
@@ -6291,7 +6629,8 @@ return {
         [3] = "Ga IV",
         [4] = "Stonega IV",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Stonega V"] = {
         [1] = "Elemental",
@@ -6299,7 +6638,8 @@ return {
         [3] = "Ga V",
         [4] = "Stonega V",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Stoneja"] = {
         [1] = "Elemental",
@@ -6307,14 +6647,16 @@ return {
         [3] = "Ja",
         [4] = "Stoneja",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Stonera"] = {
         [1] = "Elemental",
         [2] = "Ra",
         [3] = "Stonera",
         [4] = "Earth Affinity",
-        [5] = "Earth Magic Damage"
+        [5] = "Earth Offensive",
+        [6] = "Earth Magic Damage"
     },
     ["Stonera II"] = {
         [1] = "Elemental",
@@ -6322,7 +6664,8 @@ return {
         [3] = "Ra II",
         [4] = "Stonera II",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Stonera III"] = {
         [1] = "Elemental",
@@ -6330,7 +6673,8 @@ return {
         [3] = "Ra III",
         [4] = "Stonera III",
         [5] = "Earth Affinity",
-        [6] = "Earth Magic Damage"
+        [6] = "Earth Offensive",
+        [7] = "Earth Magic Damage"
     },
     ["Stoneskin"] = {
         [1] = "Enhancing",
@@ -6345,8 +6689,10 @@ return {
         [3] = "Stun",
         [4] = "Lightning Affinity",
         [5] = "Thunder Affinity",
-        [6] = "Lightning Enfeeblement",
-        [7] = "Thunder Enfeeblement"
+        [6] = "Lightning Offensive",
+        [7] = "Thunder Offensive",
+        [8] = "Lightning Enfeeblement",
+        [9] = "Thunder Enfeeblement"
     },
     ["Sub-zero Smash"] = {
         [1] = "Blue",
@@ -6362,7 +6708,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Subduction",
         [6] = "Wind Affinity",
-        [7] = "Wind Magic Damage"
+        [7] = "Wind Offensive",
+        [8] = "Wind Magic Damage"
     },
     ["Sudden Lunge"] = {
         [1] = "Blue",
@@ -6377,7 +6724,8 @@ return {
         [3] = "Elemental Ninjutsu Ichi",
         [4] = "Suiton: Ichi",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Suiton: Ni"] = {
         [1] = "Ninjutsu",
@@ -6385,7 +6733,8 @@ return {
         [3] = "Elemental Ninjutsu Ni",
         [4] = "Suiton: Ni",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Suiton: San"] = {
         [1] = "Ninjutsu",
@@ -6393,7 +6742,8 @@ return {
         [3] = "Elemental Ninjutsu San",
         [4] = "Suiton: San",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Sweeping Gouge"] = {
         [1] = "Blue",
@@ -6442,7 +6792,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Tearing Gust",
         [6] = "Wind Affinity",
-        [7] = "Wind Magic Damage"
+        [7] = "Wind Offensive",
+        [8] = "Wind Magic Damage"
     },
     ["Teleport-Altep"] = {
         [1] = "Enhancing",
@@ -6504,7 +6855,8 @@ return {
         [3] = "INT Magical Blue",
         [4] = "Tem. Upheaval",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Temper"] = {
         [1] = "Enhancing",
@@ -6525,8 +6877,10 @@ return {
         [3] = "Temporal Shift",
         [4] = "Lightning Affinity",
         [5] = "Thunder Affinity",
-        [6] = "Lightning Enfeeblement",
-        [7] = "Thunder Enfeeblement"
+        [6] = "Lightning Offensive",
+        [7] = "Thunder Offensive",
+        [8] = "Lightning Enfeeblement",
+        [9] = "Thunder Enfeeblement"
     },
     ["Tenebral Crush"] = {
         [1] = "Blue",
@@ -6535,7 +6889,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Tenebral Crush",
         [6] = "Dark Affinity",
-        [7] = "Dark Magic Damage"
+        [7] = "Dark Offensive",
+        [8] = "Dark Magic Damage"
     },
     ["Tenzen"] = {
         [1] = "Trust",
@@ -6572,7 +6927,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Thermal Pulse",
         [6] = "Fire Affinity",
-        [7] = "Fire Magic Damage"
+        [7] = "Fire Offensive",
+        [8] = "Fire Magic Damage"
     },
     ["Thrashing Assault"] = {
         [1] = "Blue",
@@ -6586,8 +6942,10 @@ return {
         [3] = "Thundaga",
         [4] = "Lightning Affinity",
         [5] = "Thunder Affinity",
-        [6] = "Lightning Magic Damage",
-        [7] = "Thunder Magic Damage"
+        [6] = "Lightning Offensive",
+        [7] = "Thunder Offensive",
+        [8] = "Lightning Magic Damage",
+        [9] = "Thunder Magic Damage"
     },
     ["Thundaga II"] = {
         [1] = "Elemental",
@@ -6596,8 +6954,10 @@ return {
         [4] = "Thundaga II",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Thundaga III"] = {
         [1] = "Elemental",
@@ -6606,8 +6966,10 @@ return {
         [4] = "Thundaga III",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Thundaga IV"] = {
         [1] = "Elemental",
@@ -6616,8 +6978,10 @@ return {
         [4] = "Thundaga IV",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Thundaga V"] = {
         [1] = "Elemental",
@@ -6626,8 +6990,10 @@ return {
         [4] = "Thundaga V",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Thundaja"] = {
         [1] = "Elemental",
@@ -6636,8 +7002,10 @@ return {
         [4] = "Thundaja",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Thundara"] = {
         [1] = "Elemental",
@@ -6645,8 +7013,10 @@ return {
         [3] = "Thundara",
         [4] = "Lightning Affinity",
         [5] = "Thunder Affinity",
-        [6] = "Lightning Magic Damage",
-        [7] = "Thunder Magic Damage"
+        [6] = "Lightning Offensive",
+        [7] = "Thunder Offensive",
+        [8] = "Lightning Magic Damage",
+        [9] = "Thunder Magic Damage"
     },
     ["Thundara II"] = {
         [1] = "Elemental",
@@ -6655,8 +7025,10 @@ return {
         [4] = "Thundara II",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Thundara III"] = {
         [1] = "Elemental",
@@ -6665,8 +7037,10 @@ return {
         [4] = "Thundara III",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Thunder"] = {
         [1] = "Elemental",
@@ -6674,8 +7048,10 @@ return {
         [3] = "Thunder",
         [4] = "Lightning Affinity",
         [5] = "Thunder Affinity",
-        [6] = "Lightning Magic Damage",
-        [7] = "Thunder Magic Damage"
+        [6] = "Lightning Offensive",
+        [7] = "Thunder Offensive",
+        [8] = "Lightning Magic Damage",
+        [9] = "Thunder Magic Damage"
     },
     ["Thunder Breath"] = {
         [1] = "Blue",
@@ -6683,8 +7059,10 @@ return {
         [3] = "Thunder Breath",
         [4] = "Lightning Affinity",
         [5] = "Thunder Affinity",
-        [6] = "Lightning Breath Damage",
-        [7] = "Thunder Breath Damage"
+        [6] = "Lightning Offensive",
+        [7] = "Thunder Offensive",
+        [8] = "Lightning Breath Damage",
+        [9] = "Thunder Breath Damage"
     },
     ["Thunder II"] = {
         [1] = "Elemental",
@@ -6693,8 +7071,10 @@ return {
         [4] = "Thunder II",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Thunder III"] = {
         [1] = "Elemental",
@@ -6703,8 +7083,10 @@ return {
         [4] = "Thunder III",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Thunder IV"] = {
         [1] = "Elemental",
@@ -6713,8 +7095,10 @@ return {
         [4] = "Thunder IV",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Thunder Spirit"] = {
         [1] = "Summoning",
@@ -6732,8 +7116,10 @@ return {
         [4] = "Thunder V",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Thunder VI"] = {
         [1] = "Elemental",
@@ -6742,8 +7128,10 @@ return {
         [4] = "Thunder VI",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Magic Damage",
-        [8] = "Thunder Magic Damage"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Magic Damage",
+        [10] = "Thunder Magic Damage"
     },
     ["Thunderbolt"] = {
         [1] = "Blue",
@@ -6753,8 +7141,10 @@ return {
         [5] = "Thunderbolt",
         [6] = "Lightning Affinity",
         [7] = "Thunder Affinity",
-        [8] = "Lightning Magic Damage",
-        [9] = "Thunder Magic Damage"
+        [8] = "Lightning Offensive",
+        [9] = "Thunder Offensive",
+        [10] = "Lightning Magic Damage",
+        [11] = "Thunder Magic Damage"
     },
     ["Thunderstorm"] = {
         [1] = "Enhancing",
@@ -6805,7 +7195,8 @@ return {
         [2] = "Ancient Magic",
         [3] = "Tornado",
         [4] = "Wind Affinity",
-        [5] = "Wind Magic Damage"
+        [5] = "Wind Offensive",
+        [6] = "Wind Magic Damage"
     },
     ["Tornado II"] = {
         [1] = "Elemental",
@@ -6813,7 +7204,8 @@ return {
         [3] = "Ancient Magic II",
         [4] = "Tornado II",
         [5] = "Wind Affinity",
-        [6] = "Wind Magic Damage"
+        [6] = "Wind Offensive",
+        [7] = "Wind Magic Damage"
     },
     ["Tourbillion"] = {
         [1] = "Blue",
@@ -6894,7 +7286,8 @@ return {
         [3] = "INT Magical Blue",
         [4] = "Uproot",
         [5] = "Light Affinity",
-        [6] = "Light Magic Damage"
+        [6] = "Light Offensive",
+        [7] = "Light Magic Damage"
     },
     ["Utsusemi: Ichi"] = {
         [1] = "Ninjutsu",
@@ -6978,14 +7371,16 @@ return {
         [2] = "Breath Blue",
         [3] = "Vapor Spray",
         [4] = "Water Affinity",
-        [5] = "Water Breath Damage"
+        [5] = "Water Offensive",
+        [6] = "Water Breath Damage"
     },
     ["Venom Shell"] = {
         [1] = "Blue",
         [2] = "Enfeebling Blue",
         [3] = "Venom Shell",
         [4] = "Water Affinity",
-        [5] = "Water Enfeeblement"
+        [5] = "Water Offensive",
+        [6] = "Water Enfeeblement"
     },
     ["Vertical Cleave"] = {
         [1] = "Blue",
@@ -7015,7 +7410,8 @@ return {
         [2] = "Black Magic Enfeebling",
         [3] = "Virus",
         [4] = "Fire Affinity",
-        [5] = "Fire Enfeeblement"
+        [5] = "Fire Offensive",
+        [6] = "Fire Enfeeblement"
     },
     ["Vital Etude"] = {
         [1] = "Singing",
@@ -7063,7 +7459,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Voracious Trunk",
         [4] = "Wind Affinity",
-        [5] = "Wind Enfeeblement"
+        [5] = "Wind Offensive",
+        [6] = "Wind Enfeeblement"
     },
     ["Warding Round"] = {
         [1] = "Singing",
@@ -7104,7 +7501,8 @@ return {
         [2] = "Single Target Elemental",
         [3] = "Water",
         [4] = "Water Affinity",
-        [5] = "Water Magic Damage"
+        [5] = "Water Offensive",
+        [6] = "Water Magic Damage"
     },
     ["Water Bomb"] = {
         [1] = "Blue",
@@ -7113,7 +7511,8 @@ return {
         [4] = "INT Enfeebling Magical Blue",
         [5] = "Water Bomb",
         [6] = "Water Affinity",
-        [7] = "Water Magic Damage"
+        [7] = "Water Offensive",
+        [8] = "Water Magic Damage"
     },
     ["Water Carol"] = {
         [1] = "Singing",
@@ -7142,7 +7541,8 @@ return {
         [3] = "Single Target Elemental II",
         [4] = "Water II",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Water III"] = {
         [1] = "Elemental",
@@ -7150,7 +7550,8 @@ return {
         [3] = "Single Target Elemental III",
         [4] = "Water III",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Water IV"] = {
         [1] = "Elemental",
@@ -7158,7 +7559,8 @@ return {
         [3] = "Single Target Elemental IV",
         [4] = "Water IV",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Water Spirit"] = {
         [1] = "Summoning",
@@ -7174,8 +7576,10 @@ return {
         [4] = "Water Threnody",
         [5] = "Lightning Affinity",
         [6] = "Thunder Affinity",
-        [7] = "Lightning Enfeeblement",
-        [8] = "Thunder Enfeeblement"
+        [7] = "Lightning Offensive",
+        [8] = "Thunder Offensive",
+        [9] = "Lightning Enfeeblement",
+        [10] = "Thunder Enfeeblement"
     },
     ["Water Threnody II"] = {
         [1] = "Singing",
@@ -7185,8 +7589,10 @@ return {
         [5] = "Water Threnody II",
         [6] = "Lightning Affinity",
         [7] = "Thunder Affinity",
-        [8] = "Lightning Enfeeblement",
-        [9] = "Thunder Enfeeblement"
+        [8] = "Lightning Offensive",
+        [9] = "Thunder Offensive",
+        [10] = "Lightning Enfeeblement",
+        [11] = "Thunder Enfeeblement"
     },
     ["Water V"] = {
         [1] = "Elemental",
@@ -7194,7 +7600,8 @@ return {
         [3] = "Single Target Elemental V",
         [4] = "Water V",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Water VI"] = {
         [1] = "Elemental",
@@ -7202,14 +7609,16 @@ return {
         [3] = "Single Target Elemental VI",
         [4] = "Water VI",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Watera"] = {
         [1] = "Elemental",
         [2] = "Ra",
         [3] = "Watera",
         [4] = "Water Affinity",
-        [5] = "Water Magic Damage"
+        [5] = "Water Offensive",
+        [6] = "Water Magic Damage"
     },
     ["Watera II"] = {
         [1] = "Elemental",
@@ -7217,7 +7626,8 @@ return {
         [3] = "Ra II",
         [4] = "Watera II",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Watera III"] = {
         [1] = "Elemental",
@@ -7225,14 +7635,16 @@ return {
         [3] = "Ra III",
         [4] = "Watera III",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Waterga"] = {
         [1] = "Elemental",
         [2] = "Ga",
         [3] = "Waterga",
         [4] = "Water Affinity",
-        [5] = "Water Magic Damage"
+        [5] = "Water Offensive",
+        [6] = "Water Magic Damage"
     },
     ["Waterga II"] = {
         [1] = "Elemental",
@@ -7240,7 +7652,8 @@ return {
         [3] = "Ga II",
         [4] = "Waterga II",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Waterga III"] = {
         [1] = "Elemental",
@@ -7248,7 +7661,8 @@ return {
         [3] = "Ga III",
         [4] = "Waterga III",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Waterga IV"] = {
         [1] = "Elemental",
@@ -7256,7 +7670,8 @@ return {
         [3] = "Ga IV",
         [4] = "Waterga IV",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Waterga V"] = {
         [1] = "Elemental",
@@ -7264,7 +7679,8 @@ return {
         [3] = "Ga V",
         [4] = "Waterga V",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Waterja"] = {
         [1] = "Elemental",
@@ -7272,7 +7688,8 @@ return {
         [3] = "Ja",
         [4] = "Waterja",
         [5] = "Water Affinity",
-        [6] = "Water Magic Damage"
+        [6] = "Water Offensive",
+        [7] = "Water Magic Damage"
     },
     ["Whirl of Rage"] = {
         [1] = "Blue",
@@ -7307,7 +7724,8 @@ return {
         [2] = "Breath Blue",
         [3] = "Wind Breath",
         [4] = "Wind Affinity",
-        [5] = "Wind Breath Damage"
+        [5] = "Wind Offensive",
+        [6] = "Wind Breath Damage"
     },
     ["Wind Carol"] = {
         [1] = "Singing",
@@ -7332,7 +7750,8 @@ return {
         [3] = "Threnody",
         [4] = "Wind Threnody",
         [5] = "Ice Affinity",
-        [6] = "Ice Enfeeblement"
+        [6] = "Ice Offensive",
+        [7] = "Ice Enfeeblement"
     },
     ["Wind Threnody II"] = {
         [1] = "Singing",
@@ -7341,7 +7760,8 @@ return {
         [4] = "Threnody II",
         [5] = "Wind Threnody II",
         [6] = "Ice Affinity",
-        [7] = "Ice Enfeeblement"
+        [7] = "Ice Offensive",
+        [8] = "Ice Enfeeblement"
     },
     ["Winds of Promy."] = {
         [1] = "Blue",
@@ -7381,7 +7801,8 @@ return {
         [2] = "Enfeebling Blue",
         [3] = "Yawn",
         [4] = "Light Affinity",
-        [5] = "Light Enfeeblement"
+        [5] = "Light Offensive",
+        [6] = "Light Enfeeblement"
     },
     ["Ygnas"] = {
         [1] = "Trust",
@@ -7403,7 +7824,8 @@ return {
         [3] = "Yurin",
         [4] = "Yurin: Ichi",
         [5] = "Dark Affinity",
-        [6] = "Dark Enfeeblement"
+        [6] = "Dark Offensive",
+        [7] = "Dark Enfeeblement"
     },
     ["Zazarg"] = {
         [1] = "Trust",
