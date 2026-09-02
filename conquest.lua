@@ -203,11 +203,10 @@ local function LookupControl(zone)
     end
 end
 
-local currentZone = memory.GetCurrentZone()
 local locals = {
     CurrentNation = "Unknown",
-    CurrentZone = currentZone,
-    CurrentControl = LookupControl(currentZone)
+    CurrentZone = memory.GetCurrentZone(),
+    CurrentControl = LookupControl(memory.GetCurrentZone())
 }
 
 logger.Info(chat.message("Region control set to ") .. chat.highlight(locals.CurrentControl))
