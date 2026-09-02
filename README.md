@@ -324,6 +324,4 @@ layers.EnableAutomaticMidshotDelay()
 layers.EnableDefaultStickyItems()
 
 return layers
-
-return layers
 ```
