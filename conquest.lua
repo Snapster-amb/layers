@@ -206,7 +206,7 @@ end
 local locals = {
     CurrentNation = "Unknown",
     CurrentZone = memory.GetCurrentZone(),
-    CurrentControl = LookupControl(currentZone)
+    CurrentControl = LookupControl(memory.GetCurrentZone())
 }
 
 logger.Info(chat.message("Region control set to ") .. chat.highlight(locals.CurrentControl))
@@ -240,7 +240,7 @@ memory.RegisterPacketIn("LAC_Conquest_Module_HandleIncomingPacket", function (e)
 end)
 
 conquest.GetCurrentControl = function()
-    return locals.CrrentControl
+    return locals.CurrentControl
 end
 
 conquest.GetCurrentNation = function()
@@ -252,6 +252,9 @@ conquest.GetZoneControl = function(zone)
 end
 
 conquest.GetInsideControl = function()
+    if (locals.CurrentControl == "Unknown") then
+        return false
+    end
     return (locals.CurrentControl == locals.CurrentNation)
 end
 
