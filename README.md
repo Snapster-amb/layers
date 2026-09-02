@@ -82,401 +82,248 @@ Sample Ninja LUA
 ```lua
 local layers = gFunc.LoadFile('layers\\layers.lua')
 
-local evasionMode = layers.CreateModeGroup('Evasion', {'Off', 'Evasion'}, '@e')
-local weaponMode = layers.CreateModeGroup('Weapon', {'SenjiFudo', 'Staves'}, '@w')
-local pdtMode = layers.CreateModeGroup('PDT', {'Off', 'PDT'}, '@2')
-local mdtMode = layers.CreateModeGroup('MDT', {'Off', 'MDT'}, '@1')
-local regenMode = layers.CreateModeGroup('Regen', {'Off', 'Regen'}, '@p')
-local buffaloMode = layers.CreateModeGroup('Buffalo', {'Off', 'Buffalo'}, '@b')
-local refreshMode = layers.CreateModeGroup('Refresh', {'Off', 'Refresh'}, '@r')
-local ninjutsuMode = layers.CreateModeGroup('Ninjutsu', {'Off', 'HighHP', 'HighINT', 'HighAcc'}, '@n')
-local meleeMode = layers.CreateModeGroup('Melee', {'Off', 'Acc'}, '@m')
+layers.CreateModeGroup('Weapon', {'Katanas', 'Staves'}, '@w')
+layers.CreateModeGroup('Melee', {'Off', 'Acc'}, '@m')
+layers.CreateModeGroup('PDT', {'Off', 'PDT'}, '@2')
+layers.CreateModeGroup('MDT', {'Off', 'MDT'}, '@1')
+layers.CreateModeGroup('Regen', {'Off', 'Regen'}, '@p')
+layers.CreateModeGroup('Buffalo', {'Off', 'Buffalo'}, '@b')
+layers.CreateModeGroup('Refresh', {'Off', 'Refresh'}, '@r')
+layers.CreateModeGroup('Ninjutsu', {'Off', 'HighHP', 'HighAcc'}, '@n')
+layers.CreateModeGroup('Kiting', {'Kiting', 'Off'}, '@k')
+
+
+-- Add RDM fast cast belt
 
 local PDT = {
     Head = "Arh. Jinpachi +1",
     Body = "Arhat's Gi +1",
-    Hands = "Seiryu's Kote",
+    Hands = { Name = "Seiryu's Kote", Priority = 100 },
     Legs = "Dst. Subligar +1",
-    Feet = "Dst. Leggings +1",
-    Neck = "Bloodbead Amulet",
-    Waist = "Steppe Sash",
-    Back = "Resentment Cape",
-    Ear1 = "Ethereal Earring",
-    Ear2 = "Morukaka Earring",
-    Ring1 = "Sattva Ring",
+    Feet = { { Name = "Nin. Kyahan +1", When = "Dusk to Dawn && Kiting" }, { Name = "Dst. Leggings +1" } },
+    Neck = { Name = "Bloodbead Amulet", Priority = 100 },
+    Waist = { Name = "Steppe Sash", Priority = 100 },
+    Back = { Name = "Gigant Mantle", Priority = 102 },
+    Ear1 = { Name = "Ethereal Earring", Priority = 100 },
+    Ear2 = { Name = "Morukaka Earring", Priority = 100 },
+    Ring1 = { Name = "Sattva Ring", Priority = 100 },
     Ring2 = "Jelly Ring",
-    Range = "Empty",
-    Ammo = "Happy Egg"
+    Ammo = { { Name = "Fenrir's Stone", When = "Daytime", Priority = 100 }, { Name = "Happy Egg", Priority = 100 } }
 }
 
 local MDT = gFunc.Combine(PDT, {
-    Neck = "Jeweled Collar",
-    Back = "Resentment Cape",
-    Ear1 = "Merman's Earring",
+    Back = { { Name = "Resentment Cape", When = "Outside Nation Control" } },
     Ear2 = "Merman's Earring",
     Ring2 = "Merman's Ring"
 })
 
 local Enmity = {
-    Head = "Arh. Jinpachi +1",
-    Body = "Arhat's Gi +1",
-    Hands = "Yasha Tekko",
-    Legs = "Arhat's Hakama +1",
-    Feet = "Yasha Sune-Ate",
-    Waist = "Warwolf Belt",
+    Head = "Yasha Jinpachi +1",
+    Body = "Yasha Samue +1",
+    Hands = "Yasha Tekko +1",
+    Legs = { Name = "Yasha Hakama +1", Priority = 100 },
+    Feet = { Name = "Ysh. Sune-Ate +1", Priority = 100 },
+    -- Waist = "Warwolf Belt", -- Should be steppe sashe in HP sets
+    Waist = { Name = "Steppe Sash", Priority = 100 },
     Neck = "Harmonia's Torque",
-    Back = {Name = "Gigant Mantle", Priority = 100},
+    Back = { Name = "Gigant Mantle", Priority = 102 },
     Ear1 = "Eris' Earring +1",
     Ear2 = "Eris' Earring +1",
-    Ring1 = "Sattva Ring",
-    Ring2 = {Name = "Bomb Queen Ring", Priority = 100},
-    Range = "Empty",
-    Ammo = "Nokizaru Shuriken"
+    Ring1 = { Name = "Sattva Ring", Priority = 100 },
+    Ring2 = { Name = "Bomb Queen Ring", Priority = 102 },
+    Ammo = { { Name = "Fenrir's Stone", When = "Daytime" }, { Name = "Nokizaru Shuriken" } }
 }
 
 local Haste = {
     Head = "Panther Mask +1",
-    Hands = "Dusk Gloves",
+    Hands = { Name = "Dusk Gloves", Priority = 100 },
     Legs = "Byakko's Haidate",
-    Feet = "Sarutobi Kyahan",
+    Feet = { Name = "Fuma Sune-Ate", Priority = 100 },
     Waist = "Sprinter's Belt"
 }
 
 local FastCast = {
-    Ear1 = {Name = "Loquac. Earring", Priority = 1}
+    Back = { Name = "Warlock's Mantle", When = "Player Subjob == Red Mage" },
+    Ear1 = { Name = "Loquac. Earring", Priority = 99 }
 }
 
+local Regen = {
+    Head = { Name = "Dream Ribbon", When = "(Regen || (Player HP <= 238 && Buffalo)) && Player Status Effect == Utsusemi && Player HPP < 100" },
+    Body = { Name = "War Shinobi Gi", When = "(Regen || (Player HP <= 238 && Buffalo)) && Player Status Effect == Utsusemi && Player HPP < 100" },
+    Waist = { Name = "Muscle Belt +1", When = "((Regen && Orange HP) || (Player HP <= 238 && Buffalo))" }
+}
+
+local Refresh = {
+    Body = { Name = "Blue Cotehardie", When = "(Player MP < 41) && Player Status Effect == Utsusemi" }
+}
+
+-- Begin Idle Sets --
+
+layers.Sets.Idle = PDT
+layers.Sets.MDT.Idle = MDT
+layers.Sets.Regen.Idle = Regen
+layers.Sets.Refresh.Idle = Refresh
+layers.Sets['Region == Bastok'].Idle = { Body = "Republic Aketon" }
+layers.Sets.Katanas.Idle = { Main = "Senjuinrikio", Sub = "Fudo" }
+layers.Sets.Staves.Idle = { Main = "Terra's Staff" }
+
+
+-- Begin Engaged Sets --
+
 layers.Sets.Engaged = gFunc.Combine({
-    Body = "Ninja Chainmail",
+    Body = { { Name = "Haubergeon +1", When = "Acc" }, { Name = "Nin. Chainmail +1", Priority = 100 } },
     Neck = "Peacock Amulet",
     Back = "Forager's Mantle",
     Ear1 = "Stealth Earring",
     Ear2 = "Brutal Earring",
-    Ring1 = "Jaeger Ring",
-    Ring2 = "Venerer Ring",
-    Range = "Empty",
-    Ammo = "Bomb Core"
+    Ring1 = { Name = "Toreador's Ring", Priority = 100 },
+    Ring2 = { { Name = "Shinobi Ring", When = "Yellow HP"}, { Name = "Toreador's Ring", Priority = 100 } },
+    Ammo = "Bomb Core",
 }, Haste)
+layers.Sets.PDT.Engaged = PDT
+layers.Sets.MDT.Engaged = MDT
+layers.Sets.Regen.Engaged = Regen
+layers.Sets.Refresh.Engaged = Refresh
+layers.Sets.Katanas.Engaged = layers.Sets.Katanas.Idle
+layers.Sets.Staves.Engaged = layers.Sets.Staves.Idle
 
-layers.Sets.Acc.Engaged = {
-    Body = "Haubergeon"
-}
+-- Begin Weaponskill Sets --
 
 layers.Sets.Weaponskill = {
-    Head = "Voyager Sallet",
-    Body = "Kirin's Osode",
-    Hands = "Ochimusha Kote",
+    Head = "Maat's Cap",
+    Body = { { Name = "Haubergeon +1", When = "Acc"}, { Name = "Kirin's Osode", Priority = 99 } },
+    Hands = { { Name = "Kog. Tekko +1", When = "Dusk to Dawn"}, { Name = "Ochimusha Kote" } },
     Legs = "Byakko's Haidate",
-    Feet = "Luisant Sollerets",
-    Neck = "Spike Necklace",
+    Feet = { { Name = "Kog. Kyahan +1", When = "Dusk to Dawn"}, { Name = "Creek M Clomps", Priority = 100} },
+    Neck = "Justice Torque",
     Waist = "Warwolf Belt",
     Back = "Forager's Mantle",
-    Ear1 = "Suppanomimi",
+    Ear1 = { { Name = "Vampire Earring", When = "Nighttime", }, { Name = "Suppanomimi" } },
     Ear2 = "Brutal Earring",
     Ring1 = "Flame Ring",
     Ring2 = "Flame Ring",
-    Range = "Empty",
     Ammo = "Bomb Core"
 }
+layers.Sets.Weaponskill['Blade: Chi'] = { Neck = "Thunder Gorget" }
+layers.Sets.Weaponskill['Blade: Jin'] = { Neck = "Thunder Gorget" }
 
-layers.Sets.Acc.Weaponskill = {
-    Body = "Haubergeon"
-}
+-- Begin Ability Sets --
 
-layers.Sets.Weaponskill['Blade: Chi'] = {
-    Neck = "Thunder Gorget"
-}
+layers.Sets.Ability.Yonin = Enmity
+layers.Sets.Ability.Provoke = Enmity
+layers.Sets.Ability.Warcry = Enmity
+layers.Sets.Ability.Souleater = Enmity
+layers.Sets.Ability['Last Resort'] = Enmity
+layers.Sets.Ability['Weapon Bash'] = Enmity
 
-layers.Sets.Weaponskill['Blade: Jin'] = {
-    Neck = "Thunder Gorget"
-}
-
-layers.Sets.Midshot = {
-    Hands = "Seiryu's Kote",
-    Legs = "Ninja Hakama",
-    Feet = "Nin. Kyahan +1",
-    Neck = "Peacock Amulet",
-    Ring1 = "Merman's Ring"
-}
-
-layers.Sets.Ability = Enmity
-layers.Sets.Idle = PDT
-
-layers.Sets.Evasion.Idle = {
-    Head = "Nin. Hatsuburi +1",
-    Body = "Scorpion Harness",
-    Hands = "Rasetsu Tekko",
-    Neck = "Evasion Torque",
-    Waist = "Scouter's Rope",
-    Back = "Boxer's Mantle",
-    Ear1 = "Suppanomimi",
-    Ring1 = "Sattva Ring",
-    Ring2 = "Emerald Ring",
-    Range = "Ungur Boomerang",
-    Ammo = "Empty"
-}
-
-layers.Sets.Evasion.Engaged = layers.Sets.Evasion.Idle
+-- Begin Precast Sets --
 
 layers.Sets.Precast = gFunc.Combine({
-    Hands = { Name = "Seiryu's Kote", Priority = 100},
-    Waist = { Name = "Steppe Sash", Priority = 100},
-    Back = { Name = "Gigant Mantle", Priority = 100}
+    Head = { Name = "Genbu's Kabuto", Priority = 100 },
+    Hands = { Name = "Seiryu's Kote", Priority = 100 },
+    Waist = { Name = "Steppe Sash", Priority = 100 },
+    Ring2 = { Name = "Bomb Queen Ring", Priority = 100 },
 }, FastCast)
 
-layers.Sets.Midcast.Ninjutsu = {
-    Head = "Nin. Hatsuburi +1",
-    Body = "Kirin's Osode",
+-- Begin Midcast Sets --
+
+layers.Sets.Midcast.Ninjutsu = gFunc.Combine(Haste, gFunc.Combine(FastCast, {
+    Back = { Name = "Gigant Mantle", Priority = 102 },
+    Ring2 = { { Name = "Shinobi Ring", When = "Yellow HP" }, { Name = "Bomb Queen Ring", Priority = 102 } },
+    Ear2 = { Name = "Shinobi Earring", When = "Red HP" },
+}))
+layers.Sets.Midcast['Enfeebling Ninjutsu'] = {
+    Head = { Name = "Nin. Hatsuburi +1", Priority = 100 },
     Hands = "Kog. Tekko +1",
-    Legs = "Yasha Hakama",
     Feet = "Kog. Kyahan +1",
     Neck = "Ninjutsu Torque",
     Waist = "Koga Sarashi",
-    Back = "Astute Cape",
+    Back = { Name = "Astute Cape", Priority = 99 },
     Ear1 = "Stealth Earring",
+    Ammo = "Ensorcelled Shard"
+}
+layers.Sets.Midcast['Elemental Ninjutsu'] = {
+    Head = "Yasha Jinpachi +1",
+    Body = { Name = "Kirin's Osode", Priority = 99 },
+    Hands = { { Name = "Seiryu's Kote", When = "HighHP" }, { Name = "Kog. Tekko +1" } },
+    Legs = { Name = "Yasha Hakama +1", Priority = 100 },
+    Feet = { { Name = "Kog. Kyahan +1", When = "HighAcc || HighHP" }, { Name = "Nin. Kyahan +1", Priority = 100 } },
+    Neck = { { Name = "Ninjutsu Torque", When = "HighAcc || HighHP" }, { Name = "Uggalepih Pendant", When = "Player MPP After Cast <= 50" }, { Name = "Prudence Torque" } },
+    Waist = { { Name = "Ryl.Kgt. Belt", When = "Red HP" }, { Name = "Steppe Sash", When = "HighHP", Priority = 102 }, { Name = "Koga Sarashi" } },
+    Back = { { Name = "Gigant Mantle", When = "HighHP", Priority = 102 }, { Name = "Astute Cape", When = "HighAcc" }, { Name = "Fed. Army Mantle" } },
     Ring1 = "Snow Ring",
     Ring2 = "Snow Ring",
-    Range = "Empty",
-    Ammo = "Phtm. Tathlum"
-}
-
-layers.Sets.Midcast['Elemental Ninjutsu'] = {
-    Head = "Yasha Jinpachi",
-    --Feet = "Nin. Kyahan +1",
     Ear1 = "Novio Earring",
-    Ear2 = "Moldavite Earring"
+    Ear2 = { { Name = "Stealth Earring", When = "Red HP" }, { Name = "Stealth Earring", When = "HighAcc || HighHP" }, { Name = "Moldavite Earring" } },
+    Ammo = "Ensorcelled Shard"
 }
-
-layers.Sets.HighAcc.Midcast['Enfeebling Ninjutsu'] = layers.Sets.Midcast.Ninjutsu
-
-layers.Sets.HighAcc.Midcast['Elemental Ninjutsu'] = {
-    Head = "Nin. Hatsuburi +1",
-    Feet = "Kog. Kyahan +1",
-    Back = "Astute Cape",
-    Waist = "Koga Sarashi",
-    Ear2 = "Stealth Earring"
-}
-
-layers.Sets.HighINT.Midcast['Elemental Ninjutsu'] = {
-    Back = "Fed. Army Mantle",
-    Waist = "Ryl.Kgt. Belt"
-}
-
-layers.Sets.HighHP.Midcast['Elemental Ninjutsu'] = {
-    Hands = { Name = "Seiryu's Kote", Priority = 100},
-    Waist = { Name = "Steppe Sash", Priority = 100},
-    Back = { Name = "Gigant Mantle", Priority = 100}
-}
-
-layers.Sets.Midcast.Utsusemi = gFunc.Combine(PDT, gFunc.Combine(Haste, gFunc.Combine(FastCast, {
-    Back = {Name = "Gigant Mantle", Priority = 100},
-    Ring2 = {Name = "Bomb Queen Ring", Priority = 100},
-})))
-
-layers.Sets.Midcast.Stun = gFunc.Combine(Enmity, Haste)
-layers.Sets.Midcast.Sleep = gFunc.Combine(Enmity, Haste)
-layers.Sets.Midcast.Bind = gFunc.Combine(Enmity, Haste)
-layers.Sets.Midcast.Aspir = gFunc.Combine(Enmity, Haste)
-layers.Sets.Midcast.Cure = Enmity
-
-layers.Sets.PDT.Engaged = PDT
-layers.Sets.PDT.Midcast['Enfeebling Ninjutsu'] = Enmity
-layers.Sets.PDT.Midcast['Utsusemi: Ichi'] = gFunc.Combine(PDT, gFunc.Combine(FastCast, {
-    Waist = "Sprinter's Belt",
-    Back = {Name = "Gigant Mantle", Priority = 100},
-}))
-
-layers.Sets.MDT.Engaged = MDT
-layers.Sets.MDT.Idle = MDT
-layers.Sets.MDT.Midcast['Utsusemi: Ichi'] = gFunc.Combine(MDT, {
-    Waist = "Sprinter's Belt",
-    Back = {Name = "Gigant Mantle", Priority = 100},
-})
-
-
-layers.Sets.SenjiFudo.Idle = {
-    Main = "Senjuinrikio",
-    Sub = "Fudo"
-}
-layers.Sets.SenjiFudo.Engaged = layers.Sets.SenjiFudo.Idle
-
-layers.Sets.Staves.Idle = {
-    Main = "Terra's Staff",
-}
-
-layers.Sets.Staves.Engaged = layers.Sets.Staves.Idle
-layers.Sets.Staves.Midcast['Elemental Ninjutsu'] = {
-    Main = "Crimson Blade",
-    Sub = "Crimson Blade"
-}
-layers.Sets.Staves.Midcast['Ice Magic Damage'] = { Main = "Aquilo's Staff" }
-layers.Sets.Staves.Midcast['Lightning Magic Damage'] = { Main = "Jupiter's Staff" }
-layers.Sets.Staves.Midcast['Earth Magic Damage'] = { Main = "Terra's Staff" }
-layers.Sets.Staves.Midcast['Wind Magic Damage'] = { Main = "Auster's Staff" }
-layers.Sets.Staves.Midcast['Fire Magic Damage'] = { Main = "Vulcan's Staff" }
-layers.Sets.Staves.Midcast['Water Magic Damage'] = { Main = "Neptune's Staff" }
-layers.Sets.Staves.Midcast['Earth Enfeeblement'] = { Main = "Terra's Staff" }
-layers.Sets.Staves.Midcast['Ice Enfeeblement'] = { Main = "Aquilo's Staff" }
-layers.Sets.Staves.Midcast['Lightning Enfeeblement'] = { Main = "Jupiter's Staff" }
 
 layers.Sets.Midcast.Stoneskin = {
-    Body = "Kirin's Osode",
+    Head = { { Name = "Maat's Cap", When = "Player HPP <= 95"}, { Name = "Genbu's Kabuto", Priority = 100 } },
+    Body = { Name = "Kirin's Osode", Priority = 99 },
+    Legs = { Name = "Yasha Hakama +1", Priority = 100 },
     Feet = "Suzaku's Sune-Ate",
-    Neck = "Enhancing Torque"
+    Waist = "Ryl.Kgt. Belt",
+    Neck = "Promise Badge",
+    Ear1 = "Cmn. Earring",
+    Ear2 = "Cmn. Earring",
+    Ring1 = "Aqua Ring",
+    Ring2 = "Aqua Ring"
 }
 
-layers.Sets.Regen.Idle = {
-    Head = "President. Hairpin",
-    Body = "War Shinobi Gi",
-    Waist = "Muscle Belt +1"
+layers.Sets.Midcast.Stun = gFunc.Combine(gFunc.Combine(Enmity, { Head = { Name = "Genbu's Kabuto", Priority = 100 }, Hands = { Name = "Dusk Gloves", Priority = 100 }, Waist = "Sprinter's Belt" }), { Neck = "Dark Torque" } )
+layers.Sets.Midcast.Sleep = gFunc.Combine(Enmity, { Head = { Name = "Genbu's Kabuto", Priority = 100 }, Hands = { Name = "Dusk Gloves", Priority = 100 }, Waist = "Sprinter's Belt" })
+layers.Sets.Midcast.Bind = Enmity
+layers.Sets.Midcast.Aspir = gFunc.Combine(Enmity, { Head = { Name = "Genbu's Kabuto", Priority = 100 }, Hands = { Name = "Dusk Gloves", Priority = 100 }, Waist = "Sprinter's Belt" })
+layers.Sets.Midcast.Cure = Enmity
+layers.Sets.Midcast.Dispel = Enmity
+
+layers.Sets.Midcast['Dark Offensive'] = {
+    Main = { Name = "Pluto's Staff", When = "Staves" },
+    Waist = { Name = "Anrin Obi", When = "Environment Score >= 10" }
 }
 
-layers.Sets.Regen.Engaged = layers.Sets.Regen.Idle
+layers.Sets.Midcast['Earth Offensive'] = {
+    Main = { Name = "Terra's Staff", When = "Staves" }
+}
 
-layers.RegisterCallback("PostHandleIdle", function()
-    local environment = gData.GetEnvironment()
-    if environment.Time >= 17.00 or environment.Time <= 7.00 then
-        gFunc.Equip("Feet", "Nin. Kyahan +1")
-    end
-end, "Equip Ninja Kyahan")
+layers.Sets.Midcast['Water Offensive'] = {
+    Main = { Name = "Neptune's Staff", When = "Staves" }
+}
 
-layers.RegisterCallback("PostHandleEngaged", function()
-    local player = gData.GetPlayer()
-    if player.HPP <= 75 and (pdtMode.current ~= "PDT" and mdtMode.current ~= "MDT") then
-        gFunc.Equip("Ring2", "Shinobi Ring")
-    end
-end, "Engaged Shinobi Ring")
+layers.Sets.Midcast['Wind Offensive'] = {
+    Main = { Name = "Auster's Staff", When = "Staves" },
+    Waist = { Name = "Furin Obi", When = "Environment Score >= 10" }
+}
 
-layers.RegisterCallback("PostHandleMidcast", function(spell)
-    local player = gData.GetPlayer()
-    if player.HPP <= 75 and (layers.GetClassifiers('Spell', spell.Name)['Utsusemi']) and (spell.Name ~= "Utsusemi: Ichi" or (pdtMode.current ~= "PDT" and mdtMode.current ~= "MDT")) then
-        gFunc.Equip("Ring2", "Shinobi Ring")
-    end
-end, "Midcast Shinobi Ring")
+layers.Sets.Midcast['Fire Offensive'] = {
+    Main = { Name = "Vulcan's Staff", When = "Staves" }
+}
 
-layers.RegisterCallback("PostHandleMidcast", function(spell)
-    if layers.GetClassifiers('Spell', spell.Name)['Elemental Ninjutsu'] and ninjutsuMode.current ~= 'HighAcc' and spell.MppAftercast <= 50 then
-        gFunc.Equip("Neck", "Uggalepih Pendant")
-    end
-end, "Midcast Uggalepih Pendant")
+layers.Sets.Midcast['Ice Offensive'] = {
+    Main = { Name = "Aquilo's Staff", When = "Staves" },
+    Waist = { Name = "Hyorin Obi", When = "Environment Score >= 10" }
+}
 
-layers.RegisterCallback("PostHandleMidcast", function(spell)
-    local player = gData.GetPlayer()
-    if player.HPP <= 25 then
-        gFunc.Equip("Ear2", "Shinobi Earring")
-        if layers.GetClassifiers('Spell', spell.Name)['Elemental Ninjutsu'] then
-            gFunc.Equip("Waist", "Ryl.Kgt. Belt")
-        end
-    end
-end, "Midcast Shinobi Earring")
+layers.Sets.Midcast['Lightning Offensive'] = {
+    Main = { Name = "Jupiter's Staff", When = "Staves" },
+    Waist = { Name = "Rairin Obi", When = "Environment Score >= 10" }
+}
 
-layers.RegisterCallback("PostHandleIdle", function()
-    local player = gData.GetPlayer()
-    if player.HP <= 238 and buffaloMode.current == "Buffalo" then
-        gFunc.EquipSet(layers.Sets.Regen.Idle)
-    end
-end, "Equip Regen 25% Idle")
+-- Begin Preshot Sets
 
-layers.RegisterCallback("PostHandleEngaged", function()
-    local player = gData.GetPlayer()
-    if player.HP <= 238 and buffaloMode.current == "Buffalo" then
-        gFunc.EquipSet(layers.Sets.Regen.Idle)
-    end
-end, "Engaged Regen 25% Engaged")
+-- Begin Interimcast Sets --
 
-layers.RegisterCallback("PostHandleIdle", function()
-    local player = gData.GetPlayer()
-    if player.MP <= 38 and refreshMode.current == "Refresh" then
-        gFunc.EquipSet({ Body = "Blue Cotehardie" })
-    end
-end, "Equip Refresh 25% Idle")
+layers.Sets.Interimcast = PDT
+layers.Sets.MDT.Interimcast = MDT
+layers.Sets.Regen.Interimcast = Regen
+layers.Sets.Refresh.Interimcast = Refresh
 
-layers.RegisterCallback("PostHandleEngaged", function()
-    local player = gData.GetPlayer()
-    if player.MP <= 38 and refreshMode.current == "Refresh" then
-        gFunc.EquipSet({ Body = "Blue Cotehardie" })
-    end
-end, "Engaged Refresh 25% Engaged")
+layers.EnableAutomaticMidcastDelay()
+layers.EnableAutomaticMidshotDelay()
+layers.EnableDefaultStickyItems()
 
-layers.RegisterCallback("PostHandleWeaponskill", function()
-    local environment = gData.GetEnvironment()
-    if environment.Time >= 17.00 or environment.Time <= 7.00 then
-        gFunc.Equip("Hands", "Kog. Tekko +1")
-    end
-end, "Equip Koga Tekko Weaponskill")
-
-layers.RegisterCallback("PostHandleWeaponskill", function()
-    local environment = gData.GetEnvironment()
-    if environment.Time >= 17.00 or environment.Time <= 7.00 then
-        gFunc.Equip("Feet", "Kog. Kyahan +1")
-    end
-end, "Equip Koga Kyahan Weaponskill")
-
-layers.RegisterCallback("PostHandleWeaponskill", function()
-    local environment = gData.GetEnvironment()
-    if environment.Time >= 18.00 or environment.Time <= 6.00 then
-        gFunc.Equip("Ear1", "Vampire Earring")
-        --gFunc.Equip("Ear2", "Vampire Earring")
-    end
-end, "Equip Vampire Earring Weaponskill")
-
-layers.RegisterCallback("PostHandleEngaged", function()
-    local environment = gData.GetEnvironment()
-    if (pdtMode.current ~= "PDT" and mdtMode.current ~= "MDT" and evasionMode.current ~= "Evasion") and (environment.Time >= 17.00 or environment.Time <= 7.00) then
-        gFunc.Equip("Hands", "Kog. Tekko +1")
-    end
-end, "Equip Koga Tekko Engaged")
-
-layers.RegisterCallback("PostHandleIdle", function()
-    local environment = gData.GetEnvironment()
-    local bastok = {
-        ['Bastok Markets'] = true,
-        ['Bastok Mines'] = true,
-        ['Port Bastok'] = true,
-        ['Metalworks'] = true
-    }
-    if bastok[environment.Area] then
-        gFunc.Equip("Body", "Republic Aketon")
-    end
-end, "Equip Republic Aketon")
-
-layers.RegisterCallback("PostHandleIdle", function()
-    if evasionMode.current == 'Evasion' and gData.GetBuffCount('Blindness') > 0 then
-        gFunc.EquipSet({
-            Ear1 = "Bat Earring",
-            Ear2 = "Bat Earring"
-        })
-    end
-end, "Equip Bat Earrings")
-
-layers.RegisterCallback("PostHandleIdle", function()
-    local environment = gData.GetEnvironment()
-    if evasionMode.current == 'Evasion' and (environment.Time >= 18.00 or environment.Time <= 6.00) then
-        gFunc.Equip("Legs", "Ninja Hakama")
-    end
-end, "Equip Evasion Legs Idle")
-
-layers.RegisterCallback("PostHandleEngaged", function()
-    local environment = gData.GetEnvironment()
-    if evasionMode.current == 'Evasion' and (environment.Time >= 18.00 or environment.Time <= 6.00) then
-        gFunc.Equip("Legs", "Ninja Hakama")
-    end
-end, "Equip Evasion Legs Engaged")
-
-
-layers.RegisterCallback("PostHandleIdle", function()
-    local environment = gData.GetEnvironment()
-    if evasionMode.current == 'Evasion' and weaponMode.current == 'Staves' then
-        gFunc.Equip("Main", "Auster's Staff")
-    end
-end, "Equip Evasion Weapon Idle")
-
-layers.RegisterCallback("PostHandleEngaged", function()
-    local environment = gData.GetEnvironment()
-    if evasionMode.current == 'Evasion' and weaponMode.current == 'Staves' then
-        gFunc.Equip("Main", "Auster's Staff")
-    end
-end, "Equip Evasion Weapon Engaged")
+return layers
 
 return layers
 ```
