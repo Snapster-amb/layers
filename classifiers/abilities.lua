@@ -544,7 +544,9 @@ return {
     },
     ["Dark Shot"] = {
         [1] = "Quick Draw",
-        [2] = "Dark Shot"
+        [2] = "Dark Shot",
+        [3] = "Dark Affinity",
+        [4] = "Dark Offensive"
     },
     ["Dark Spore"] = {
         [1] = "Dark Spore"
@@ -703,7 +705,10 @@ return {
     },
     ["Earth Shot"] = {
         [1] = "Quick Draw",
-        [2] = "Earth Shot"
+        [2] = "Earth Shot",
+        [3] = "Earth Affinity",
+        [4] = "Earth Offensive",
+        [5] = "Earth Quick Draw Damage"
     },
     ["Earthen Armor"] = {
         [1] = "Blood Pact",
@@ -845,7 +850,10 @@ return {
     },
     ["Fire Shot"] = {
         [1] = "Quick Draw",
-        [2] = "Fire Shot"
+        [2] = "Fire Shot",
+        [3] = "Fire Affinity",
+        [4] = "Fire Offensive",
+        [5] = "Fire Quick Draw Damage"
     },
     ["Fireball"] = {
         [1] = "Fireball"
@@ -1149,7 +1157,10 @@ return {
     },
     ["Ice Shot"] = {
         [1] = "Quick Draw",
-        [2] = "Ice Shot"
+        [2] = "Ice Shot",
+        [3] = "Ice Affinity",
+        [4] = "Ice Offensive",
+        [5] = "Ice Quick Draw Damage"
     },
     ["Ignis"] = {
         [1] = "Rune",
@@ -1281,7 +1292,9 @@ return {
     },
     ["Light Shot"] = {
         [1] = "Quick Draw",
-        [2] = "Light Shot"
+        [2] = "Light Shot",
+        [3] = "Light Affinity",
+        [4] = "Light Offensive"
     },
     ["Lightning Armor"] = {
         [1] = "Blood Pact",
@@ -2229,7 +2242,13 @@ return {
     },
     ["Thunder Shot"] = {
         [1] = "Quick Draw",
-        [2] = "Thunder Shot"
+        [2] = "Thunder Shot",
+        [3] = "Lightning Affinity",
+        [4] = "Thunder Affinity",
+        [5] = "Lightning Offensive",
+        [6] = "Thunder Offensive",
+        [7] = "Lightning Quick Draw Damage",
+        [8] = "Thunder Quick Draw Damage"
     },
     ["Thunderspark"] = {
         [1] = "Blood Pact",
@@ -2391,7 +2410,10 @@ return {
     },
     ["Water Shot"] = {
         [1] = "Quick Draw",
-        [2] = "Water Shot"
+        [2] = "Water Shot",
+        [3] = "Water Affinity",
+        [4] = "Water Offensive",
+        [5] = "Water Quick Draw Damage"
     },
     ["Water Wall"] = {
         [1] = "Water Wall"
@@ -2443,7 +2465,10 @@ return {
     },
     ["Wind Shot"] = {
         [1] = "Quick Draw",
-        [2] = "Wind Shot"
+        [2] = "Wind Shot",
+        [3] = "Wind Affinity",
+        [4] = "Wind Offensive",
+        [5] = "Wind Quick Draw Damage"
     },
     ["Wind's Blessing"] = {
         [1] = "Blood Pact",
