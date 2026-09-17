@@ -35,7 +35,7 @@ defaults.SetMidcastDelay = function(spell)
         if fastCastItems[item] then
             fastCast = fastCast + fastCastItems[item]
         end
-        if classifiers['Song'] and songCastItems[item] then
+        if classifiers['Singing'] and songCastItems[item] then
             fastCast = fastCast + songCastItems[item]
         end
         if classifiers['Cure'] and cureCastItems[item] then
