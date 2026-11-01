@@ -28,7 +28,8 @@ Game
                 ├── logger.lua
                 ├── modes.lua
                 ├── taxonomy.lua
-                └── utils.lua
+                ├── utils.lua
+                └── visualizer.lua
 ```
 
 LuAshitacast Include Statement
@@ -67,7 +68,8 @@ Windower
                 ├── logger.lua
                 ├── modes.lua
                 ├── taxonomy.lua
-                └── utils.lua
+                ├── utils.lua
+                └── visualizer.lua
 ```
 
 GearSwap Include Statement
@@ -76,6 +78,71 @@ GearSwap Include Statement
 ```lua
 local layers = require('layers/layers')
 ```
+
+Mode Group Visualizer
+
+The visualizer shows mode groups and their current values in an in-game overlay.
+It is configured from the job file, next to the mode groups it displays, so a
+job's visualizer settings are part of the job's own configuration.
+
+```lua
+layers.visualizer({
+    Enabled = true,
+    Position = { X = 60, Y = 200 },
+    Scale = 1.25,
+    BackgroundColor = { 0.0, 0.0, 0.0, 0.65 },
+    NameColor = { 0.75, 0.75, 0.75, 1.0 },
+    Groups = {
+        'Weapon',
+        'Melee',
+        { Name = 'Defense', Colors = { PDT = { 0.6, 0.9, 0.6, 1.0 } } },
+    },
+})
+```
+
+`Groups` is both the list of mode groups shown and the order they are shown in.
+Each entry is either a group name or a table with the group name and its
+colors.  Without a `Groups` list every mode group is shown in the order it was
+created, minus the implicit groups the engine builds for compound predicates.
+
+An entry can set `DisplayName` to show a shorter name than the mode group's own.
+The overlay is measured from the displayed name, so `{ Name = 'CombatDefense',
+DisplayName = 'ComDef' }` reserves room for `ComDef`, not `CombatDefense`.
+
+`Scale` multiplies the text size of the whole overlay, using the font the addon
+is already drawing with.  `NameColor` colors the mode group names and
+`BackgroundColor` colors the window, alpha included.  The background defaults to
+black at half opacity, so an opaque background is `{ 0.0, 0.0, 0.0, 1.0 }` and
+no background at all is `{ 0.0, 0.0, 0.0, 0.0 }`.  The overlay is as wide as the
+longest row any of the configured groups can produce, so switching a group to a
+shorter value does not resize it.
+
+Values are red when the group is set to `Off` and blue otherwise.  `OffColor`
+and `DefaultColor` change those two defaults, `Color` replaces the default for
+every value of one group, and `Colors` sets the color of individual values.
+Colors are `{ red, green, blue, alpha }` with each component from 0 to 1.
+
+```lua
+layers.visualizer({
+    OffColor = { 1.0, 0.35, 0.35, 1.0 },
+    DefaultColor = { 0.4, 0.7, 1.0, 1.0 },
+    Groups = {
+        { Name = 'Weapon', Color = { 1.0, 1.0, 1.0, 1.0 } },
+        { Name = 'Defense', Colors = { PDT = { 0.6, 0.9, 0.6, 1.0 } } },
+    },
+})
+```
+
+Configuring the overlay shows it at load time; pass `Enabled = false` to
+configure it without showing it.  The overlay can be toggled in game.
+
+```lua
+/lac fwd visualizer        -- Cycle the overlay on or off
+/lac fwd visualizer on     -- Show the overlay
+/lac fwd visualizer off    -- Hide the overlay
+```
+
+The overlay takes no input, so clicks pass through it to the game.
 
 Sample Ninja LUA
 

@@ -86,6 +86,7 @@ if gearswap then
         { ['merits'] = 'merits' },
         { ['defaults'] = 'defaults' },
         { ['groups'] = 'groups' },
+        { ['visualizer'] = 'visualizer' },
         { ['core'] = 'core' },
         { ['shims/constants'] = '' },
         { ['shims/hotkeys'] = 'hotkeys' },
@@ -180,12 +181,33 @@ else
         struct = struct,
         ashita = ashita,
         bit = bit,
+        math = math,
         tonumber = tonumber,
         tostring = tostring,
         coroutine = coroutine,
         os = os,
         io = io
     }
+
+    -- The mode group visualizer is drawn through the host addon's ImGui
+    -- bindings.  Only the pieces the visualizer needs are exposed to the
+    -- sandboxed module environment.
+    local imgui = nil
+    local imguiWindowFlags = nil
+    local success, loadedImgui = pcall(require, 'imgui')
+    if success and loadedImgui and ImGuiWindowFlags_NoDecoration ~= nil then
+        imgui = loadedImgui
+        imguiWindowFlags = {
+            NoDecoration = ImGuiWindowFlags_NoDecoration,
+            AlwaysAutoResize = ImGuiWindowFlags_AlwaysAutoResize,
+            NoSavedSettings = ImGuiWindowFlags_NoSavedSettings,
+            NoInputs = ImGuiWindowFlags_NoInputs
+        }
+    end
+    env.imgui = imgui
+    env.imguiWindowFlags = imguiWindowFlags
+    env.imguiCondAlways = ImGuiCond_Always
+    env.imguiColWindowBg = ImGuiCol_WindowBg
 
     local modules = {
         'modes',
@@ -204,6 +226,7 @@ else
         'predicates',
         'layer',
         'groups',
+        'visualizer',
         'merits',
         'defaults',
         'core'
