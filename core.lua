@@ -271,6 +271,7 @@ end
 ---
 -- Unbind any keys that were bound and execute the user's UserOnUnload if it exists.
 core.OnUnload = function()
+    visualizer.Unregister()
     hotkeys.UnbindAll()
     local userOnUnload  = rawget(proxy, 'UserOnUnload')
     if userOnUnload and type(userOnUnload) == 'function' then
@@ -284,6 +285,10 @@ end
 ---
 -- Expose the CreateModeGroup method to user job files.
 core.CreateModeGroup = groups.CreateModeGroup
+
+---
+-- Expose the mode group visualizer configuration to user job files.
+core.visualizer = visualizer.Configure
 
 ---
 -- Expose the groupWrapperArray object to user job files.
