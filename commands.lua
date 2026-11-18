@@ -45,6 +45,33 @@ local function handleLoggingCommand(args)
     print(chat.header("Layers") .. chat.message("Logging level set to ") .. chat.group(logger.level.current))
 end
 
+local function handleVisualizerCommand(args)
+    if not visualizer.IsAvailable() then
+        return logger.Error('Unable to complete visualizer command - ImGui is not available')
+    end
+
+    local action = args[1]
+    if action ~= nil then
+        action = tostring(action):lower()
+    end
+
+    if action == nil or action == '' or action == 'cycle' then
+        visualizer.Toggle()
+    elseif action == 'on' or action == 'true' then
+        visualizer.SetEnabled(true)
+    elseif action == 'off' or action == 'false' then
+        visualizer.SetEnabled(false)
+    else
+        return logger.Error(string.format('Unable to complete visualizer command - unrecognized value %s', tostring(action)))
+    end
+
+    local state = 'disabled'
+    if visualizer.Enabled then
+        state = 'enabled'
+    end
+    print(chat.header('Layers') .. chat.message('Mode group visualizer ') .. chat.group(state))
+end
+
 local function handleUpdateCommand()
     local function exec(cmd)
         local ok, _, code = os.execute(cmd)
@@ -257,6 +284,7 @@ end
 -- reset modeGroup - Resets the provided modeGroup to the default value
 -- set modeGroup mode - Sets the mode for the provided modeGroup
 -- logging [mode] - Sets the logging mode to the provided level (Debug, Trace, etc.) or cycles it if no level is provided.
+-- visualizer [on|off] - Shows, hides, or cycles the mode group value visualizer.
 commands.HandleCommand = function(args)
     local command = table.remove(args, 1)
     local modeGroupCommands = {
@@ -269,6 +297,8 @@ commands.HandleCommand = function(args)
         handleModeGroupCommand(command, args)
     elseif command == 'logging' then
         handleLoggingCommand(args)
+    elseif command == 'visualizer' then
+        handleVisualizerCommand(args)
     elseif command == 'update' or command == 'u' then
         handleUpdateCommand()
     elseif command == 'validate' or command == 'v' then
